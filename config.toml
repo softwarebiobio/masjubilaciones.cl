@@ -1,4 +1,4 @@
-#baseurl = "https://example.org"
+baseurl = "https://dantoac.gitlab.io/masjubilaciones"
 title = "MasJubilaciones"
 theme = "universal"
 #themesDir = "../.."
@@ -6,7 +6,7 @@ languageCode = "es-cl"
 # Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "es"
 # Enable comments by entering your Disqus shortname
-disqusShortname = "devcows"
+#disqusShortname = "devcows"
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
 
@@ -99,14 +99,7 @@ paginate = 10
 
     logo = "images/logo-MasJubilaciones-mediano.jpg"
     logo_small = "images/logo.jpg"
-    address = """<p><strong>Universal Ltd.</strong>
-        <br>13/25 New Avenue
-        <br>Newtown upon River
-        <br>45Y 73J
-        <br>England
-        <br>
-        <strong>Great Britain</strong>
-      </p>
+    address = """aoeu
       """
     latitude = "-12.043333"
     longitude = "-77.028333"
