@@ -1,0 +1,3 @@
+[submodule "themes/assembly"]
+	path = themes/assembly
+	url = https://github.com/salsysd/hugo-assembly.git

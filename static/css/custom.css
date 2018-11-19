@@ -1,0 +1,7 @@
+.home-carousel {
+  background: url('/images/02.jpg') center center repeat !important;
+}
+
+.home-carousel .dark-mask {
+    background: #063;
+}
