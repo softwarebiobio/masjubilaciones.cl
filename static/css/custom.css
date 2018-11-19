@@ -5,3 +5,11 @@
 .home-carousel .dark-mask {
     background: #063;
 }
+
+.navbar-brand {
+    height:auto;
+}
+
+.navbar-brand img {
+    max-height:100px
+}
