@@ -1,3 +1,6 @@
 [submodule "themes/assembly"]
 	path = themes/assembly
 	url = https://github.com/salsysd/hugo-assembly.git
+[submodule "themes/universal"]
+	path = themes/universal
+	url = https://github.com/devcows/hugo-universal-theme
