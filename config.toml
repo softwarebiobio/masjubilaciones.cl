@@ -1,4 +1,4 @@
-baseurl = "https://dantoac.gitlab.io/masjubilaciones"
+baseurl = "https://dantoac.gitlab.io/masjubilaciones/"
 title = "MasJubilaciones"
 theme = "universal"
 #themesDir = "../.."
