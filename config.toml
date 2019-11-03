@@ -61,14 +61,14 @@ paginate = 10
 [[menu.topbar]]
     weight = 4
     name = "Email"
-    url = "mailto:your@email.com"
+    url = "mailto:contacto@masjubilaciones.cl"
     pre = "<i class='fa fa-2x fa-envelope'></i>"
 
 [params]
     viewMorePostLink = "/blog/"
     author = "Marcos Aguayo Mas"
     defaultKeywords = ["pensiones", "jubilacion", "anticipada", "pensión"]
-    defaultDescription = "Asesor Previsional Concepcion Chile"
+    defaultDescription = "Asesor Previsional Acreditado Biobío Concepción Chile"
 
     # Google Maps API key (if not set will default to not passing a key.)
     #googleMapsApiKey = ""
@@ -91,16 +91,15 @@ paginate = 10
     # Enable the contact form by entering your Formspree.io email
     email = "contacto@majubilaciones.cl"
 
-    about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
-    copyright = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."
+    about_us = "<p>Somos una empresa <strong>independiente y experta</strong> en el Sistema Previsional chileno, <strong>acreditados</strong> por la      Superintendencia de Valores y Seguros para realizar Asesorías Previsionales. </p>"
+    copyright = "Copyright (c) 2015 - 2019, Masjubilaciones; algunos derechos reservados."
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
 
     logo = "images/logo-MasJubilaciones-mediano.jpg"
     logo_small = "images/logo.jpg"
-    address = """aoeu
-      """
+    address = """San Martín 553 Oficina 302 Edificio Millenium II, <br />Concepción, Región del Biobío."""
     latitude = "-12.043333"
     longitude = "-77.028333"
 
@@ -110,7 +109,7 @@ paginate = 10
 # Enable or disable top bar with social icons
 [params.topbar]
     enable = true
-    text = """<p class="hidden-sm hidden-xs">Contacto a +56 9 777 555 333 o contacto@masjubilaciones.cl.</p>
+    text = """<p class="hidden-sm hidden-xs">Contáctenos al celular <strong>+56 9 9346 7163</strong> o envíenos un e-mail a <strong>contacto@masjubilaciones.cl</strong></p>
       <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fa fa-phone"></i></a>
       <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
       </p>
