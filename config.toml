@@ -1,4 +1,4 @@
-baseurl = "https://www.masjubilaciones.cl/"
+baseurl = "www.masjubilaciones.cl/"
 title = "MasJubilaciones"
 theme = "universal"
 #themesDir = "../.."
