@@ -1,5 +1,5 @@
-baseurl = "www.masjubilaciones.cl/"
-title = "MasJubilaciones"
+baseurl = "http://www.masjubilaciones.cl/"
+title = "MasJubilaciones - Asesoría Previsional. Expertos e Independientes en Concepción, Chile."
 theme = "universal"
 #themesDir = "../.."
 languageCode = "es-cl"
