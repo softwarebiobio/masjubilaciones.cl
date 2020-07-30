@@ -109,10 +109,11 @@ paginate = 10
 # Enable or disable top bar with social icons
 [params.topbar]
     enable = true
-    text = """<p class="hidden-sm hidden-xs">Contáctenos al celular <strong>+56 9 9346 7163</strong> o envíenos un e-mail a <strong>contacto@masjubilaciones.cl</strong></p>
-      <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fa fa-phone"></i></a>
-      <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
-      </p>
+    text = """<p class="col-xs-12 lead">
+    Contáctenos al celular <strong><a href="tel:+56993467163" data-animate-hover="pulse"><i class="fa fa-phone hidden-xs"></i>+56 9 9346 7163</a></strong></p> 
+    <p class="col-md-12 lead">o al email 
+    <a href="mailto:contacto@masjubilaciones.cl" data-animate-hover="pulse"><i class="fa fa-envelope hidden-xs"></i><strong>contacto@masjubilaciones.cl</strong></a></p>
+      
       """
 
 # Enable and disable widgets for the right sidebar
