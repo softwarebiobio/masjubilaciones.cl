@@ -37,12 +37,16 @@
 
 <main class="pt-20">
     <!-- Hero Section -->
-    <section id="hero" class="relative text-white" aria-labelledby="hero-title" style="height: 60vh;">
-        <img src="images/hero.jpg" alt="Imagen destacada de asesoría previsional"
-             class="w-full h-full object-cover object-top">
-        <div class="absolute inset-0 dark:bg-gradient-to-l bg-[#27AE60] from-[#27AE60] to-[#2C3E50] opacity-70 dark:opacity-80 dark:from-[#1ABC9C] dark:to-[#34495E] flex flex-col justify-center items-center">
+    <section id="hero" class="overflow-hidden relative text-white" aria-labelledby="hero-title" style="height: 60vh;">
+        <div class="z-50 absolute inset-0 flex flex-col justify-center items-center">
             <h1 id="hero-title" class="text-5xl font-bold mb-4">Tu Futuro Seguro</h1>
             <p class="text-2xl mb-8">Asesoría Previsional Independiente</p>
+        </div>
+        <div class="dark:bg-gradient-to-l bg-[#27AE60] from-[#27AE60] to-[#2C3E50]  dark:from-[#1ABC9C] dark:to-[#34495E]">
+            <div class="opacity-25">
+                <img src="images/hero.jpg" alt="Imagen destacada de asesoría previsional"
+                     class="w-full h-full object-cover object-top">
+            </div>
         </div>
     </section>
 
@@ -140,7 +144,7 @@
         <!-- Mapa debajo del formulario e información de contacto -->
         <div class="w-full">
             <img class="w-full h-full max-h-96 rounded-lg shadow-2xl border-0 object-cover object-center"
-                    src="images/map.png""
+                 src="images/map.png""
             >
         </div>
     </section>
@@ -149,10 +153,10 @@
 <footer class="bg-[#2C3E50] dark:bg-[#1A1A1A] text-white dark:text-gray-100 py-8">
     <div class="container mx-auto text-center">
         <p>&copy; 2024 Más Jubilaciones. Todos los derechos reservados.</p>
-        <p>Web por
+        <p>
             <a class="hover:text-[#F1C40F] dark:hover:text-[#F39C12] transition duration-300"
                target="_blank"
-               href="https://www.softwarebiobio.com/">SoftwareBiobio.com</a>
+               href="https://www.softwarebiobio.com/"><strong><code>@softwarebiobio</code></strong></a>
         </p>
 
     </div>
