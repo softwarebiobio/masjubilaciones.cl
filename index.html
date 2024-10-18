@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +14,11 @@
             async src="//gc.zgo.at/count.js"></script>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Open Sans', sans-serif;
         }
 
         #inicio {
@@ -85,7 +86,7 @@
                 <i class="fas fa-user text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6"
                    aria-hidden="true"></i>
                 <h3 class="text-2xl font-semibold mb-4">Asesoría Previsional</h3>
-                <p>Le ayudamos a entender y optimizar su situación
+                <p class="text-lg">Le ayudamos a entender y optimizar su situación
                     previsional, considerando
                     todas las opciones disponibles en el sistema de AFP y el mercado de rentas vitalicias, acompañándole
                     en el proceso hasta el final.</p>
@@ -93,7 +94,7 @@
             <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
                 <i class="fas fa-briefcase text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
                 <h3 class="text-2xl font-semibold mb-4">Somos Independientes</h3>
-                <p>No tenemos lazos con entidades externas. Nuestro compromiso es
+                <p class="text-lg">No tenemos lazos con entidades externas. Nuestro compromiso es
                     exclusivamente con el afiliado, garantizando la mejor opción a través de cálculos precisos y un
                     análisis exhaustivo del sistema.</p>
             </div>
@@ -109,11 +110,18 @@
 
     <!-- Sección de Ética y Valores -->
     <section id="etica" class="bg-gradient-to-r to-[#27AE60] from-[#2C3E50] text-white dark:text-gray-100 py-20">
-        <div class="container mx-auto text-center py-8">
+        <div class="container mx-auto text-center py-8 text-lg">
             <h2 id="ethics-title" class="text-4xl font-bold mb-8">Nuestra Ética y Valores</h2>
-            <p class="text-lg mb-8">En Más Jubilaciones, nuestra ética se basa en la transparencia, la integridad y el
+            <p class="mb-8">En Más Jubilaciones, nuestra ética se basa en la transparencia, la integridad y el
                 compromiso con nuestros clientes. Proporcionamos asesoría clara y honesta, enfocada en tus necesidades y
                 bienestar, construyendo relaciones de confianza a largo plazo.</p>
+
+            <p>
+                Como miembros de la <strong><a href="https://www.agap.cl/">Asociación Gremial de Asesores
+                Previsionales AGAP</a> </strong> garantizamos asesoría ética, profesional y acreditada en todo
+                momento.
+            </p>
+
         </div>
 
 
@@ -124,7 +132,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
-                <span class="text-lg font-semibold">Transparencia</span>
+                <span class="text-xl font-semibold">Transparencia</span>
             </li>
             <li class="flex flex-col items-center">
                 <svg class="w-12 h-12 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -132,7 +140,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                 </svg>
-                <span class="text-lg font-semibold">Integridad</span>
+                <span class="text-xl font-semibold">Integridad</span>
             </li>
             <li class="flex flex-col items-center">
                 <svg class="w-12 h-12 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -140,14 +148,10 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                 </svg>
-                <span class="text-lg font-semibold">Compromiso</span>
+                <span class="text-xl font-semibold">Compromiso</span>
             </li>
         </ul>
 
-        <div class="container mx-auto text-center pt-8 text-xl">
-            Como miembros de la <strong><a href="https://www.agap.cl/">Asociación Gremial de Asesores
-            Previsionales AGAP</a> </strong> garantizamos asesoría ética, profesional y acreditada en todo momento.
-        </div>
     </section>
 
 
@@ -216,7 +220,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
                 <h3 class="text-xl font-semibold mb-4">Más Jubilaciones</h3>
-                <p class="text-gray-300">En Más Jubilaciones, nos dedicamos a brindar asesoría previsional
+                <p class="text-gray-300 text-lg">En Más Jubilaciones, nos dedicamos a brindar asesoría previsional
                     independiente, ayudándote a tomar las mejores decisiones para tu futuro.
                     Con más de 30 años de experiencia en el mercado, nuestro
                     compromiso es ofrecer un servicio personalizado y de calidad.
@@ -225,7 +229,7 @@
             </div>
             <div>
                 <h3 class="text-xl font-semibold mb-4">Enlaces Rápidos</h3>
-                <ul class="space-y-2">
+                <ul class="space-y-2 text-lg">
                     <li><a href="#inicio" class="text-gray-300 hover:text-white transition duration-300">Inicio</a></li>
                     <li><a href="#servicios"
                            class="text-gray-300 hover:text-white transition duration-300">Servicios</a></li>
@@ -237,7 +241,7 @@
             </div>
             <div>
                 <h3 class="text-xl font-semibold mb-4">Contáctanos</h3>
-                <ul class="space-y-2 text-gray-300">
+                <ul class="space-y-2 text-gray-300 text-lg">
                     <li>San Martín 553, Oficina 302</li>
                     <li>Concepción, Región del Biobío</li>
                     <li>Email: contacto@masjubilaciones.cl</li>
