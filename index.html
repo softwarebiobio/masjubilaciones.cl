@@ -12,40 +12,64 @@
     <link rel="stylesheet" href="css/styles.css">
     <script data-goatcounter="https://masjubilaciones.goatcounter.com/count"
             async src="//gc.zgo.at/count.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #inicio {
+            text-shadow: 1px 1px black;
+        }
+
+    </style>
 </head>
 
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+
 <header class="bg-white backdrop-blur-lg  dark:bg-gray-800 text-gray-900 dark:text-gray-100 shadow-md fixed w-full z-50">
     <div class="container mx-auto flex justify-between items-center py-4 px-6 ">
         <div class="flex items-center">
             <a href="#hero"><img src="images/logo.jpg" alt="Logo de Más Jubilaciones"
-                                 class="h-16  mr-3 rounded"></a>
+                                 class="h-8 md:h-16 mr-3 rounded"></a>
         </div>
         <nav aria-label="Menú principal">
-            <ul class="flex space-x-6">
-                <li><a href="#hero" class="hover:text-[#27AE60] dark:hover:text-[#2ECC71] transition duration-300"><i
+            <ul class="md:flex space-x-6 hidden">
+                <li><a href="#inicio" class="hover:text-[#27AE60] dark:hover:text-[#2ECC71] transition duration-300"><i
                         class="fas fa-home" aria-hidden="true"></i> Inicio</a></li>
-                <li><a href="#services"
+                <li><a href="#servicios"
                        class="hover:text-[#27AE60] dark:hover:text-[#2ECC71] transition duration-300"><i
-                        class="fas fa-cogs" aria-hidden="true"></i> Servicios</a></li>
-                <li><a href="#ethics" class="hover:text-[#27AE60] dark:hover:text-[#2ECC71] transition duration-300"><i
+                        class="fas fa-user" aria-hidden="true"></i> Servicios</a></li>
+                <li><a href="#etica" class="hover:text-[#27AE60] dark:hover:text-[#2ECC71] transition duration-300"><i
                         class="fas fa-info-circle" aria-hidden="true"></i> Ética</a></li>
-                <li><a href="#contact" class="hover:text-[#27AE60] dark:hover:text-[#2ECC71] transition duration-300"><i
+                <li><a href="#contacto"
+                       class="hover:text-[#27AE60] dark:hover:text-[#2ECC71] transition duration-300"><i
                         class="fas fa-envelope" aria-hidden="true"></i> Contacto</a></li>
             </ul>
         </nav>
+        <div>
+            <a href="#contacto"
+               class="
+                hover:shadow-2xl
+                hover:text-white
+               bg-lime-green md:text-2xl text-primary-green px-6 py-2 rounded-full hover:bg-light-green transition duration-300 shadow-md">
+                Solicite su Asesoría <span class="bg-blue-600 text-white p-2 font-bold rounded-full">aquí</span>
+            </a>
+        </div>
     </div>
 </header>
 
 <main class="pt-20">
     <!-- Hero Section -->
-    <section id="hero" class="overflow-hidden relative text-white" aria-labelledby="hero-title" style="height: 60vh;">
-        <div class="p-8 z-50 absolute inset-0 flex flex-col justify-center items-center">
+    <section id="inicio" class="overflow-hidden relative text-white" aria-labelledby="hero-title" style="height: 60vh;">
+        <div class="z-10 p-8 absolute inset-0 flex flex-col justify-center items-center">
             <h1 id="hero-title" class="text-5xl font-bold mb-4">Asesoría Previsional en Chile</h1>
-            <p class="text-2xl mb-8">Acreditados e independientes con más de 30 años de experiencia</p>
+            <p class="text-2xl mb-8">Acreditados, expertos e independientes con más de 30 años de experiencia</p>
         </div>
-        <div class="h-full dark:bg-gradient-to-l bg-[#27AE60] from-[#27AE60] to-[#2C3E50]  dark:from-[#1ABC9C] dark:to-[#34495E]">
-            <div class="opacity-25 h-full">
+        <div class="h-full bg-gradient-to-b from-primary-green to-transparent">
+            <div class="opacity-80 h-full">
                 <img src="images/hero.jpg" alt="Imagen destacada de asesoría previsional"
                      class="w-full h-full object-cover object-top">
             </div>
@@ -53,21 +77,23 @@
     </section>
 
     <!-- Sección de Servicios -->
-    <section id="services" class="container mx-auto py-20  text-gray-900 dark:text-gray-100">
+    <section id="servicios" class="container mx-auto py-20  text-gray-900 dark:text-gray-100">
         <h2 id="services-title" class="text-4xl font-bold text-center mb-16 text-[#2C3E50] dark:text-white">Nuestros
             Servicios</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div class="bg-gray-100 dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+            <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
                 <i class="fas fa-user text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6"
                    aria-hidden="true"></i>
                 <h3 class="text-2xl font-semibold mb-4">Asesoría Previsional</h3>
-                <p>Te acompañamos en tu proceso de jubilación, brindándote el apoyo necesario para comprender y elegir
-                    la mejor opción según tu situación personal.</p>
+                <p>Le ayudamos a entender y optimizar su situación
+                    previsional, considerando
+                    todas las opciones disponibles en el sistema de AFP y el mercado de rentas vitalicias, acompañándole
+                    en el proceso hasta el final.</p>
             </div>
-            <div class="bg-gray-100 dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+            <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
                 <i class="fas fa-briefcase text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
                 <h3 class="text-2xl font-semibold mb-4">Somos Independientes</h3>
-                <p>Somos una empresa independiente y experta, sin lazos con entidades externas. Nuestro compromiso es
+                <p>No tenemos lazos con entidades externas. Nuestro compromiso es
                     exclusivamente con el afiliado, garantizando la mejor opción a través de cálculos precisos y un
                     análisis exhaustivo del sistema.</p>
             </div>
@@ -82,18 +108,52 @@
     </section>
 
     <!-- Sección de Ética y Valores -->
-    <section id="ethics" class="bg-gradient-to-r to-[#27AE60] from-[#2C3E50] text-white dark:text-gray-100 py-20">
-        <div class="container mx-auto text-center">
+    <section id="etica" class="bg-gradient-to-r to-[#27AE60] from-[#2C3E50] text-white dark:text-gray-100 py-20">
+        <div class="container mx-auto text-center py-8">
             <h2 id="ethics-title" class="text-4xl font-bold mb-8">Nuestra Ética y Valores</h2>
             <p class="text-lg mb-8">En Más Jubilaciones, nuestra ética se basa en la transparencia, la integridad y el
                 compromiso con nuestros clientes. Proporcionamos asesoría clara y honesta, enfocada en tus necesidades y
                 bienestar, construyendo relaciones de confianza a largo plazo.</p>
         </div>
+
+
+        <ul class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <li class="flex flex-col items-center">
+                <svg class="w-12 h-12 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span class="text-lg font-semibold">Transparencia</span>
+            </li>
+            <li class="flex flex-col items-center">
+                <svg class="w-12 h-12 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+                <span class="text-lg font-semibold">Integridad</span>
+            </li>
+            <li class="flex flex-col items-center">
+                <svg class="w-12 h-12 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+                <span class="text-lg font-semibold">Compromiso</span>
+            </li>
+        </ul>
+
+        <div class="container mx-auto text-center pt-8 text-xl">
+            Como miembros de la <strong><a href="https://www.agap.cl/">Asociación Gremial de Asesores
+            Previsionales AGAP</a> </strong> garantizamos asesoría ética, profesional y acreditada en todo momento.
+        </div>
     </section>
 
+
     <!-- Sección de Contacto -->
-    <section id="contact" class="container mx-auto py-20 text-gray-900 dark:text-gray-100">
-        <h2 class="text-4xl font-bold text-center mb-16 text-[#2C3E50] dark:text-white">Contacto</h2>
+    <section id="contacto" class="container mx-auto py-20 text-gray-900 dark:text-gray-100">
+        <h2 class="text-4xl font-bold text-center mb-16 text-[#2C3E50] dark:text-white">Contáctenos</h2>
 
         <div class="flex flex-col md:flex-row justify-center items-center mb-16 gap-4">
 
@@ -110,16 +170,17 @@
 
             <div class="w-full md:w-1/2 md:mr-8">
                 <form action="success.html" method="post" name="contacto-masjubilaciones" netlify
-                      class="w-full bg-[#c7eEa0] dark:bg-gray-700 p-8 rounded-lg shadow-2xl hover:shadow-lg transition duration-500">
+                      class="w-full bg-lime-green dark:bg-gray-700 p-8 rounded-lg shadow-2xl hover:shadow-lg transition duration-500">
                     <div class="mb-6">
                         <label for="name" class="block text-left text-lg mb-2">Nombre:</label>
-                        <input type="text" id="name" name="name" placeholder="Su nombre."
+                        <input type="text" id="name" name="name" placeholder="Indíquenos aquí su nombre."
                                class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-[#27AE60] dark:focus:border-[#2ECC71]"
                                required>
                     </div>
                     <div class="mb-6">
-                        <label for="email" class="block text-left text-lg mb-2">Correo Electrónico:</label>
-                        <input type="email" id="email" name="email" placeholder="Algún correo donde contactarle."
+                        <label for="phone" class="block text-left text-lg mb-2">Teléfono:</label>
+                        <input type="phone" id="phone" name="phone"
+                               placeholder="Algún teléfono donde contactarle, suyo o de algún familiar"
                                class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-[#27AE60] dark:focus:border-[#2ECC71]"
                                required>
                     </div>
@@ -132,7 +193,7 @@
                     </div>
                     <div class="text-right">
                         <button type="submit"
-                                class="bg-blue-600 text-white text-2xl py-3 px-5 rounded-lg transition duration-300 shadow-md hover:shadow-xl hover:shadow-gray-600 shadow-gray-600">
+                                class="w-full bg-blue-600 hover:translate-x-2 text-white text-2xl py-3 px-5 rounded-xl transition duration-300 shadow-md hover:shadow-xl">
                             <i class="fas fa-paper-plane"></i> Enviar
                         </button>
                     </div>
@@ -145,22 +206,74 @@
         <!-- Mapa debajo del formulario e información de contacto -->
         <div class="w-full">
             <img class="w-full h-full max-h-96 rounded-lg shadow-2xl border-0 object-cover object-center"
-                 src="images/map.png""
+                 src="images/map.png"
             >
         </div>
     </section>
 </main>
-
-<footer class="bg-[#2C3E50] dark:bg-[#1A1A1A] text-white dark:text-gray-100 py-8">
-    <div class="container mx-auto text-center">
-        <p>&copy; 2024 Más Jubilaciones. Todos los derechos reservados.</p>
-        <p>
-            <a class="hover:text-[#F1C40F] dark:hover:text-[#F39C12] transition duration-300"
-               target="_blank"
-               href="https://www.softwarebiobio.com/"><strong><code>@softwarebiobio</code></strong></a>
-        </p>
-
+<footer class="bg-dark-green text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Más Jubilaciones</h3>
+                <p class="text-gray-300">En Más Jubilaciones, nos dedicamos a brindar asesoría previsional
+                    independiente, ayudándote a tomar las mejores decisiones para tu futuro.
+                    Con más de 30 años de experiencia en el mercado, nuestro
+                    compromiso es ofrecer un servicio personalizado y de calidad.
+                    Como miembros de AGAP (Asociación Gremial de Asesores
+                    Previsionales), garantizamos asesoría ética, profesional y acreditada en todo momento.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Enlaces Rápidos</h3>
+                <ul class="space-y-2">
+                    <li><a href="#inicio" class="text-gray-300 hover:text-white transition duration-300">Inicio</a></li>
+                    <li><a href="#servicios"
+                           class="text-gray-300 hover:text-white transition duration-300">Servicios</a></li>
+                    <li><a href="#sobre-nosotros" class="text-gray-300 hover:text-white transition duration-300">Sobre
+                        Nosotros</a></li>
+                    <li><a href="#contacto" class="text-gray-300 hover:text-white transition duration-300">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Contáctanos</h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li>San Martín 553, Oficina 302</li>
+                    <li>Concepción, Región del Biobío</li>
+                    <li>Email: contacto@masjubilaciones.cl</li>
+                    <li>Teléfono: +56 9 9346 7163</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-12 pt-8 border-t border-gray-700 text-center">
+            <p class="text-gray-300">&copy; 2024 Más Jubilaciones. Todos los derechos reservados.
+                <br><span class="text-slate-500 font-mono">web por Softwarebiobio.com</span>
+            </p>
+        </div>
     </div>
 </footer>
+
+<script>
+    // Navegación suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // // Menú móvil (puedes expandir esta funcionalidad según sea necesario)
+    // const mobileMenuButton = document.createElement('button');
+    // mobileMenuButton.innerHTML = '☰';
+    // mobileMenuButton.className = 'md:hidden text-primary text-2xl';
+    // document.querySelector('header .container').appendChild(mobileMenuButton);
+    //
+    // const nav = document.querySelector('nav');
+    // mobileMenuButton.addEventListener('click', () => {
+    //     nav.classList.toggle('hidden');
+    // });
+</script>
 </body>
 </html>
