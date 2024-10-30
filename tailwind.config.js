@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["*.html"],
+    content: ["./src/*.html", "./src/**/*.html"],
     theme: {
         extend: {
             colors: {
@@ -13,7 +13,7 @@ module.exports = {
                 'lime-green': '#c7eEa0',
                 'secondary-green': '#1ABC9C',
                 'dark-green': '#34495E',
-                primary: 'primary-blue'
+                'primary': 'primary-blue'
             }
         }
     },

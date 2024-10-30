@@ -1,0 +1,184 @@
+---
+layout: "base.html"
+date: Last Modified
+---
+
+<!-- Hero Section -->
+<section id="inicio" class="overflow-hidden relative text-white" aria-labelledby="hero-title" style="height: 60vh;">
+    <div class="z-10 p-8 absolute inset-0 flex flex-col justify-center items-center">
+        <h1 id="hero-title" class="text-5xl font-bold mb-4">Asesoría Previsional en Chile</h1>
+        <p class="text-2xl mb-8">Acreditados, expertos e independientes con más de 30 años de experiencia</p>
+    </div>
+    <div class="h-full bg-gradient-to-b from-primary-green to-transparent">
+        <div class="opacity-80 h-full">
+            <img src="images/hero.jpg" alt="Imagen destacada de asesoría previsional"
+                 class="w-full h-full object-cover object-top">
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Noticias -->
+<section id="blog" class="noticias text-gray-900 dark:text-gray-100">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mt-8"><a href="blog.html">Publicaciones</a></h2>
+
+        <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8">
+            {% if collections.posts %}
+            <p><em>Próximamente, en este espacio publicaremos artículos útiles para usted.</em></p>
+            {% else %}
+            {% assign posts = collections.posts | reverse | slice: 0,3 %}
+
+
+            {%- for post in posts -%}
+            <a href="{{ post.url }}">
+                <article
+                        class="noticia bg-[aliceblue] text-black p-4 rounded-lg border shadow-lg border-blue-100 inset-0">
+                    <h2 class="text-xl font-bold">{{ post.data.title }}</h2>
+                    {{post.url}}{{post.data.image}}
+                    <div class="card-image">
+                        <img src="{{post.url}}/{{post.data.image}}"
+                             alt="{{post.url}}/{{post.data.image}}"></img>
+                    </div>
+                    <div class="card-body">
+                        {{ post.content | truncate:200 }}
+                    </div>
+                </article>
+            </a>
+            {% endfor %}
+            {% endif %}
+        </article>
+
+
+    </div>
+</section>
+
+
+<!-- Imagen PGU -->
+<div class="mt-16 text-center p-8">
+    <img src="images/PGU.png" alt="Información importante sobre PGU" class="mx-auto rounded-lg shadow-2xl">
+    <p class="mt-4 text-lg text-gray-800 dark:text-gray-200">Información importante sobre la Pensión Garantizada
+        Universal (PGU)</p>
+</div>
+
+
+<!-- Sección Servicios-->
+<section id="servicios" class="container mx-auto p-20  text-gray-900 dark:text-gray-100">
+    <h2 id="services-title" class="text-4xl font-bold text-center mb-16 text-[#2C3E50] dark:text-white">Nuestros
+        Servicios</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+            <i class="fas fa-user text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
+            <h3 class="text-xl font-semibold mb-4">Asesoría Previsional</h3>
+            <p class="text-pretty text-left">Le brindamos orientación personalizada para obtener la pensión más alta
+                posible.
+                Consideramos todas las variables y beneficios que usted puede aprovechar.</p>
+        </div>
+        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+            <i class="fas fa-calculator text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
+            <h3 class="text-xl font-semibold mb-4">Cálculo de Pensiones</h3>
+            <p class="text-pretty text-left">Realizamos estudios detallados y comparativos de pensiones en retiros
+                programados y
+                rentas vitalicias, incluyendo combinaciones de estas opciones.</p>
+        </div>
+        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+            <i class="fas fa-gavel text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
+            <h3 class="text-xl font-semibold mb-4">Apelaciones de Invalidez</h3>
+            <p class="text-pretty text-left">Te guiamos y asistimos durante el proceso de apelación para asegurar que
+                recibas el
+                beneficio de invalidez que te corresponde.</p>
+        </div>
+        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+            <i class="fas fa-balance-scale text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
+            <h3 class="text-xl font-semibold mb-4">Rentas Vitalicias y Retiro Programado</h3>
+            <p class="text-pretty text-left">Analizamos y proyectamos, a medida, las mejores opciones entre rentas
+                vitalicias y
+                retiros programados según su situación particular.</p>
+        </div>
+        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+            <i class="fas fa-file-alt text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
+            <h3 class="text-xl font-semibold mb-4">Asistencia en Jubilaciones</h3>
+            <p class="text-pretty text-left">Le acompañamos y gestionamos todas las etapas de su jubilación: vejez,
+                anticipada,
+                invalidez y sobrevivencia.</p>
+        </div>
+        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+            <i class="fas fa-line-chart text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
+            <h3 class="text-xl font-semibold mb-4">Proyección de Pensiones</h3>
+            <p class="text-pretty text-left">Calculamos y proyectamos su edad de jubilación considerando múltiples
+                variables y
+                determinamos su ingreso base con precisión.</p>
+        </div>
+        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+            <i class="fas fa-dollar-sign text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
+            <h3 class="text-xl font-semibold mb-4">Gestión de Excedentes</h3>
+            <p class="text-pretty text-left">Realizamos cálculos precisos para retiros de excedentes y proyectamos la
+                rentabilidad
+                futura de su capital.</p>
+        </div>
+        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+            <i class="fas fa-bell text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
+            <h3 class="text-xl font-semibold mb-4">Asesoría en Reclamos</h3>
+            <p class="text-pretty text-left">Asesoramos y asistimos ante organismos competentes (AFP, SP, CMR, IPS) en
+                la
+                resolución y reclamación de irregularidades previsionales.</p>
+        </div>
+    </div>
+</section>
+
+
+<div class="bg-lime-green mt-16 dark:bg-gray-700 p-20 hover:shadow-lg text-center shadow-2xl transition duration-500">
+    <i class="fas fa-briefcase text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
+    <h3 class="text-2xl font-semibold mb-4">Somos Independientes</h3>
+    <p class="text-lg">No tenemos lazos con entidades externas. Nuestro compromiso es exclusivamente
+        con el afiliado, garantizando la mejor opción a través de cálculos precisos y un análisis exhaustivo del
+        sistema.</p>
+</div>
+
+
+</section>
+
+<!-- Sección de Ética y Valores -->
+<section id="etica" class="bg-gradient-to-r to-[#27AE60] from-[#2C3E50] text-white dark:text-gray-100 p-20">
+    <div class="container mx-auto text-center py-8 text-lg">
+        <h2 id="ethics-title" class="text-4xl font-bold mb-8">Nuestra Ética y Valores</h2>
+        <p class="mb-8">En Más Jubilaciones, nuestra ética se basa en la transparencia, la integridad y el
+            compromiso con nuestros clientes. Proporcionamos asesoría clara y honesta, enfocada en tus necesidades y
+            bienestar, construyendo relaciones de confianza a largo plazo.</p>
+
+        <p>
+            Como miembros de la <strong><a href="https://www.agap.cl/">Asociación Gremial de Asesores
+            Previsionales AGAP</a> </strong> garantizamos asesoría ética, profesional y acreditada en todo
+            momento.
+        </p>
+
+    </div>
+
+
+    <ul class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <li class="flex flex-col items-center">
+            <svg class="w-12 h-12 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-xl font-semibold">Transparencia</span>
+        </li>
+        <li class="flex flex-col items-center">
+            <svg class="w-12 h-12 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+            <span class="text-xl font-semibold">Integridad</span>
+        </li>
+        <li class="flex flex-col items-center">
+            <svg class="w-12 h-12 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            <span class="text-xl font-semibold">Compromiso</span>
+        </li>
+    </ul>
+
+</section>

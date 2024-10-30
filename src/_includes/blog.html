@@ -1,0 +1,32 @@
+---
+layout: "base.html"
+---
+
+<style>
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+    }
+
+    blockquote {
+        font-size: 1.25rem;
+        background-color: #f9f9f9;
+        color: #2C3E50;
+        padding: 1rem;
+        border-left: 10px solid green;
+        margin: 1.5em 10px;
+    }
+
+</style>
+
+<div id="blog" class="container mx-auto mt-20">
+
+    <article class="prose lg:prose-xl bg-white text-black dark:bg-gray-800 dark:text-white rounded-xl p-8">
+        {{ content }}
+    </article>
+</div>
