@@ -61,7 +61,8 @@ layout: 'blog.html'
     </div>
 </section>
 
-<article class="text-black container p-12 lg:px-32 bg-gradient-to-b dark:from-slate-900 dark:to-slate-600 dark:text-white from-white to-slate-100 rounded-2xl text-xl">
+<article
+        class="text-black container  bg-gradient-to-b dark:from-slate-900 dark:to-slate-600 dark:text-white from-white to-slate-100 rounded-2xl text-xl">
 
     <header class="bg-gradient-to-r dark:from-blue-900 dark:to-blue-400 from-blue-100 dark:text-white to-white p-4 my-4 rounded-lg md:text-4xl md:p-8">
         <h1>{{title}}</h1>
@@ -70,7 +71,7 @@ layout: 'blog.html'
         <img src="{{page.url}}{{image}}" class="w-full rounded-2xl mb-8">
     </figure>
 
-    <section class="prose dark:prose-dark  leading-relaxed md:leading-loose indent-12">
+    <section class="prose dark:prose-dark  leading-relaxed md:leading-loose indent-12 p-8">
         {{content}}
     </section>
 </article>

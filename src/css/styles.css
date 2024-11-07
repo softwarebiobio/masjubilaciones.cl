@@ -1148,6 +1148,11 @@ video {
   padding-right: 3rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .pt-20 {
   padding-top: 5rem;
 }
