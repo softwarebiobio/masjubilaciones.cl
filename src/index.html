@@ -20,7 +20,7 @@ date: Last Modified
 <!-- Sección de Noticias -->
 <section id="blog" class="noticias text-gray-900 dark:text-gray-100">
     <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mt-8"><a href="blog.html">Publicaciones</a></h2>
+        <h2 class="text-4xl text-slate-500 font-bold text-center mt-8"><a href="blog.html">Publicaciones</a></h2>
 
         <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8">
             {% assign posts = collections.posts | reverse | slice: 0,3 %}
@@ -31,14 +31,18 @@ date: Last Modified
             <a href="{{ post.url }}">
                 <article
                         class="noticia bg-[aliceblue] text-black p-4 rounded-lg border shadow-lg border-blue-100 inset-0">
-                    <h2 class="text-xl font-bold">{{ post.data.title }}</h2>
-                    {{post.url}}{{post.data.image}}
+
                     <div class="card-image">
-                        <img src="{{post.url}}/{{post.data.image}}"
-                             alt="{{post.url}}/{{post.data.image}}"></img>
+                        <img class="rounded-lg object-cover w-full h-auto"
+                             src="{{post.url}}/{{post.data.image}}"
+                             alt="{{post.data.image}}"></img>
                     </div>
-                    <div class="card-body">
+                    <h2 class="text-xl font-bold my-4">{{ post.data.title }}</h2>
+                    <div class="card-body text-lg">
                         {{ post.content | truncate:200 }}
+                    </div>
+                    <div class="grid justify-items-end hover:translate-x-2 duration-300 transition-all">
+                            <div>Leer más <i class="fas fa-chevron-circle-right"></i></div>
                     </div>
                 </article>
             </a>

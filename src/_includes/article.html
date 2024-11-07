@@ -1,0 +1,52 @@
+---
+layout: 'blog.html'
+---
+
+<style>
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    p {
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+
+    blockquote {
+        font-size: 1.25rem;
+        background-color: #f9f9f9;
+        color: #2C3E50;
+        padding: 1rem;
+        border-left: 10px solid green;
+        margin: 1.5em 10px;
+    }
+
+</style>
+
+
+<article class="container p-12 lg:px-32 bg-gradient-to-b from-white to-slate-100 rounded-2xl text-xl
+ leading-loose indent-12">
+
+    <header class="bg-gradient-to-r from-blue-100 to-white p-4 my-4 rounded-lg md:text-4xl md:p-8">
+        <h1>{{title}}</h1>
+    </header>
+    <figure>
+        <img src="{{page.url}}{{image}}" class="w-full rounded-2xl mb-8">
+    </figure>
+    <section>
+        {{content}}
+    </section>
+</article>
