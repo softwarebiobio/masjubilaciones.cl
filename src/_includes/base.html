@@ -17,7 +17,8 @@
 
     <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
         body {
             font-family: 'Lato', sans-serif !important;
         }
@@ -33,13 +34,13 @@
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 
 <header class="bg-white backdrop-blur-lg  dark:bg-gray-800 text-gray-900 dark:text-gray-100 shadow-md fixed w-full z-50">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6 ">
+    <div class="xl:container mx-auto flex justify-between items-center py-4 px-6 ">
         <div class="flex items-center">
             <a href="/#inicio"><img src="/images/logo.png" alt="Logo de Más Jubilaciones"
-                                 class="h-8 md:h-16 mr-3 rounded"></a>
+                                    class="h-8 md:h-16 mr-3 rounded"></a>
         </div>
         <nav aria-label="Menú principal">
-            <ul class="md:flex space-x-6 hidden">
+            <ul class="md:flex space-x-2 lg:space-x-6 hidden text-sm lg:text-xl">
                 <li><a href="/#inicio" class="hover:text-[#27AE60] dark:hover:text-[#2ECC71] transition duration-300"><i
                         class="fas fa-home" aria-hidden="true"></i> Inicio</a></li>
                 <li><a href="/#blog" class="hover:text-[#27AE60] dark:hover:text-[#2ECC71] transition duration-300"><i
@@ -54,15 +55,13 @@
                         class="fas fa-envelope" aria-hidden="true"></i> Contacto</a></li>
             </ul>
         </nav>
-        <div>
-            <a href="#contacto"
-               class="
-                hover:shadow-2xl
-                hover:text-white
-               bg-lime-green md:text-2xl text-primary-green px-6 py-2 rounded-full hover:bg-light-green transition duration-300 shadow-md">
-                Solicite su Asesoría <span class="bg-blue-600 text-white p-2 font-bold rounded-full">aquí</span>
-            </a>
-        </div>
+
+        <a href="#contacto"
+           class="text-nowrap hover:shadow-2xl hover:text-white bg-lime-green md:text-2xl text-primary-green px-6 py-2
+           rounded-full hover:bg-light-green transition duration-300 shadow-md">Solicite su Asesoría
+            <span class="bg-blue-600 text-white p-2 font-bold rounded-full">aquí</span>
+        </a>
+
     </div>
 </header>
 
