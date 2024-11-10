@@ -31,8 +31,9 @@ date: Last Modified
         {%- for post in posts -%}
         <a href="{{ post.url }}">
             <article
-                    class="bg-white text-black dark:text-slate-300 dark:bg-slate-800
-                    shadow-md  border border-slate-100 dark:border-slate-500 h-full
+                    class="bg-white bg-opacity-80 text-black dark:text-slate-300 dark:bg-slate-800
+                    transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105
+                    shadow-md hover:shadow-2xl border border-slate-100 dark:border-slate-500 h-full
                      p-4 rounded-lg">
 
                 <div class="card-image">
@@ -64,7 +65,7 @@ date: Last Modified
     <h2 id="services-title" class="text-4xl font-bold text-center mb-16 text-[#2C3E50] dark:text-white">Nuestros
         Servicios</h2>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-2xl text-center shadow-lg transition duration-500">
             <i class="fas fa-user text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-semibold mb-4">Asesoría Previsional</h3>
             <p class="text-pretty text-left leading-relaxed">Le brindamos orientación personalizada para obtener la
@@ -72,7 +73,7 @@ date: Last Modified
                 posible.
                 Consideramos todas las variables y beneficios que usted puede aprovechar.</p>
         </div>
-        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-2xl text-center shadow-lg transition duration-500">
             <i class="fas fa-calculator text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-semibold mb-4">Cálculo de Pensiones</h3>
             <p class="text-pretty text-left leading-relaxed">Realizamos estudios detallados y comparativos de pensiones
@@ -80,7 +81,7 @@ date: Last Modified
                 programados y
                 rentas vitalicias, incluyendo combinaciones de estas opciones.</p>
         </div>
-        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-2xl text-center shadow-lg transition duration-500">
             <i class="fas fa-gavel text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-semibold mb-4">Apelaciones de Invalidez</h3>
             <p class="text-pretty text-left leading-relaxed">Te guiamos y asistimos durante el proceso de apelación para
@@ -88,7 +89,7 @@ date: Last Modified
                 recibas el
                 beneficio de invalidez que te corresponde.</p>
         </div>
-        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-2xl text-center shadow-lg transition duration-500">
             <i class="fas fa-balance-scale text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-semibold mb-4">Rentas Vitalicias y Retiro Programado</h3>
             <p class="text-pretty text-left leading-relaxed">Analizamos y proyectamos, a medida, las mejores opciones
@@ -96,7 +97,7 @@ date: Last Modified
                 vitalicias y
                 retiros programados según su situación particular.</p>
         </div>
-        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-2xl text-center shadow-lg transition duration-500">
             <i class="fas fa-file-alt text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-semibold mb-4">Asistencia en Jubilaciones</h3>
             <p class="text-pretty text-left leading-relaxed">Le acompañamos y gestionamos todas las etapas de su
@@ -104,7 +105,7 @@ date: Last Modified
                 anticipada,
                 invalidez y sobrevivencia.</p>
         </div>
-        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-2xl text-center shadow-lg transition duration-500">
             <i class="fas fa-line-chart text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-semibold mb-4">Proyección de Pensiones</h3>
             <p class="text-pretty text-left leading-relaxed">Calculamos y proyectamos su edad de jubilación considerando
@@ -112,7 +113,7 @@ date: Last Modified
                 variables y
                 determinamos su ingreso base con precisión.</p>
         </div>
-        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-2xl text-center shadow-lg transition duration-500">
             <i class="fas fa-dollar-sign text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-semibold mb-4">Gestión de Excedentes</h3>
             <p class="text-pretty text-left leading-relaxed">Realizamos cálculos precisos para retiros de excedentes y
@@ -120,7 +121,7 @@ date: Last Modified
                 rentabilidad
                 futura de su capital.</p>
         </div>
-        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
+        <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-2xl text-center shadow-lg transition duration-500">
             <i class="fas fa-bell text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-semibold mb-4">Asesoría en Reclamos</h3>
             <p class="text-pretty text-left">Asesoramos y asistimos ante organismos competentes (AFP, SP, CMR, IPS) en
