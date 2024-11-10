@@ -23,47 +23,40 @@ date: Last Modified
 <section id="blog" class="noticias text-gray-900 dark:text-gray-100">
     <h2 class="text-4xl text-slate-500 font-bold text-center mt-8 border-2 border-t-0 border-l-0 border-r-0 border-b-slate-300">
         <a href="blog.html">Publicaciones</a></h2>
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8">
-
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 p-8 items-stretch">
         {% assign posts = collections.posts | reverse | slice: 0,3 %}
         {% if posts.length == 0 %}
         <p><em>Próximamente, en este espacio publicaremos artículos útiles para usted.</em></p>
         {% else %}
         {%- for post in posts -%}
+        <a href="{{ post.url }}">
+            <article
+                    class="bg-white text-black dark:text-slate-300
+                    shadow-md  border border-slate-100 dark:border-slate-500 h-full
+                     p-4 rounded-lg">
 
-        <article class="bg-[aliceblue] text-black  p-4 rounded-lg border shadow-lg border-blue-100 inset-0">
-
-            <a href="{{ post.url }}">
-                <div class="noticia">
-                    <div class="card-image">
-                        <img class="rounded-lg object-cover w-full h-auto"
-                             src="{{post.url}}/{{post.data.image}}"
-                             alt="{{post.data.title}}"></img>
-                    </div>
-                    <h2 class="text-xl font-bold my-4">{{ post.data.title }}</h2>
+                <div class="card-image">
+                    <img class="rounded-lg object-cover w-full h-auto inset-0"
+                         src="{{post.url}}/{{post.data.image}}"
+                         alt="{{post.data.title}}"></img>
+                </div>
+                <div class="grid grid-cols-1 items-stretch">
+                    <h2 class="text-lg font-bold my-4">{{ post.data.title }}</h2>
                     <div class="card-body text-lg leading-relaxed">
-                        {{ post.content | truncate:200 }}
+                        {{ post.content | truncate:180 }}
                     </div>
-                    <div class="grid justify-items-end hover:translate-x-2 duration-300 transition-all">
+                    <div class="flex justify-end hover:translate-x-2 duration-300 transition-all">
                         <div>Leer más <i class="fas fa-chevron-circle-right"></i></div>
                     </div>
                 </div>
-            </a>
 
-        </article>
+            </article>
+        </a>
         {% endfor %}
         {% endif %}
 
     </div>
 </section>
-
-
-<!-- Imagen PGU -->
-<div class="mt-16 text-center p-8">
-    <img src="images/PGU.png" alt="Información importante sobre PGU" class="mx-auto rounded-lg shadow-2xl">
-    <p class="mt-4 text-lg text-gray-800 dark:text-gray-200">Información importante sobre la Pensión Garantizada
-        Universal (PGU)</p>
-</div>
 
 
 <!-- Sección Servicios-->
@@ -74,49 +67,56 @@ date: Last Modified
         <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
             <i class="fas fa-user text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-semibold mb-4">Asesoría Previsional</h3>
-            <p class="text-pretty text-left leading-relaxed">Le brindamos orientación personalizada para obtener la pensión más alta
+            <p class="text-pretty text-left leading-relaxed">Le brindamos orientación personalizada para obtener la
+                pensión más alta
                 posible.
                 Consideramos todas las variables y beneficios que usted puede aprovechar.</p>
         </div>
         <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
             <i class="fas fa-calculator text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-semibold mb-4">Cálculo de Pensiones</h3>
-            <p class="text-pretty text-left leading-relaxed">Realizamos estudios detallados y comparativos de pensiones en retiros
+            <p class="text-pretty text-left leading-relaxed">Realizamos estudios detallados y comparativos de pensiones
+                en retiros
                 programados y
                 rentas vitalicias, incluyendo combinaciones de estas opciones.</p>
         </div>
         <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
             <i class="fas fa-gavel text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-semibold mb-4">Apelaciones de Invalidez</h3>
-            <p class="text-pretty text-left leading-relaxed">Te guiamos y asistimos durante el proceso de apelación para asegurar que
+            <p class="text-pretty text-left leading-relaxed">Te guiamos y asistimos durante el proceso de apelación para
+                asegurar que
                 recibas el
                 beneficio de invalidez que te corresponde.</p>
         </div>
         <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
             <i class="fas fa-balance-scale text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-semibold mb-4">Rentas Vitalicias y Retiro Programado</h3>
-            <p class="text-pretty text-left leading-relaxed">Analizamos y proyectamos, a medida, las mejores opciones entre rentas
+            <p class="text-pretty text-left leading-relaxed">Analizamos y proyectamos, a medida, las mejores opciones
+                entre rentas
                 vitalicias y
                 retiros programados según su situación particular.</p>
         </div>
         <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
             <i class="fas fa-file-alt text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-semibold mb-4">Asistencia en Jubilaciones</h3>
-            <p class="text-pretty text-left leading-relaxed">Le acompañamos y gestionamos todas las etapas de su jubilación: vejez,
+            <p class="text-pretty text-left leading-relaxed">Le acompañamos y gestionamos todas las etapas de su
+                jubilación: vejez,
                 anticipada,
                 invalidez y sobrevivencia.</p>
         </div>
         <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
             <i class="fas fa-line-chart text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-semibold mb-4">Proyección de Pensiones</h3>
-            <p class="text-pretty text-left leading-relaxed">Calculamos y proyectamos su edad de jubilación considerando múltiples
+            <p class="text-pretty text-left leading-relaxed">Calculamos y proyectamos su edad de jubilación considerando
+                múltiples
                 variables y
                 determinamos su ingreso base con precisión.</p>
         </div>
         <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-lg text-center shadow-2xl transition duration-500">
             <i class="fas fa-dollar-sign text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-semibold mb-4">Gestión de Excedentes</h3>
-            <p class="text-pretty text-left leading-relaxed">Realizamos cálculos precisos para retiros de excedentes y proyectamos la
+            <p class="text-pretty text-left leading-relaxed">Realizamos cálculos precisos para retiros de excedentes y
+                proyectamos la
                 rentabilidad
                 futura de su capital.</p>
         </div>

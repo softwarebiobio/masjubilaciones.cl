@@ -31,7 +31,7 @@
 
 </head>
 
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+<body class="bg-slate-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 
 <header class="bg-white backdrop-blur-lg  dark:bg-gray-800 text-gray-900 dark:text-gray-100 shadow-md fixed w-full z-50">
     <div class="xl:container mx-auto flex justify-between items-center py-4 px-6 ">
@@ -152,6 +152,11 @@
                         Nosotros</a></li>
                     <li><a href="#contacto" class="text-gray-300 hover:text-white transition duration-300">Contacto</a>
                     </li>
+                    <li><a href="https://www.spensiones.cl" target="_blank"
+                           class="text-gray-300 hover:text-white transition duration-300">Superintendencia de
+                        Pensiones</a></li>
+                    <li><a href="https://www.agap.cl/">Asociación Gremial de Asesores Previsionales de Chile AGAP</a>
+                    </li>
                 </ul>
             </div>
             <div>
@@ -166,7 +171,7 @@
         </div>
         <div class="mt-12 pt-8 border-t border-gray-700 text-center">
             <p class="text-gray-300">&copy; 2024 Más Jubilaciones. Todos los derechos reservados.
-                <br><span class="text-slate-500 font-mono">web por Softwarebiobio.com</span>
+                <br><span class="text-slate-500 font-mono">web por <a href="https://www.softwarebiobio.com/">Softwarebiobio.com</a></span>
             </p>
         </div>
     </div>
@@ -183,16 +188,16 @@
         });
     });
 
-    // // Menú móvil (puedes expandir esta funcionalidad según sea necesario)
-    // const mobileMenuButton = document.createElement('button');
-    // mobileMenuButton.innerHTML = '☰';
-    // mobileMenuButton.className = 'md:hidden text-primary text-2xl';
-    // document.querySelector('header .container').appendChild(mobileMenuButton);
-    //
-    // const nav = document.querySelector('nav');
-    // mobileMenuButton.addEventListener('click', () => {
-    //     nav.classList.toggle('hidden');
-    // });
+    // Menú móvil (puedes expandir esta funcionalidad según sea necesario)
+    const mobileMenuButton = document.createElement('button');
+    mobileMenuButton.innerHTML = '☰';
+    mobileMenuButton.className = 'md:hidden text-primary text-2xl';
+    document.querySelector('header .container').appendChild(mobileMenuButton);
+
+    const nav = document.querySelector('nav');
+    mobileMenuButton.addEventListener('click', () => {
+        nav.classList.toggle('hidden');
+    });
 </script>
 </body>
 </html>
