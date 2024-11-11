@@ -4,12 +4,17 @@ date: Last Modified
 ---
 
 <!-- Hero Section -->
-<section id="inicio" class="overflow-hidden relative text-white" aria-labelledby="hero-title" style="height: 60dvh;">
-    <div class="z-10 p-8 absolute inset-0 flex flex-col justify-center items-center">
-        <h1 id="hero-title" class="text-5xl font-bold mb-4">Asesoría Previsional en Chile</h1>
-        <p class="text-2xl mb-8">Acreditados, expertos e independientes con más de 30 años de experiencia</p>
+<section id="inicio" class="overflow-hidden opacity-80 relative text-white" aria-labelledby="hero-title"
+         style="height: 60dvh;">
+    <div class="z-10 absolute inset-0 flex flex-col justify-end items-center">
+        <div class="dark:text-white text-black px-8 pt-4 pb-0 w-full bg-gradient-to-t dark:from-slate-900 from-slate-100 to-transparent">
+            <h1 id="hero-title" class="text-3xl font-bold mb-4">Asesoría Previsional en Chile</h1>
+            <p class="text-xl mb-8">
+                Acreditados, expertos e independientes con más de 30 años de experiencia
+            </p>
+        </div>
     </div>
-    <div class="h-full bg-gradient-to-t from-black to-transparent">
+    <div class="h-full bg-gradient-to-t from-primary-blue to-transparent">
         <div class="opacity-90 h-full">
             <img src="images/hero2.jpg" alt="Imagen destacada de asesoría previsional"
                  class="w-full h-full object-cover object-top">
@@ -17,11 +22,13 @@ date: Last Modified
     </div>
 </section>
 
+<section class="container m-4">
 {% include  "social-buttons.html" %}
+</section>
 
 <!-- Sección de Noticias -->
 <section id="blog" class="noticias text-gray-900 dark:text-gray-100">
-    <h2 class="text-4xl text-slate-500 font-bold text-center mt-8 border-2 border-t-0 border-l-0 border-r-0 border-b-slate-300">
+    <h2 class="text-4xl text-slate-500 font-bold text-center mt-8">
         <a href="blog.html">Publicaciones</a></h2>
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 p-8 items-stretch">
         {% assign posts = collections.posts | reverse | slice: 0,3 %}
@@ -64,7 +71,7 @@ date: Last Modified
 <section id="servicios" class="container mx-auto p-20  text-gray-900 dark:text-gray-100">
     <h2 id="services-title" class="text-4xl font-bold text-center mb-16 text-[#2C3E50] dark:text-white">Nuestros
         Servicios</h2>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <div class="bg-light-blue dark:bg-gray-700 p-8 rounded-lg hover:shadow-2xl text-center shadow-lg transition duration-500">
             <i class="fas fa-user text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-semibold mb-4">Asesoría Previsional</h3>
@@ -132,7 +139,7 @@ date: Last Modified
 </section>
 
 
-<div class="bg-lime-green mt-16 dark:bg-gray-700 p-20 hover:shadow-lg text-center shadow-2xl transition duration-500">
+<div class="opacity-80 bg-lime-green mt-16 dark:bg-gray-700 p-20 hover:shadow-lg text-center shadow-2xl transition duration-500">
     <i class="fas fa-briefcase text-[#27AE60] dark:text-[#2ECC71] text-5xl mb-6" aria-hidden="true"></i>
     <h3 class="text-2xl font-semibold mb-4">Somos Independientes</h3>
     <p class="text-lg">No tenemos lazos con entidades externas. Nuestro compromiso es exclusivamente
@@ -144,7 +151,7 @@ date: Last Modified
 </section>
 
 <!-- Sección de Ética y Valores -->
-<section id="etica" class="bg-gradient-to-r to-[#27AE60] from-[#2C3E50] text-white dark:text-gray-100 p-20">
+<section id="etica" class="opacity-80 bg-gradient-to-r to-[#27AE60] from-[#2C3E50] text-white dark:text-gray-100 p-20">
     <div class="container mx-auto text-center py-8 text-lg">
         <h2 id="ethics-title" class="text-4xl font-bold mb-8">Nuestra Ética y Valores</h2>
         <p class="mb-8">En Más Jubilaciones, nuestra ética se basa en la transparencia, la integridad y el

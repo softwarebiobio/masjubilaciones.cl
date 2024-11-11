@@ -23,22 +23,21 @@
 
         body {
             font-family: 'Lato', sans-serif !important;
-            background: url('/images/logo-parcial.png') bottom left  no-repeat fixed;
+            background: url('/images/logo-parcial.png') bottom left no-repeat fixed;
         }
 
         #inicio {
-            text-shadow: 1px 1px black;
-        }
 
+        }
 
 
     </style>
 
 </head>
 
-<body class="bg-slate-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+<body class="bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-slate-100">
 
-<header class="bg-white backdrop-blur-lg  dark:bg-gray-800 text-gray-900 dark:text-gray-100 shadow-md fixed w-full z-50">
+<header class="bg-white backdrop-blur-lg  dark:bg-slate-900 text-gray-900 dark:text-gray-100 shadow-md fixed w-full z-50">
     <div class="xl:container mx-auto flex justify-between items-center py-4 px-6 ">
         <div class="flex items-center">
             <a href="/#inicio"><img src="/images/logo-texto.png" alt="Logo de Más Jubilaciones"
@@ -63,8 +62,12 @@
 
         <a href="#contacto"
            class="text-nowrap hover:shadow-2xl hover:text-white bg-lime-green md:text-2xl text-primary-green px-6 py-2
-           rounded-full hover:bg-light-green transition duration-300 shadow-md">Solicite su Asesoría
-            <span class="bg-blue-600 text-white p-2 font-bold rounded-full">aquí</span>
+           rounded-full hover:bg-light-green transition duration-300 shadow-md
+            dark:bg-primary-blue dark:text-white hover:scale-110
+            ">Solicite su Asesoría
+            <div class="inline-block animate-bounce bg-blue-600 dark:bg-primary-green text-white p-2 font-bold rounded-full">
+                aquí
+            </div>
         </a>
 
     </div>
@@ -73,7 +76,6 @@
 <main class="pt-20">
 
     {{ content }}
-
 
     <!-- Sección de Contacto -->
     <section id="contacto" class="container mx-auto p-20 text-gray-900 dark:text-gray-100">
@@ -93,7 +95,7 @@
 
 
             <div class="w-full md:w-1/2 md:mr-8">
-                <form action="success.html" method="post" name="contacto-masjubilaciones" netlify
+                <form action="/success" method="post" name="contacto-masjubilaciones" netlify
                       class="w-full bg-lime-green dark:bg-gray-700 p-8 rounded-lg shadow-2xl hover:shadow-lg transition duration-500">
                     <div class="mb-6">
                         <label for="name" class="block text-left text-lg mb-2">Nombre:</label>
@@ -176,7 +178,7 @@
         </div>
         <div class="mt-12 pt-8 border-t border-gray-700 text-center">
             <p class="text-gray-300">&copy; 2024 Más Jubilaciones. Todos los derechos reservados.
-                <br><span class="text-slate-500 font-mono">web por <a href="https://www.softwarebiobio.com/">Softwarebiobio.com</a></span>
+                <br><span class="text-white font-mono">web por <a href="https://www.softwarebiobio.com/">Softwarebiobio.com</a></span>
             </p>
         </div>
     </div>

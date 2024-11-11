@@ -9,11 +9,19 @@ layout: 'blog.html'
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        color: green;
+        margin: 2rem auto 2rem auto;
+        text-indent:0;
+    }
+
+    h2:first-of-type {
+        margin-top: 0;
     }
 
     h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        color: #3b82f6;
     }
 
     h4 {
@@ -21,8 +29,7 @@ layout: 'blog.html'
     }
 
     p {
-        margin-bottom: 2rem;
-        margin-top: 1rem;
+        margin: 1rem auto 1rem auto;
     }
 
     blockquote {
@@ -39,18 +46,21 @@ layout: 'blog.html'
 
 {% include "social-buttons.html" %}
 
-<header class="text-center bg-gradient-to-b dark:from-blue-900 dark:to-blue-400 from-green-200 dark:text-white to-transparent p-4 my-4 rounded-lg md:text-4xl md:p-8">
-    <h1>{{title}}</h1>
-</header>
 
 <article
-        class="text-black bg-opacity-70 dark:bg-slate-800 shadow-md dark:text-slate-300  bg-white dark:from-slate-900 dark:to-slate-600 dark:text-white rounded-2xl text-xl">
+        class="p-8 my-4 text-black dark:bg-opacity-90 bg-opacity-70 dark:bg-slate-800 shadow-xl dark:text-slate-300  bg-white dark:from-slate-900 dark:to-slate-600 dark:text-white rounded-2xl text-xl">
 
-    <figure class="">
-        <img src="{{page.url}}{{image}}" class="w-full 2xl:w-1/2 mx-auto rounded-2xl mb-8">
-    </figure>
+    <header class="text-center md:text-4xl p-8">
+        <h1>{{title}}</h1>
+    </header>
 
-    <section class="prose dark:prose-dark  leading-relaxed md:leading-loose indent-12 p-8">
+    <section class="prose dark:prose-dark  leading-relaxed indent-12 p-8">
         {{content}}
     </section>
+
+    <figure class="">
+        <img src="{{page.url}}{{image}}"
+             class="w-full xl:w-1/2 hover:w-full duration-500 2xl:w-1/2 mx-auto rounded-2xl mb-8">
+    </figure>
+
 </article>
