@@ -40,3 +40,10 @@ Esta cláusula permite establecer un porcentaje de aumento del monto de la pensi
     En esta modalidad, se contrata una renta vitalicia no inferior a la pensión mínima con una parte de los fondos acumulados, y con el resto se establece un retiro programado.
     La pensión total corresponderá a la suma de ambas modalidades.
     La renta vitalicia es irrevocable, mientras que el retiro programado es revocable.
+
+## A tener en cuenta
+La jubilación constituye un proceso intrincado que demanda una planificación cuidadosa y decisiones bien fundamentadas. Es fundamental contar con la asesoría de profesionales con experiencia y **debidamente acreditados**, ya que esto resulta esencial para optimizar los beneficios y garantizar una transición sin contratiempos hacia esta nueva fase de la vida. Un asesor experimentado puede ofrecer la tranquilidad necesaria para tomar decisiones informadas en relación con el futuro financiero.
+
+En Masjubilaciones.cl, contamos con más de 30 años de experiencia y superamos periódicamente los procesos de certificación requeridos, garantizando nuestra calificación para atender profesionalmente todas sus dudas e inquietudes respecto al de jubilación. Le extendemos una cordial invitación a contactarnos para recibir una asesoría personalizada que le permita planificar un futuro seguro y sereno. Nuestro equipo se compromete a brindar el mejor servicio y acompañamiento en cada etapa de su jubilación.
+
+Si tiene alguna pregunta o necesita información adicional, no dude en[ comunicarse con nosotros](#contacto). Estamos aquí para asistirle en la planificación de un futuro seguro y tranquilo.
