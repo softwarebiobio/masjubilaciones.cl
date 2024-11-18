@@ -4,6 +4,7 @@
     "tailwindcss": "^3.4.10"
   },
   "scripts": {
-    "dev": "eleventy --serve --watch"
+    "dev": "eleventy --serve --watch",
+    "tailwindcss-build": "npx tailwindcss -c tailwind.config.js -o src/css/styles.css -w"
   }
 }
