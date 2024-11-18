@@ -63,8 +63,8 @@ dark:text-gray-100 shadow-md fixed w-full z-50">
 
         <a href="#contacto"
            class="text-nowrap hover:shadow-2xl hover:text-white bg-lime-green md:text-2xl text-primary-green px-6 py-2
-           rounded-full hover:bg-light-green transition duration-300 shadow-md
-            dark:bg-primary-blue dark:text-white hover:scale-110
+           rounded-full hover:bg-light-green transition duration-300 shadow-lg
+            dark:bg-primary-blue dark:text-white hover:scale-110 hover:shadow-slate-500
             ">Solicite su Asesoría
             <div class="inline-block animate-bounce bg-blue-600 dark:bg-primary-green text-white p-2 font-bold rounded-full">
                 aquí
@@ -185,17 +185,12 @@ dark:text-gray-100 shadow-md fixed w-full z-50">
     </div>
 </footer>
 
+
 <script>
-    // Navegación suave
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
+
+    document.getElementById("name").focus();
 
 </script>
+
 </body>
 </html>

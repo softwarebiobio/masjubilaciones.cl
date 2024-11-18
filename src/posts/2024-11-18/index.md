@@ -21,10 +21,10 @@ Realizar simulaciones financieras basadas en tus ahorros actuales, edad y expect
 
 ## Gestión de excedentes de libre disposición
 
-En casos de fondos previsionales excedentes, evalúa cómo retirarlos o reinvertirlos estratégicamente. Los excedentes pueden ser una fuente adicional para gastos importantes o inversiones rentables.
+Evalúa cómo retirar y maximizar el retiro de excedentes de libre disposición. Estos pueden ser una fuente adicional para gastos importantes o inversiones rentables según sea tu caso.
 
 ## Apoyo profesional
 
-Contar con un asesor previsional independiente puede garantizar decisiones objetivas y personalizadas. Especialistas con experiencia aseguran un análisis integral y te acompañan en trámites como apelaciones, reclamos o revisiones de cálculo.
+Contar con un asesor previsional acreditado e independiente puede garantizar decisiones objetivas y personalizadas. En MasJubilaciones.cl, un Especialistas con experiencia te acompañará en trámites de tu pensión, apelaciones, reclamos o revisiones de los cálculos estimados por la AFP.
 
-Para más información sobre cómo planificar tu jubilación y conocer tus derechos, consulta a especialistas locales como los de Más Jubilaciones.
+Para más información sobre cómo planificar tu jubilación y conocer tus derechos, puedes contactarnos y [agendar una reunión con nosotros](#contacto).
