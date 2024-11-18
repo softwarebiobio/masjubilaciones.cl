@@ -8,28 +8,29 @@ layout: 'blog.html'
         font-weight: bold;
     }
 
-    h2 {
+    article h2 {
         font-size: 1.5rem;
-        color: green;
-        margin: 2rem auto 2rem auto;
-        text-indent:0;
+        color: #000;
+        margin: 2rem auto 0 auto;
+        text-indent: 0;
     }
 
     h2:first-of-type {
         margin-top: 0;
     }
 
-    h3 {
+    article h3 {
         font-size: 1.3rem;
         color: #3b82f6;
     }
 
-    h4 {
+    article h4 {
         font-size: 1rem;
     }
 
     p {
-        margin: 1rem auto 1rem auto;
+        margin: 0rem auto 1rem auto;
+        text-wrap: pretty;
     }
 
     blockquote {
@@ -46,21 +47,21 @@ layout: 'blog.html'
 
 {% include "social-buttons.html" %}
 
-
+{% assign image_url = "/posts/" | concat: page.fileSlug | concat: "/" | concat: image %}
 <article
-        class="p-8 my-4 text-black dark:bg-opacity-90 bg-opacity-70 dark:bg-slate-800 shadow-xl dark:text-slate-300  bg-white dark:from-slate-900 dark:to-slate-600 dark:text-white rounded-2xl text-xl">
+        class="p-8 my-4 text-black dark:bg-opacity-90 bg-opacity-70 dark:bg-slate-800 shadow-xl dark:text-slate-300  bg-white dark:from-slate-900 dark:to-slate-600 dark:text-white text-xl">
 
-    <header class="text-center md:text-4xl p-8">
+    <section class="text-center md:text-4xl p-8">
         <h1>{{title}}</h1>
-    </header>
+    </section>
 
     <section class="prose dark:prose-dark  leading-relaxed indent-12 p-8">
         {{content}}
     </section>
 
     <figure class="">
-        <img src="{{page.url}}{{image}}"
-             class="w-full xl:w-1/2 hover:w-full duration-500 2xl:w-1/2 mx-auto rounded-2xl mb-8">
+        <img src="{{image_url}}" alt="Imagen: {{title}}"
+             class="w-full xl:w-1/2 xl:hover:w-full duration-500 mx-auto mb-8">
     </figure>
 
 </article>
