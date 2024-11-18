@@ -1,30 +1,42 @@
 ---
-title: "Cómo optimizar tus beneficios previsionales en Chile"
+title: "Modalidades de Pensión en Chile: Opciones para una Jubilación Segura"
 date: "2024-11-18"
-lead: "Descubre estrategias clave para maximizar tu pensión y asegurar tu futuro en el sistema previsional chileno."
+lead: "Este artículo detalla las principales modalidades disponibles en Chile, incluyendo el Retiro Programado y las Rentas Vitalicias, así como sus características, beneficios y consideraciones. Comprender estas opciones permitirá a los afiliados tomar decisiones informadas que se alineen con sus necesidades financieras y expectativas de vida"
 image: "image.jpg"
+draft: false
 ---
 
-En el sistema previsional chileno, la planificación adecuada puede marcar una diferencia significativa en la calidad de vida durante la jubilación. Aquí presentamos las claves para optimizar tus beneficios previsionales, asegurando decisiones informadas y efectivas.
 
-## Conoce tus opciones
+## Modalidades de Pensión
+### Retiro Programado
 
-En Chile, existen dos modalidades principales para recibir pensiones: retiro programado y rentas vitalicias. Ambas tienen ventajas y desventajas, dependiendo de factores como tu expectativa de vida, necesidad de flexibilidad financiera y aversión al riesgo. Analiza cuidadosamente estas alternativas y considera combinarlas si es ventajoso.
+    Esta modalidad consiste en una pensión que paga la AFP utilizando los fondos acumulados en la cuenta individual del afiliado, siendo su monto variable.
+    Se abona mientras existan recursos en la cuenta del afiliado; posteriormente, se puede acceder a la pensión mínima.
+    Se recalcula anualmente, pudiendo aumentar o disminuir según la rentabilidad de los fondos y las tasas vigentes.
+    Es revocable, lo que permite al afiliado optar por otra alternativa de pensión.
+    En caso de no existir beneficiarios legales, los fondos restantes a la fecha del fallecimiento se consideran herencia.
 
-## Aprovecha la Pensión Garantizada Universal (PGU)
+### Renta Vitalicia Inmediata
 
-Si cumples con los requisitos, la PGU puede complementar tu pensión base, garantizando un ingreso mínimo. Es crucial mantenerse informado sobre cambios legislativos y ajustarse para maximizar este beneficio.
+    Esta modalidad es una pensión que paga una compañía de seguros de vida, tras la formalización del contrato correspondiente.
+    Su monto no puede ser inferior a la pensión mínima.
+    Su valor es constante, expresado en UF, y no varía.
+    Es vitalicia, lo que significa que se paga de por vida.
+    Es irrevocable; una vez seleccionada, no se puede modificar.
+    Ofrece cobertura especial para los beneficiarios legales y no legales designados por el afiliado.
 
-## Proyecciones y simulaciones
+### Renta Vitalicia con Cláusula de Aumento Temporal 100% *(RV/CAT)*
 
-Realizar simulaciones financieras basadas en tus ahorros actuales, edad y expectativas futuras es esencial. Esto te permitirá identificar posibles déficits y ajustar tus contribuciones o planes de retiro a tiempo.
+Esta cláusula permite establecer un porcentaje de aumento del monto de la pensión durante un periodo determinado. Este aumento temporal puede alcanzar hasta el 100% de la pensión vitalicia, expresado en UF, y puede aplicarse por un periodo que varía entre 1 y 10 años.
 
-## Gestión de excedentes de libre disposición
+### Renta Temporal con Renta Vitalicia Diferida
 
-Evalúa cómo retirar y maximizar el retiro de excedentes de libre disposición. Estos pueden ser una fuente adicional para gastos importantes o inversiones rentables según sea tu caso.
+    En esta modalidad, el afiliado contrata con una compañía de seguros de vida el pago de una renta vitalicia mensual, fija en UF, a partir de una fecha futura.
+    Se deja un saldo en la cuenta individual de la AFP para financiar una renta temporal, que abarca el periodo entre la selección de esta modalidad y el inicio del pago de la renta vitalicia diferida, generalmente fluctuando entre 1 y 5 años o más.
+    Esta renta temporal puede variar dependiendo de los fondos restantes en la AFP tras el traspaso del capital a la compañía de seguros.
 
-## Apoyo profesional
+### Renta Vitalicia Inmediata con Retiro Programado
 
-Contar con un asesor previsional acreditado e independiente puede garantizar decisiones objetivas y personalizadas. En MasJubilaciones.cl, un Especialistas con experiencia te acompañará en trámites de tu pensión, apelaciones, reclamos o revisiones de los cálculos estimados por la AFP.
-
-Para más información sobre cómo planificar tu jubilación y conocer tus derechos, puedes contactarnos y [agendar una reunión con nosotros](#contacto).
+    En esta modalidad, se contrata una renta vitalicia no inferior a la pensión mínima con una parte de los fondos acumulados, y con el resto se establece un retiro programado.
+    La pensión total corresponderá a la suma de ambas modalidades.
+    La renta vitalicia es irrevocable, mientras que el retiro programado es revocable.

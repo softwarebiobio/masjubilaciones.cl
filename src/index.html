@@ -5,14 +5,15 @@ date: Last Modified
 
 <style>
     #inicio {
-        text-shadow: #aaa 0px 0px 10px !important;
+        text-shadow: #fff 0px 0px 20px !important;
     }
 </style>
 
 <!-- Hero Section -->
 <section id="inicio" class="overflow-hidden relative text-white" aria-labelledby="hero-title"
          style="height: 90dvh;">
-    <div class="z-10 absolute inset-0 flex justify-center items-center bg-gradient-to-t dark:from-slate-900 from-slate-100 to-transparent">
+    <div class="z-10 absolute inset-0 flex justify-center items-center bg-gradient-to-t dark:from-slate-900 from-slate-100 via-transparent to-transparent">
+
         <div class="container dark:text-white text-slate-500 px-8 pt-4 pb-0 w-full">
             <h1 id="hero-title" class="text-4xl xl:text-6xl font-bold mb-4">Asesoría Previsional Experta</h1>
             <p class="text-xl mb-8">
@@ -21,16 +22,12 @@ date: Last Modified
             </p>
         </div>
     </div>
-    <div class="h-full bg-gradient-to-t from-primary-blue to-transparent">
-        <div class="opacity-90 h-full">
+    <div class="h-full bg-gradient-to-t from-white to-transparent">
+        <div class="h-full">
             <img src="images/hero2.jpg" alt="Imagen destacada de asesoría previsional"
                  class="w-full h-full object-cover object-top">
         </div>
     </div>
-</section>
-
-<section class="container mx-auto">
-    {% include "social-buttons.html" %}
 </section>
 
 <!-- Sección de Noticias -->
@@ -38,11 +35,13 @@ date: Last Modified
     <h2 class="text-4xl text-slate-500 font-bold text-center mt-8">
         <a href="blog.html">Publicaciones</a></h2>
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 p-8 items-stretch">
-        {% assign posts = collections.posts | reverse | slice: 0,3 %}
-        {% if posts.length == 0 %}
+        {%- assign posts = collections.posts | reverse | slice: 0,3 -%}
+        {%- if posts.length == 0 -%}
         <p><em>Próximamente, en este espacio publicaremos artículos útiles para usted.</em></p>
         {% else %}
-        {%- for post in posts -%}
+        {%- for post in posts | where-%}
+
+        {% if post.data.draft == true %}  {% continue %}  {% endif %}
 
         {% assign cover_image_url = post.fileSlug | concat: "/" | concat: post.data.image %}
 
@@ -63,7 +62,7 @@ date: Last Modified
                     <h2 class="text-lg font-bold my-4">{{ post.data.title }}</h2>
                     <div class="card-body text-lg leading-relaxed">
 
-                        {{ post.content | truncate:180 }}
+                        {{ post.data.lead | default: post.content | strip_html | truncate:180 }}
                     </div>
                     <div class="flex justify-end hover:translate-x-2 duration-300 transition-all">
                         <div>Leer más <i class="fas fa-chevron-circle-right"></i></div>

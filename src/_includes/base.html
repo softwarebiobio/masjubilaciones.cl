@@ -35,7 +35,17 @@
 
 </head>
 
-<body class="bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-slate-100">
+<body class="dark:bg-slate-900 text-slate-900 dark:text-slate-100
+
+{% if page.url != '/' %}
+bg-slate-200
+
+{% else %}
+
+bg-slate-100
+{% endif %}
+
+">
 
 <header id="navbar" class="bg-white backdrop-blur-lg  dark:bg-slate-900 text-gray-900
 dark:text-gray-100 shadow-md fixed w-full z-50">
@@ -74,7 +84,7 @@ dark:text-gray-100 shadow-md fixed w-full z-50">
     </div>
 </header>
 
-<main class="pt-20">
+<main class="pt-20 ">
 
     {{ content }}
 
@@ -92,6 +102,10 @@ dark:text-gray-100 shadow-md fixed w-full z-50">
                         class="text-[#3498DB] hover:text-[#2980B9] dark:text-[#2ECC71] dark:hover:text-[#1ABC9C]">contacto@masjubilaciones.cl</a>
                 </p>
                 <p><strong><i class="fas fa-mobile-alt" aria-hidden="true"></i> Celular:</strong> +56 9 9346 7163</p>
+                <section class="">
+                {% include "social-buttons.html" %}
+            </section>
+
             </div>
 
 
