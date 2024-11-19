@@ -1,7 +1,7 @@
 ---
 title: "Modalidades de Pensión en Chile: Opciones para una Jubilación Segura"
 date: "2024-11-18"
-lead: "Este artículo detalla las principales modalidades disponibles en Chile, incluyendo el Retiro Programado y las Rentas Vitalicias, así como sus características, beneficios y consideraciones. Comprender estas opciones permitirá a los afiliados tomar decisiones informadas que se alineen con sus necesidades financieras y expectativas de vida"
+lead: "Este artículo detalla las principales modalidades disponibles en Chile, incluyendo el Retiro Programado y las Rentas Vitalicias, así como sus características, beneficios y consideraciones. Comprender estas opciones permitirá a los afiliados tomar decisiones informadas que se alineen con sus necesidades financieras y expectativas de vida."
 image: "image.jpg"
 draft: false
 ---
