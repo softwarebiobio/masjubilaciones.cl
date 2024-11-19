@@ -1,0 +1,45 @@
+<div class="p-2 align-middle flex justify-center">
+    <label for="mode-toggle" class="inline-flex items-center cursor-pointer">
+        <span class="mr-2 text-primary-contrast dark:text-secondary-contrast">Modo:</span>
+        <input type="checkbox" id="mode-toggle" class="hidden"/>
+        <div class="toggle-bg   text-xl w-20 h-8 bg-white dark:bg-slate-700 rounded-full relative flex items-center justify-between px-2">
+            <i class="fas fa-sun text-amber-300"></i>
+            <div class="toggle-thumb w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-200"></div>
+            <i class="fas fa-moon text-secondary"></i>
+        </div>
+    </label>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggle = document.getElementById('mode-toggle');
+        const body = document.body;
+        const thumb = document.querySelector('.toggle-thumb');
+
+        const applyTheme = (theme) => {
+            if (theme === 'dark') {
+                body.classList.add('dark');
+                thumb.style.transform = 'translateX(20px)'; // Ajusta esta transformación según sea necesario
+                toggle.checked = true;
+            } else {
+                body.classList.remove('dark');
+                thumb.style.transform = 'translateX(-24px)'; // Ajusta esta transformación según sea necesario
+                toggle.checked = false;
+            }
+        };
+
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            applyTheme(storedTheme);
+        } else {
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            applyTheme(systemPrefersDark ? 'dark' : 'light');
+        }
+
+        toggle.addEventListener('change', () => {
+            const newTheme = toggle.checked ? 'dark' : 'light';
+            applyTheme(newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    });
+</script>

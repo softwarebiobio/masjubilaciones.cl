@@ -30,6 +30,10 @@ date: Last Modified
     </div>
 </section>
 
+<section class="flex justify-end">
+    {% include "darkmode-switch.html" %}
+</section>
+
 <!-- Sección de Noticias -->
 <section id="blog" class="noticias text-gray-900 dark:text-gray-100">
     <h2 class="text-4xl text-slate-500 font-bold text-center mt-8">
@@ -62,7 +66,7 @@ date: Last Modified
                     <h2 class="text-lg font-bold my-4">{{ post.data.title }}</h2>
                     <div class="card-body text-lg leading-relaxed">
 
-                        {{ post.data.lead | default: post.content | strip_html | truncate:180 }}
+                        {{ post.data.lead | default: post.content | strip_html | truncatewords:28 }}
                     </div>
                     <div class="flex justify-end hover:translate-x-2 duration-300 transition-all">
                         <div>Leer más <i class="fas fa-chevron-circle-right"></i></div>
