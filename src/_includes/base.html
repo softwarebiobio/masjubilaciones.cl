@@ -1,16 +1,28 @@
+{%- if page.url != '/' -%}
+
+{%- assign css_dark_bg = "bg-slate-200" -%}
+{%- assign css_dark_mode_text = "dark:text-white" -%}
+
+{%- else -%}
+
+{%- assign css_bg_html_body = "bg-slate-100" -%}
+{%- assign css_dark_mode_text = "text-black" -%}
+
+{%- endif -%}
+
+
 <!DOCTYPE html>
 <html lang="es" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Más Jubilaciones - Asesoría Previsional en Concepción, Chile</title>
-
+    <title>MasJubilaciones.cl - Mejor Asesoría Previsional Experta en Chile</title>
     <link rel="icon" href="/images/favicon.png" type="image/x-icon">
     <meta name="description"
           content="Asesoría previsional en Chile para retiros, pensiones, PGU y más. 30 años de experiencia en ayudar a los afiliados a obtener mejores pensiones.">
     <meta name="keywords" content="asesoría previsional, PGU, pensiones, retiro, AFP, jubilación Chile, Concepción">
     <meta name="author" content="Más Jubilaciones">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
 
     <meta name="last-modified" content="{{page.date}}">
@@ -35,18 +47,11 @@
 
 </head>
 
-<body class="dark:bg-slate-900 text-slate-900 dark:text-slate-100
+<body class="dark:bg-slate-900 text-slate-900 dark:text-slate-100 {{css_bg_html_body}}">
 
-{% if page.url != '/' %}
-bg-slate-200
-
-{% else %}
-
-bg-slate-100
-{% endif %}
-
-">
-
+<section class="absolute right-0 top-24 z-50 text-black {{css_dark_mode_text}}">
+    {% include "darkmode-switch.html" %}
+</section>
 <header id="navbar" class="bg-white backdrop-blur-lg  dark:bg-slate-900 text-gray-900
 dark:text-gray-100 shadow-md fixed w-full z-50">
     <div class="xl:container mx-auto flex justify-between items-center py-4 px-6 ">
