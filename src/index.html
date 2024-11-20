@@ -40,7 +40,7 @@ date: Last Modified
         {%- if posts.length == 0 -%}
         <p><em>Próximamente, en este espacio publicaremos artículos útiles para usted.</em></p>
         {% else %}
-        {%- for post in posts | where-%}
+        {%- for post in posts -%}
 
         {% if post.data.draft == true %} {% continue %} {% endif %}
 
