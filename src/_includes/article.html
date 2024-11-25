@@ -36,7 +36,7 @@ layout: 'blog.html'
         text-wrap: pretty;
     }
 
-    blockquote {
+    blockquote is:not(.tiktok-embed) {
         font-size: 1.25rem;
         background-color: #f9f9f9;
         color: #2C3E50;
@@ -45,32 +45,46 @@ layout: 'blog.html'
         margin: 1.5em 10px;
     }
 
+    .tiktok-embed {
+        margin:1rem auto;
+    }
+
     article a {
         text-decoration: underline;
         color: #3b82f6;
     }
 
+    .article-container {
+
+
+    }
+
 </style>
 
-<article
-        class="rounded mx-auto max-w-[80ch] p-2 md:p-12 mt-8 text-black dark:bg-opacity-90 bg-opacity-70 dark:bg-slate-800 shadow-xl
-        dark:text-slate-300  bg-white dark:from-slate-900 dark:to-slate-600 dark:text-white text-xl">
+<div class="article-container container rounded mx-auto">
 
-    <section class="text-center text-3xl md:text-4xl my-4">
-        <h1>{{title}}</h1>
-    </section>
+    <article
+            class="mx-auto max-w-[80ch] p-2 md:p-12 mt-8 text-black bg-white dark:bg-opacity-90 bg-opacity-90 dark:bg-slate-800 shadow-xl
+        dark:text-slate-300  dark:from-slate-900 dark:to-slate-600 dark:text-white text-xl"
+    >
 
-    {% if lead != nil and lead.size > 0 %}
-    <section class="text-xl bg-blue-50 dark:bg-slate-700 p-4 rounded">{{lead}}</section>
-    {% endif %}
+        <section class="text-center text-3xl md:text-4xl my-4">
+            <h1>{{title}}</h1>
+        </section>
 
-    <section class="dark:prose-dark leading-relaxed indent-12 text-xl p-2 md:p-12">
-        {{content}}
-    </section>
+        {% if lead != nil and lead.size > 0 %}
+        <section class="text-xl bg-blue-50 dark:bg-slate-700 p-4 rounded">{{lead}}</section>
+        {% endif %}
 
-    <figure class="">
-        <img src="{{image_url}}" alt="Imagen: {{title}}"
-             class="w-full xl:w-1/2 xl:hover:w-full duration-500 mx-auto mb-8">
-    </figure>
+        <section class="dark:prose-dark leading-relaxed indent-12 text-xl p-2 md:p-12">
+            {{content}}
+        </section>
 
-</article>
+        <figure class="">
+            <img src="{{image_url}}" alt="Imagen: {{title}}"
+                 class="w-full xl:w-1/2 xl:hover:w-full duration-500 mx-auto mb-8">
+        </figure>
+
+    </article>
+
+</div>
