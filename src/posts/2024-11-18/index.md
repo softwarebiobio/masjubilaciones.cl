@@ -6,8 +6,6 @@ image: "image.jpg"
 draft: false
 ---
 
-<iframe class="tiktok-embed rounded shadow-md w-full" height="400" width="300" src="https://www.tiktok.com/player/v1/7435047973433642296?&music_info=1&description=1&controls=1&autoplay=1" allow="fullscreen" title="TikTok @Masjubilaciones - Modalidades de Pensión"></iframe>
-
 ## Modalidades de Pensión
 
 ### Retiro Programado
@@ -50,3 +48,4 @@ En Masjubilaciones.cl, contamos con más de 30 años de experiencia y superamos 
 
 Si tiene alguna pregunta o necesita información adicional, no dude en [ comunicarse con nosotros](#contacto). Estamos aquí para asistirle en la planificación de un futuro seguro y tranquilo.
 
+<iframe class="tiktok-embed rounded shadow-md w-full" height="400" width="300" src="https://www.tiktok.com/player/v1/7435047973433642296?&music_info=1&description=1&controls=1&autoplay=1" allow="fullscreen" title="TikTok @Masjubilaciones - Modalidades de Pensión"></iframe>
