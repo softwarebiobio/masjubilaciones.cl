@@ -13,9 +13,14 @@ layout: 'blog.html'
 
     }
 
+    article h1 {
+        font-size: 1.8rem;
+    }
+
     article h2 {
         font-size: 1.5rem;
         margin: 2rem auto 0 auto;
+        color: #3b82f6;
     }
 
     h2:first-of-type {
@@ -24,7 +29,7 @@ layout: 'blog.html'
 
     article h3 {
         font-size: 1.3rem;
-        color: #3b82f6;
+        color: green;
     }
 
     article h4 {
@@ -52,31 +57,28 @@ layout: 'blog.html'
     article a {
         text-decoration: underline;
         color: #3b82f6;
+        font-style: italic;
     }
 
-    .article-container {
-
-
-    }
 
 </style>
 
 <div class="article-container container rounded mx-auto">
 
     <article
-            class="mx-auto max-w-[80ch] p-2 md:p-12 mt-8 text-black bg-white dark:bg-opacity-90 bg-opacity-90 dark:bg-slate-800 shadow-xl
+            class="mx-auto max-w-[70ch] p-2 md:p-12 mt-8 text-black bg-white/90 dark:bg-slate-950/90 shadow-xl
         dark:text-slate-300  dark:from-slate-900 dark:to-slate-600 dark:text-white text-xl"
     >
 
-        <section class="text-center text-3xl md:text-4xl my-4">
+        <section class="text-center text-4xl md:text-4xl my-4">
             <h1>{{title}}</h1>
         </section>
 
         {% if lead != nil and lead.size > 0 %}
-        <section class="text-xl bg-blue-50 dark:bg-slate-700 p-4 rounded">{{lead}}</section>
+        <section class="text-lg indent-8 bg-blue-50 dark:bg-slate-700 p-4 rounded">{{lead}}</section>
         {% endif %}
 
-        <section class="dark:prose-dark leading-relaxed indent-12 text-xl p-2 md:p-12">
+        <section class="dark:prose-dark leading-relaxed prose indent-12 text-lg p-2 md:p-8">
             {{content}}
         </section>
 
