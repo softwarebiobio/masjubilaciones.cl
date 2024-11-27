@@ -2,6 +2,7 @@
 title: "Pensión Universal Garantizada 2024"
 featured: true
 image: "PGU.png"
+date: "2024-11-10"
 ---
 
 ## Pensión Universal Garantizada 2024: Lo que Necesitas Saber
