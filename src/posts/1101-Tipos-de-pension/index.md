@@ -36,3 +36,8 @@ El acompañamiento no concluye con la jubilación. Es vital contar con un seguim
 En [Masjubilaciones](https://www.masjubilaciones.cl), contamos con la experiencia y calificación necesarias para resolver todas sus dudas e inquietudes sobre el proceso de jubilación. Lo invitamos a contactarnos para recibir una asesoría personalizada que le ayude a planificar un futuro seguro y tranquilo. Nuestro equipo está comprometido a ofrecer el mejor servicio y acompañamiento en cada etapa de su jubilación.
 
 Si tiene preguntas o requiere más información, no dude en ponerse en contacto con nosotros. Estamos aquí para ayudarle a planificar un futuro seguro y tranquilo.
+
+
+<iframe class="tiktok-embed rounded shadow-md w-full" height="400" width="300" src="https://www.tiktok.com/player/v1/7435047973433642296?&music_info=0&description=0&controls=1&autoplay=1&rel=0&loop=1" allow="fullscreen" title="TikTok @Masjubilaciones - Modalidades de Pensión">
+@Masjubilaciones en TikTok
+</iframe>
