@@ -1,0 +1,70 @@
+---
+layout: "base.html"
+title: "Página no encontrada - MasJubilaciones"
+permalink: 404.html
+---
+
+<div class="container mx-auto min-h-[80vh] flex flex-col justify-center items-center p-8">
+  <div class="bg-white/90 dark:bg-slate-950/90 p-12 rounded-2xl shadow-2xl max-w-3xl transform hover:scale-105 transition-all duration-500">
+
+      <!-- Sección Superior -->
+      <div class="text-center mb-12">
+          <div class="text-8xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent animate-pulse">
+              404
+          </div>
+
+          <h1 class="text-4xl font-bold mb-6 text-slate-700 dark:text-slate-300">
+              ¡Oops! Página no encontrada
+          </h1>
+
+          <p class="text-xl mb-8 text-slate-600 dark:text-slate-400 leading-relaxed">
+              Lo sentimos, la página que está buscando no existe o ha sido movida a otra ubicación.
+          </p>
+      </div>
+
+      <!-- Sección de Sugerencias -->
+      <div class="space-y-8">
+          <div class="bg-blue-50 dark:bg-slate-800 p-6 rounded-xl">
+              <h2 class="text-2xl mb-4 text-blue-600 dark:text-blue-400 font-semibold">
+                  <i class="fas fa-compass mr-2"></i> ¿Qué puede hacer?
+              </h2>
+
+              <ul class="space-y-4 text-lg">
+                  <li class="flex items-center hover:translate-x-2 transition-all duration-300">
+                      <a href="/" class="flex items-center text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
+                          <i class="fas fa-home mr-3"></i>
+                          <span>Volver al inicio</span>
+                      </a>
+                  </li>
+
+                  <li class="flex items-center hover:translate-x-2 transition-all duration-300">
+                      <a href="/#servicios" class="flex items-center text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
+                          <i class="fas fa-briefcase mr-3"></i>
+                          <span>Ver nuestros servicios</span>
+                      </a>
+                  </li>
+
+                  <li class="flex items-center hover:translate-x-2 transition-all duration-300">
+                      <a href="/#blog" class="flex items-center text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
+                          <i class="fas fa-book mr-3"></i>
+                          <span>Explorar nuestro blog</span>
+                      </a>
+                  </li>
+
+                  <li class="flex items-center hover:translate-x-2 transition-all duration-300">
+                      <a href="/#contacto" class="flex items-center text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
+                          <i class="fas fa-envelope mr-3"></i>
+                          <span>Contactarnos</span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+
+          <!-- Sección de Redes Sociales -->
+          <div class="text-center pt-8 border-t border-slate-200 dark:border-slate-700">
+              <p class="text-slate-600 dark:text-slate-400 mb-4">Síganos en nuestras redes sociales:</p>
+              {% include "social-buttons.html" %}
+          </div>
+      </div>
+  </div>
+</div>
