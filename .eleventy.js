@@ -3,6 +3,7 @@ module.exports = function (eleventyConfig) {
         .addPassthroughCopy("./src/images/*.{jpg,png,gif}")
         .addPassthroughCopy("./src/posts/**/*.{jpg,png,gif}")
         .addPassthroughCopy("./src/posts/blog/**/*.{jpg,png,gif}")
+        .addPassthroughCopy("./src/_redirects")
     ;
 
     return {
