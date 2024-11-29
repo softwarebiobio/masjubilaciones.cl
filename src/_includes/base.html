@@ -16,9 +16,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{page.title | default: "MasJubilaciones - Asesor Previsional Marcos Aguayo Mas"}}</title>
+    <title>{{title | default: "MasJubilaciones - Asesor Previsional Marcos Aguayo Mas"}}</title>
     <link rel="icon" href="/images/favicon.png" type="image/x-icon">
-    <meta name="description" content="Más de 30 años de experiencia en asesoría previsional experta. Ayudamos a obtener la pensión más alta posible en Chile.">
+    <meta name="description"
+          content="Más de 30 años de experiencia en asesoría previsional experta. Ayudamos a obtener la pensión más alta posible en Chile.">
     <meta name="keywords"
           content="mejor asesor previsional, asesor experto, más jubilación, pensiones, retiro, AFP, jubilación, Chile, Concepción">
     <meta name="author" content="MasJubilaciones">
@@ -51,7 +52,7 @@
     {% include "darkmode-switch.html" %}
 </section>
 
-<header id="navbar" class="bg-white backdrop-blur-lg  dark:bg-slate-900 text-gray-900
+<header id="navbar" class="bg-white backdrop-blur-lg  dark:bg-slate-800 text-gray-900
 dark:text-gray-100 shadow-md fixed w-full z-50">
     <div class="xl:container mx-auto flex justify-between items-center py-4 px-6 ">
         <div class="flex items-center">
@@ -92,72 +93,9 @@ dark:text-gray-100 shadow-md fixed w-full z-50">
 
     {{ content }}
 
-    <!-- Sección de Contacto -->
-    <section id="contacto" class="container mx-auto md:p-20 text-gray-900 dark:text-gray-100">
-        <h2 class="text-4xl font-bold text-center mb-16 text-[#2C3E50] dark:text-white">Contáctenos</h2>
-
-        <div class="flex flex-col md:flex-row justify-center items-center mb-16 gap-4">
-
-            <div class="w-full md:w-1/2 text-2xl text-center md:text-left mt-8 md:mt-0 space-y-8">
-                <p><strong><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Dirección:</strong> San Martín 553
-                    Oficina 302, Concepción, Región del Biobío</p>
-                <p><strong><i class="fas fa-envelope" aria-hidden="true"></i> Email:</strong>
-                    <a
-                            href="mailto:contacto@masjubilaciones.cl"
-                            class="text-nowrap text-[#3498DB] hover:text-[#2980B9] dark:text-[#2ECC71] dark:hover:text-[#1ABC9C]">contacto@masjubilaciones.cl</a>
-                </p>
-                <p><strong><i class="fas fa-mobile-alt" aria-hidden="true"></i> Celular:</strong>
-                    <span class="text-nowrap">+56 9 9346 7163</span></p>
-                <section class="space-y-4">
-                    {% include "social-buttons.html" %}
-                </section>
-
-            </div>
-
-
-            <div class="w-full md:w-1/2 md:mr-8">
-                <form action="/success" method="post" name="contacto-masjubilaciones" netlify
-                      class="w-full bg-lime-green dark:bg-gray-700 p-8  shadow-2xl hover:shadow-lg transition duration-500">
-                    <div class="mb-6">
-                        <label for="name" class="block text-left text-lg mb-2">Su Nombre:</label>
-                        <input type="text" id="name" name="name" placeholder="Indíquenos aquí su nombre."
-                               class="w-full  text-black p-3 border border-gray-300 dark:border-gray-600  focus:outline-none focus:border-[#27AE60] dark:focus:border-[#2ECC71]"
-                               required>
-                    </div>
-                    <div class="mb-6">
-                        <label for="phone" class="block text-left text-lg mb-2">Su Teléfono:</label>
-                        <input type="phone" id="phone" name="phone"
-                               placeholder="Algún teléfono donde contactarle, suyo o de algún familiar"
-                               class="w-full  text-black p-3 border border-gray-300 dark:border-gray-600  focus:outline-none focus:border-[#27AE60] dark:focus:border-[#2ECC71]"
-                               required>
-                    </div>
-                    <div class="mb-6">
-                        <label for="message" class="block text-left text-lg mb-2">Escríbanos su Mensaje:</label>
-                        <textarea id="message" name="message"
-                                  placeholder="Escríbanos aquí y le contactaremos a la brevedad posible."
-                                  class="w-full text-black p-3 border border-gray-300 dark:border-gray-600  focus:outline-none focus:border-[#27AE60] dark:focus:border-[#2ECC71]"
-                                  required></textarea>
-                    </div>
-                    <div class="text-right">
-                        <button type="submit"
-                                class="w-full bg-blue-600 hover:translate-x-2 text-white text-2xl py-3 px-5 hover:rounded-r-xl transition-all duration-500 shadow-md hover:shadow-xl">
-                            <i class="fas fa-paper-plane"></i> Enviar mensaje
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-
-        </div>
-
-        <!-- Mapa debajo del formulario e información de contacto -->
-        <div class="w-full">
-            <img class="w-full h-full max-h-96  shadow-2xl border-0 object-cover object-center"
-                 alt="Imagen con Mapa ubicando la oficina de Masjubilaciones"
-                 src="/images/map.png"
-            >
-        </div>
-    </section>
+    {% if page.url == '/' %}
+    {% include "contact.html" %}
+    {% endif %}
 </main>
 <footer class="bg-opacity-80 bg-dark-green text-white py-12">
     <div class="container mx-auto px-4">

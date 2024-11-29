@@ -29,7 +29,7 @@ La PGU se adapta según el monto de la pensión que ya recibe el beneficiario:
 
 En **MasJubilaciones.cl**, contamos con más de 30 años de experiencia y asesores acreditados que te ayudarán a entender y optimizar tus beneficios previsionales. No dejes que las complejidades del sistema afecten tu tranquilidad; nuestros expertos están aquí para ofrecerte respuestas claras y una planificación segura.
 
-[Contáctenos hoy y asegure](#contacto) una jubilación sin preocupaciones. Su futuro merece la mejor asesoría previsonal en Chile.
+[Contáctenos hoy y asegure](/#contacto) una jubilación sin preocupaciones. Su futuro merece la mejor asesoría previsonal en Chile.
 
 ---
 
