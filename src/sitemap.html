@@ -1,0 +1,33 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    {%- for page in collections.all %}
+    {% assign absoluteUrl = page.url | concat: url | absoluteUrl: metadata.url %}
+    {% assign cover_image_url = "/posts/" | concat: page.fileSlug | concat: "/" | concat: page.data.image %}
+    <url>
+        <loc>{{ absoluteUrl }}</loc>
+        <lastmod>{{ page.date | dateToISO }}</lastmod>
+        <changefreq>{%- if page.url == "/" -%}daily{%- else -%}weekly{%- endif -%}</changefreq>
+        <priority>{%- if page.url == "/" -%}1.0{%- else -%}0.9{%- endif -%}</priority>
+        {% if page.data.image %}
+
+        <image:image>
+            <image:loc>{{ metadata.url }}{{ cover_image_url }}</image:loc>
+            <image:title>{{ page.data.imageAlt or page.data.title }}</image:title>
+        </image:image>
+        {% endif %}
+    </url>
+    {%- endfor %}
+    <url>
+        <loc>https://tiktok.com/@masjubilaciones.cl</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.6</priority>
+    </url>
+</urlset>

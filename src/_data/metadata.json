@@ -1,5 +1,103 @@
 {
-  "url": "https://www.masjubilaciones.cl",
-  "title": "MasJubilaciones - Asesor Previsional",
-  "description": "El mejor Asesor Previsional Acreditado, Experto e Independiente en Chile"
+  "title": "MasJubilaciones | Asesoría Previsional en Chile",
+  "description": "Expertos en asesoría previsional, pensiones y jubilaciones en Chile. Obtén el máximo beneficio de tu pensión con ayuda profesional personalizada.",
+  "url": "https://masjubilaciones.cl",
+  "language": "es-CL",
+  "author": {
+    "name": "MasJubilaciones",
+    "email": "contacto@masjubilaciones.cl",
+    "url": "https://masjubilaciones.cl/sobre-nosotros"
+  },
+  "social": {
+    "twitter": {
+      "username": "@masjubilaciones"
+    },
+    "facebook": "masjubilaciones.cl",
+    "linkedin": "masjubilaciones",
+    "instagram": "masjubilaciones.cl",
+    "tiktok": "@masjubilaciones.cl",
+    "youtube": "@masjubilaciones"
+  },
+  "organization": {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "MasJubilaciones",
+    "legalName": "MasJubilaciones",
+    "url": "https://masjubilaciones.cl",
+    "logo": "https://masjubilaciones.cl/images/logo.png",
+    "description": "Asesoría profesional especializada en jubilaciones y pensiones en Chile",
+    "foundingDate": "2024",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Concepción",
+      "addressRegion": "Región del Biobío",
+      "addressCountry": "CL"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61567884763598",
+      "https://instagram.com/masjubilaciones.cl",
+      "https://www.linkedin.com/company/masjubilaciones/",
+      "https://tiktok.com/@masjubilaciones.cl",
+      "https://www.youtube.com/@masjubilaciones"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "contacto@masjubilaciones.cl",
+      "telephone": "+56 9 9346 7163",
+      "availableLanguage": [
+        "Spanish"
+      ]
+    }
+  },
+  "siteMetadata": {
+    "keywords": [
+      "jubilación",
+      "pensiones",
+      "AFP",
+      "asesoría previsional",
+      "pensión vejez",
+      "pensión invalidez",
+      "pensión sobrevivencia",
+      "DIPRECA",
+      "CAPREDENA",
+      "IPS",
+      "Chile",
+      "sistema previsional chileno",
+      "ahorro previsional",
+      "APV",
+      "retiro programado",
+      "renta vitalicia"
+    ],
+    "themeColor": "#003366",
+    "backgroundColor": "#ffffff",
+    "locale": "es_CL",
+    "robots": "index, follow"
+  },
+  "services": {
+    "@type": "Service",
+    "serviceType": [
+      "Asesoría Previsional",
+      "Cálculo de Pensiones",
+      "Trámites de Jubilación",
+      "Orientación AFP",
+      "Pensión de Invalidez",
+      "Pensión de Sobrevivencia"
+    ]
+  },
+  "localBusiness": {
+    "@type": "FinancialService",
+    "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
+    "paymentAccepted": [
+      "Transferencia bancaria",
+      "Tarjeta de crédito",
+      "Tarjeta de débito"
+    ],
+    "priceRange": "$"
+  },
+  "security": {
+    "contentSecurityPolicy": true,
+    "sslCertificate": true,
+    "hsts": true
+  }
 }

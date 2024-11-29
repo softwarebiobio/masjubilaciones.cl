@@ -6,9 +6,12 @@
     <title>{{title | default: "MasJubilaciones - Asesor Previsional Marcos Aguayo Mas"}}</title>
     <link rel="icon" href="/images/favicon.png" type="image/x-icon">
     <meta name="description"
-          content="Más de 30 años de experiencia en asesoría previsional experta. Ayudamos a obtener la pensión más alta posible en Chile.">
+          content="Expertos en asesoría previsional, pensiones y jubilaciones en Chile. Obtén el máximo beneficio de tu pensión con ayuda profesional personalizada.">
+
+    {% assign keywords = metadata.siteMetadata.keywords %}
+
     <meta name="keywords"
-          content="mejor asesor previsional, asesor experto, más jubilación, pensiones, retiro, AFP, jubilación, Chile, Concepción">
+          content="{{keywords | join: ', '}}">
     <meta name="author" content="MasJubilaciones">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
