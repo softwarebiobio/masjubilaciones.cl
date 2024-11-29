@@ -32,8 +32,9 @@ date: Last Modified
 </section>
 
 <!-- Sección de Noticias -->
-<section id="blog" class="noticias text-gray-900 dark:text-gray-100">
-    <h2 class="text-4xl text-slate-500 font-bold text-center mt-8">
+<section id="blog" class="container mx-auto p-8 md:p-20  text-gray-900 dark:text-gray-100">
+
+    <h2 class="text-4xl mt-8 text-slate-500 font-bold text-center mt-8">
         <a href="blog.html">Publicaciones</a></h2>
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 p-8 items-stretch">
         {%- assign posts = collections.posts | reverse | slice: 0,3 -%}
@@ -79,9 +80,8 @@ date: Last Modified
 </section>
 
 
-<!-- Sección Servicios-->
 <section id="servicios" class="container mx-auto p-8 md:p-20  text-gray-900 dark:text-gray-100">
-    <h2 id="services-title" class="text-4xl font-bold text-center mb-16 text-[#2C3E50] dark:text-white">Nuestros
+    <h2 id="services-title" class="text-4xl mt-8 font-bold text-center mb-16 text-[#2C3E50] dark:text-white">Nuestros
         Servicios</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
         <div class="rounded bg-light-blue dark:bg-gray-700 p-8  hover:shadow-2xl text-center shadow-lg transition duration-500">
