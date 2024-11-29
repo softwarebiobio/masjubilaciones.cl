@@ -910,6 +910,10 @@ video {
   text-wrap: nowrap;
 }
 
+.text-balance {
+  text-wrap: balance;
+}
+
 .text-pretty {
   text-wrap: pretty;
 }
@@ -1004,6 +1008,21 @@ video {
 
 .bg-white\/90 {
   background-color: rgb(255 255 255 / 0.9);
+}
+
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
+.bg-slate-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-80 {

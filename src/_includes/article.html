@@ -51,7 +51,7 @@ layout: 'blog.html'
     }
 
     .tiktok-embed {
-        margin:1rem auto;
+        margin: 1rem auto;
     }
 
     article a {
@@ -63,30 +63,28 @@ layout: 'blog.html'
 
 </style>
 
-<div class="article-container container rounded mx-auto">
 
-    <article
-            class="mx-auto max-w-[70ch] p-2 md:p-12 mt-8 text-black bg-white/90 dark:bg-slate-950/90 shadow-xl
+<article
+        class="rounded mx-auto max-w-[70ch] p-2 md:p-12 mt-8 text-black bg-white/90 dark:bg-slate-950/90 shadow-xl
         dark:text-slate-300  dark:from-slate-900 dark:to-slate-600 dark:text-white text-xl"
-    >
+>
 
-        <section class="text-center text-4xl md:text-4xl my-4">
-            <h1>{{title}}</h1>
-        </section>
 
-        {% if lead != nil and lead.size > 0 %}
-        <section class="text-lg indent-8 bg-blue-50 dark:bg-slate-700 p-4 rounded">{{lead}}</section>
-        {% endif %}
+    <section class="text-balance text-center text-4xl md:text-4xl my-4">
+        <h1>{{title}}</h1>
+    </section>
 
-        <section class="dark:prose-dark leading-relaxed prose indent-12 text-lg p-2 md:p-8">
-            {{content}}
-        </section>
+    <figure class="">
+        <img src="{{image_url}}" alt="Imagen: {{title}}"
+             class="w-full rounded mx-auto mb-8">
+    </figure>
 
-        <figure class="">
-            <img src="{{image_url}}" alt="Imagen: {{title}}"
-                 class="w-full xl:w-1/2 xl:hover:w-full duration-500 mx-auto mb-8">
-        </figure>
+    {% if lead != nil and lead.size > 0 %}
+    <section class="text-lg indent-8 bg-blue-50 dark:bg-slate-700 p-4 rounded">{{lead}}</section>
+    {% endif %}
 
-    </article>
+    <section class="dark:prose-dark leading-relaxed prose indent-12 text-lg p-2 md:p-8">
+        {{content}}
+    </section>
 
-</div>
+</article>

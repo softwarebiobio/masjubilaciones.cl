@@ -1,16 +1,3 @@
-{%- if page.url != '/' -%}
-
-{%- assign css_dark_bg = "bg-slate-200" -%}
-{%- assign css_dark_mode_text = "dark:text-white" -%}
-
-{%- else -%}
-
-{%- assign css_bg_html_body = "bg-slate-100" -%}
-{%- assign css_dark_mode_text = "text-black" -%}
-
-{%- endif -%}
-
-
 <!DOCTYPE html>
 <html lang="es" xmlns="http://www.w3.org/1999/html">
 <head>
@@ -46,7 +33,7 @@
 
 </head>
 
-<body class="dark:bg-slate-900 text-slate-900 dark:text-slate-100 {{css_bg_html_body}}">
+<body class="dark:bg-slate-900 text-slate-900 dark:text-slate-100 bg-slate-100">
 
 <section class="absolute right-0 top-24 z-50 text-black {{css_dark_mode_text}}">
     {% include "darkmode-switch.html" %}
@@ -108,13 +95,14 @@ dark:text-gray-100 shadow-md fixed w-full z-50">
                     compromiso es ofrecer un servicio personalizado y de calidad.
                     Como miembros de
                     <a class="font-bold italic" title="Asociación Gremial de Asesores Previsionales de Chile"
-                        href="https://www.agap.cl/" _target="_blank">AGAP</a>,
+                       href="https://www.agap.cl/" _target="_blank">AGAP</a>,
                     garantizamos asesoría ética, profesional y acreditada en todo momento.</p>
             </div>
             <div>
                 <h3 class="text-xl font-semibold mb-4">Enlaces Rápidos</h3>
                 <ul class="space-y-2 text-lg">
-                    <li><a href="/#inicio" class="text-gray-300 hover:text-white transition duration-300">Inicio</a></li>
+                    <li><a href="/#inicio" class="text-gray-300 hover:text-white transition duration-300">Inicio</a>
+                    </li>
                     <li><a href="/#servicios"
                            class="text-gray-300 hover:text-white transition duration-300">Servicios</a></li>
                     <li><a href="/#sobre-nosotros" class="text-gray-300 hover:text-white transition duration-300">Sobre
