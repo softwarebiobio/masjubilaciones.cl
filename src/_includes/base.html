@@ -10,6 +10,21 @@
 
     {% assign keywords = metadata.siteMetadata.keywords %}
 
+    <meta property="og:title" content="{{title | default: 'MasJubilaciones - Asesor Previsional Marcos Aguayo Mas'}}">
+    <meta property="og:description"
+          content="Expertos en asesoría previsional, pensiones y jubilaciones en Chile. Obtén el máximo beneficio de tu pensión con ayuda profesional personalizada.">
+    <meta property="og:image" content="/images/social-share.png">
+    <meta property="og:url" content="{{ page.url | default: site.url }}">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="masjubilaciones.cl">
+    <meta property="twitter:url" content="https://masjubilaciones.cl">
+    <meta name="twitter:title" content="{{title | default: 'MasJubilaciones - Asesor Previsional Marcos Aguayo Mas'}}">
+    <meta name="twitter:description"
+          content="Expertos en asesoría previsional, pensiones y jubilaciones en Chile. Obtén el máximo beneficio de tu pensión con ayuda profesional personalizada.">
+    <meta name="twitter:image" content="/images/social-share.png">
+
     <meta name="keywords"
           content="{{keywords | join: ', '}}">
     <meta name="author" content="MasJubilaciones">
