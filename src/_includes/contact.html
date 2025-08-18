@@ -2,7 +2,8 @@
          class="p-2 container bg-gradient-to-b from-white dark:from-slate-700  mx-auto md:p-20 text-gray-900 dark:text-gray-100">
     <h1 class="text-4xl font-bold text-center mt-8 mb-4 text-[#2C3E50] dark:text-white">Contáctenos</h1>
     <p class="text-sm text-center mb-12">A continuación tiene diferentes opciones para contactarnos:</p>
-
+    <p class="italic text-blue-600 dark:text-green-500 my-4 text-center text-2xl">Envíenos un mensaje y nos
+        comunicaremos con usted a la brevedad</p>
     <div class="flex flex-col md:flex-row justify-center items-center mb-16 gap-4">
 
         <div class="w-full md:w-1/2 text-2xl text-center md:text-left mt-8 md:mt-0 space-y-8">
@@ -14,28 +15,29 @@
                     <img alt="Contactar por WhatsApp"
                          width="378"
                          height="80"
+                         class="mx-auto"
                          loading="lazy" decoding="async"
                          src="/images/wsme.png"/>
                 </a>
             </p>
 
-            <p><strong><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Dirección:</strong> San Martín 553
-                Oficina 302, Concepción, Región del Biobío</p>
-            <p><strong><i class="fas fa-envelope" aria-hidden="true"></i> Email:</strong>
-                <a
-                        href="mailto:contacto@masjubilaciones.cl"
-                        class="text-nowrap text-[#3498DB] hover:text-[#2980B9] dark:text-[#2ECC71] dark:hover:text-[#1ABC9C]">contacto@masjubilaciones.cl</a>
-            </p>
-            <p><strong><i class="fas fa-mobile-alt" aria-hidden="true"></i> Celular:</strong>
-                <span class="text-nowrap">+56 9 9346 7163</span></p>
+            <section class="space-y-4">
+                <p><strong><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Dirección:</strong> San Martín 553
+                    Oficina 302, Concepción, Región del Biobío</p>
+                <p><strong><i class="fas fa-envelope" aria-hidden="true"></i> Email:</strong>
+                    <a href="mailto:contacto@masjubilaciones.cl"
+                       class="text-nowrap text-[#3498DB] hover:text-[#2980B9] dark:text-[#2ECC71] dark:hover:text-[#1ABC9C]">contacto@masjubilaciones.cl</a>
+                </p>
+                <p><strong><i class="fas fa-mobile-alt" aria-hidden="true"></i> Celular:</strong>
+                    <span class="text-nowrap">+56 9 9346 7163</span></p>
+            </section>
             <section class="space-y-4">
                 {% include "social-buttons.html" %}
             </section>
         </div>
 
         <div class="w-full md:w-1/2 md:mr-8 p-4">
-            <p class="italic text-blue-600 dark:text-green-500 my-4 text-2xl">Puede enviarnos un mensaje y nos
-                comunicaremos con usted a la brevedad:</p>
+
             <form action="/success" method="post" name="contacto-masjubilaciones" netlify
                   class="w-full bg-lime-green dark:bg-gray-700 p-8  shadow-2xl hover:shadow-lg transition duration-500">
                 <div class="mb-6">
