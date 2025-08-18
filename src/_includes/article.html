@@ -6,49 +6,61 @@ layout: 'blog.html'
 
 <style>
 
+    /* Headings inside article content */
     article :is(h1,h2,h3,h4) {
-        font-weight: bold;
+        font-weight: 700;
         text-indent: 0;
-        text-transform: capitalize;
-
+        /* Preserve original casing for Spanish text */
+        text-transform: none;
     }
 
     article h1 {
-        font-size: 1.8rem;
-        margin: 4rem auto 0 auto;
+        font-size: 2rem;
+        margin: 2rem auto 0.5rem auto;
+        line-height: 1.2;
     }
 
     article h2 {
-        font-size: 1.5rem;
-        margin: 2rem auto 0 auto;
-        color: #3b82f6;
+        font-size: 1.6rem;
+        margin: 1.75rem auto 0.25rem auto;
+        color: #2563eb; /* blue-600 */
     }
 
-    h2:first-of-type {
+    article h2:first-of-type {
         margin-top: 0;
     }
 
     article h3 {
-        font-size: 1.3rem;
-        color: green;
+        font-size: 1.25rem;
+        color: #16a34a; /* green-600 */
     }
 
     article h4 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
-    p {
+    article p {
         margin: 0rem auto 1rem auto;
         text-wrap: pretty;
     }
 
-    blockquote is:not(.tiktok-embed) {
-        font-size: 1.25rem;
-        background-color: #f9f9f9;
-        color: #2C3E50;
-        padding: 1rem;
-        border-left: 10px solid green;
-        margin: 1.5em 10px;
+    /* Elegant blockquotes */
+    article blockquote:not(.tiktok-embed) {
+        font-size: 1.1rem;
+        background-color: #f8fafc; /* slate-50 */
+        color: #1f2937; /* slate-800 */
+        padding: 1rem 1.25rem;
+        border-left: 6px solid #2ECC71; /* theme green */
+        margin: 1.5em 0.5rem;
+        border-radius: .25rem;
+    }
+    .dark article blockquote:not(.tiktok-embed) {
+        background-color: #0f172a; /* slate-900 */
+        color: #e2e8f0; /* slate-200 */
+        border-left-color: #27AE60;
+    }
+    article blockquote p {
+        margin: 0;
     }
 
     .tiktok-embed {
@@ -57,10 +69,9 @@ layout: 'blog.html'
 
     article a {
         text-decoration: underline;
-        color: #3b82f6;
+        color: #2563eb;
         font-style: italic;
     }
-
 
 </style>
 
@@ -71,21 +82,40 @@ layout: 'blog.html'
 >
 
 
+    <nav class="mb-2 text-sm">
+        <a href="/#blog" class="text-blue-700 dark:text-blue-400 hover:underline">&larr; Volver al Blog</a>
+    </nav>
     <section class="text-balance text-center text-4xl md:text-4xl my-4">
         <h1>{{title}}</h1>
+        {% if page.date %}
+        <p class="text-sm md:text-base text-slate-500 dark:text-slate-400 mt-2">{{ page.date | date: "%d %b, %Y - %l:%M %P" }}</p>
+        {% endif %}
     </section>
+    <div class="h-px bg-slate-200 dark:bg-slate-700 mb-6"></div>
 
-    <figure class="">
-        <img src="{{image_url}}" alt="Imagen: {{title}}"
-             class="w-full rounded mx-auto mb-8">
+    {% if image %}
+    <figure class="mb-8">
+        <img src="{{image_url}}" alt="Imagen: {{title}}" loading="lazy"
+             class="w-full rounded-xl shadow mx-auto">
+        {% if image_caption %}
+        <figcaption class="mt-2 text-center text-sm text-slate-500 dark:text-slate-400">{{ image_caption }}</figcaption>
+        {% endif %}
     </figure>
+    {% endif %}
 
     {% if lead != nil and lead.size > 0 %}
-    <section class="text-lg indent-8 bg-blue-50 dark:bg-slate-700 p-4 rounded">{{lead}}</section>
+    <section class="text-lg md:text-xl bg-blue-50 dark:bg-slate-800/60 p-4 md:p-5 rounded-lg border-l-4 border-light-green text-slate-700 dark:text-slate-100 mb-6">
+        {{lead}}
+    </section>
     {% endif %}
 
     <section class="dark:prose-dark leading-relaxed prose indent-12 text-lg p-2 md:p-8">
         {{content}}
     </section>
+
+    <hr class="my-8 border-slate-200 dark:border-slate-700">
+    <div class="mt-6">
+        {% include "social-buttons.html" %}
+    </div>
 
 </article>
