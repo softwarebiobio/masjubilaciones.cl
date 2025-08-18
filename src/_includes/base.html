@@ -56,6 +56,7 @@
 </head>
 
 <body class="dark:bg-slate-900 text-slate-900 dark:text-slate-100 bg-slate-100">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:rounded focus:z-50">Saltar al contenido principal</a>
 
 <section class="absolute right-0 top-24 z-50 text-black {{css_dark_mode_text}}">
     {% include "darkmode-switch.html" %}
@@ -98,7 +99,7 @@ dark:text-gray-100 shadow-md fixed w-full z-50">
     </div>
 </header>
 
-<main class="pt-20 ">
+<main id="main-content" class="pt-20 ">
     {{ content }}
     {% if page.url == '/' %}
     {% include "contact.html" %}
@@ -112,7 +113,7 @@ dark:text-gray-100 shadow-md fixed w-full z-50">
                     <span class=" font-semibold mb-4">MasJubilaciones</span> está representado por
                     don
                     <span class="font-bold">Marcos Aguayo Mas</span>,
-                    <a href="https://www.spensiones.cl/apps/consultaRAP/AsesoresVigentes" target="_blank">
+                    <a href="https://www.spensiones.cl/apps/consultaRAP/AsesoresVigentes" target="_blank" rel="noopener noreferrer">
                         acreditado por la Superintendencia de Pensiones con Registro 115.
                     </a>
                 </p>
@@ -123,7 +124,7 @@ dark:text-gray-100 shadow-md fixed w-full z-50">
                     compromiso es ofrecer un servicio personalizado y de calidad.
                     Como miembros de
                     <a class="font-bold italic" title="Asociación Gremial de Asesores Previsionales de Chile"
-                       href="https://www.agap.cl/" _target="_blank">AGAP</a>,
+                       href="https://www.agap.cl/" target="_blank" rel="noopener noreferrer">AGAP</a>,
                     garantizamos asesoría ética, profesional y acreditada en todo momento.
                 </p>
             </div>
@@ -138,10 +139,10 @@ dark:text-gray-100 shadow-md fixed w-full z-50">
                         Nosotros</a></li>
                     <li><a href="/#contacto" class="text-gray-300 hover:text-white transition duration-300">Contacto</a>
                     </li>
-                    <li><a href="https://www.spensiones.cl" target="_blank"
+                    <li><a href="https://www.spensiones.cl" target="_blank" rel="noopener noreferrer"
                            class="text-gray-300 hover:text-white transition duration-300">Superintendencia de
                         Pensiones</a></li>
-                    <li><a title="Asociación Gremial de Asesores Previsionales de Chile" href="https://www.agap.cl/">AGAP</a>
+                    <li><a title="Asociación Gremial de Asesores Previsionales de Chile" href="https://www.agap.cl/" target="_blank" rel="noopener noreferrer">AGAP</a>
                     </li>
                 </ul>
             </div>
@@ -157,11 +158,11 @@ dark:text-gray-100 shadow-md fixed w-full z-50">
         </div>
         <div class="mt-12 pt-8 border-t border-gray-700 text-center">
             <p class="text-gray-300">&copy; 2024 MasJubilaciones. Todos los derechos reservados.
-                <br><span class="text-white font-mono">Web por <a href="https://www.softwarebiobio.com/">softwarebiobio.com</a></span>
+                <br><span class="text-white font-mono">Web por <a href="https://www.softwarebiobio.com/" target="_blank" rel="noopener noreferrer">softwarebiobio.com</a></span>
             </p>
         </div>
     </div>
 </footer>
-<a href="https://wa.me/56993467163?text=Hola%2C%20escribo%20desde%20Masjubilaciones.cl%20y%20quisiera%20una%20asesor%C3%ADa%0A" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888; z-index:1000;" target="_blank"><i style="margin-top:16px" class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/56993467163?text=Hola%2C%20escribo%20desde%20Masjubilaciones.cl%20y%20quisiera%20una%20asesor%C3%ADa%0A" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888; z-index:1000;" target="_blank" rel="noopener noreferrer" aria-label="Abrir chat de WhatsApp" title="Abrir chat de WhatsApp"><i style="margin-top:16px" class="fab fa-whatsapp" aria-hidden="true"></i></a>
 </body>
 </html>

@@ -1,8 +1,8 @@
 <div class="p-2 align-middle flex justify-center">
-    <label for="mode-toggle" class="inline-flex items-center cursor-pointer">
+    <label for="mode-toggle" class="inline-flex items-center cursor-pointer gap-2">
         <span class="mr-2 text-primary-contrast dark:text-secondary-contrast">Modo:</span>
-        <input type="checkbox" id="mode-toggle" class="hidden"/>
-        <div class="toggle-bg text-xl w-21 h-8 bg-slate-200 dark:bg-slate-700 rounded-full relative flex items-center justify-between px-2">
+        <input type="checkbox" id="mode-toggle" class="sr-only peer" role="switch" aria-checked="false" aria-label="Cambiar entre modo claro y oscuro"/>
+        <div class="toggle-bg text-xl w-21 h-8 bg-slate-200 dark:bg-slate-700 rounded-full relative flex items-center justify-between px-2 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-blue-600 peer-focus-visible:outline-offset-2" aria-hidden="true">
             <i class="fas fa-circle-half-stroke text-white"></i>
             <div class="toggle-thumb w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300"></div>
             <i class="fas fa-circle-half-stroke text-secondary"></i>
@@ -16,16 +16,21 @@
         const body = document.body;
         const thumb = document.querySelector('.toggle-thumb');
 
+        const setAria = () => {
+            toggle.setAttribute('aria-checked', toggle.checked ? 'true' : 'false');
+        };
+
         const applyTheme = (theme) => {
             if (theme === 'dark') {
                 body.classList.add('dark');
-                thumb.style.transform = 'translateX(20px)'; // Ajusta esta transformación según sea necesario
+                thumb.style.transform = 'translateX(20px)';
                 toggle.checked = true;
             } else {
                 body.classList.remove('dark');
-                thumb.style.transform = 'translateX(-24px)'; // Ajusta esta transformación según sea necesario
+                thumb.style.transform = 'translateX(-24px)';
                 toggle.checked = false;
             }
+            setAria();
         };
 
         const storedTheme = localStorage.getItem('theme');

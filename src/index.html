@@ -25,7 +25,7 @@ date: Last Modified
     </div>
     <div class="h-full bg-gradient-to-t from-white to-transparent">
         <div class="h-full">
-            <img src="images/hero2.jpg" alt="Imagen destacada de asesoría previsional"
+            <img src="images/hero2.jpg" alt="Imagen destacada de asesoría previsional" decoding="async" fetchpriority="high"
                  class="w-full h-full object-cover object-top">
         </div>
     </div>
@@ -37,18 +37,18 @@ date: Last Modified
     <h2 class="text-4xl mt-8 text-slate-500 font-bold text-center mt-8">
         <a href="blog.html">Publicaciones</a>
     </h2>
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 p2: md:p-8 items-stretch">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 p-2 md:p-8 items-stretch">
         {%- assign posts = collections.posts | reverse | slice: 0,3 -%}
         {%- if posts.length == 0 -%}
         <p><em>Próximamente, en este espacio publicaremos artículos útiles para usted.</em></p>
         {% else %}
         {%- for post in posts -%}
 
-        {% if post.data.draf t == true %} {% continue %} {% endif %}
+        {% if post.data.draft == true %} {% continue %} {% endif %}
 
         {% assign cover_image_url = "/posts/" | concat: post.fileSlug | concat: "/" | concat: post.data.image %}
 
-        <a href="{{ post.url }}">
+        <a href="{{ post.url }}" aria-labelledby="post-{{ post.fileSlug }}-title" class="focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent rounded">
             <article
                     class="bg-white bg-opacity-80 text-black dark:text-slate-300 dark:bg-slate-800
                     transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105
@@ -57,12 +57,12 @@ date: Last Modified
                      px-4 py-8">
 
 
-                <img class="rounded object-cover w-full h-96"
+                <img class="rounded object-cover w-full h-96" loading="lazy" decoding="async"
                      src="{{cover_image_url}}"
                      alt="{{post.data.title}}"/>
 
 
-                <h2 class="font-bold my-8 text-2xl">{{ post.data.title | truncatewords: 8}}</h2>
+                <h2 id="post-{{ post.fileSlug }}-title" class="font-bold my-8 text-2xl">{{ post.data.title | truncatewords: 8}}</h2>
                 <div class="leading-relaxed">
 
                     {{ post.data.lead | default: post.content | strip_html | truncatewords:20 }}
@@ -168,8 +168,6 @@ date: Last Modified
         sistema.</p>
 </div>
 
-
-</section>
 
 <!-- Sección de Ética y Valores -->
 <section id="etica"

@@ -1,20 +1,20 @@
 <section id="contacto"
-         class="p2 container bg-gradient-to-b from-white dark:from-slate-700  mx-auto md:p-20 text-gray-900 dark:text-gray-100">
-    <h1 class="text-4xl font-bold text-center mt-8 mb-16 text-[#2C3E50] dark:text-white">Contáctenos
-        <p class="text-sm">A continuación tiene diferentes opciones para contactarnos:</p>
-    </h1>
+         class="p-2 container bg-gradient-to-b from-white dark:from-slate-700  mx-auto md:p-20 text-gray-900 dark:text-gray-100">
+    <h1 class="text-4xl font-bold text-center mt-8 mb-4 text-[#2C3E50] dark:text-white">Contáctenos</h1>
+    <p class="text-sm text-center mb-12">A continuación tiene diferentes opciones para contactarnos:</p>
 
     <div class="flex flex-col md:flex-row justify-center items-center mb-16 gap-4">
 
         <div class="w-full md:w-1/2 text-2xl text-center md:text-left mt-8 md:mt-0 space-y-8">
 
             <p class="my-4">
-                <a aria-label="Contactor por WhatsApp"
-                   target="_blank"
+                <a aria-label="Contactar por WhatsApp"
+                   target="_blank" rel="noopener noreferrer" title="Contactar por WhatsApp"
                    href="https://wa.me/56993467163?text=Hola%2C%20escribo%20desde%20Masjubilaciones.cl%20y%20quisiera%20una%20asesor%C3%ADa%0A">
                     <img alt="Contactar por WhatsApp"
                          width="378"
                          height="80"
+                         loading="lazy" decoding="async"
                          src="/images/wsme.png"/>
                 </a>
             </p>
@@ -41,13 +41,15 @@
                 <div class="mb-6">
                     <label for="name" class="block text-left text-lg mb-2">Indíquenos su Nombre:</label>
                     <input type="text" id="name" name="name" placeholder="Indíquenos aquí su nombre."
+                           autocomplete="name"
                            class="w-full  text-black p-3 border border-gray-300 dark:border-gray-600  focus:outline-none focus:border-[#27AE60] dark:focus:border-[#2ECC71]"
                            required>
                 </div>
                 <div class="mb-6">
                     <label for="phone" class="block text-left text-lg mb-2">Su Teléfono:</label>
-                    <input type="phone" id="phone" name="phone"
+                    <input type="tel" id="phone" name="phone"
                            placeholder="Algún teléfono donde contactarle, suyo o de algún familiar"
+                           autocomplete="tel" inputmode="tel"
                            class="w-full  text-black p-3 border border-gray-300 dark:border-gray-600  focus:outline-none focus:border-[#27AE60] dark:focus:border-[#2ECC71]"
                            required>
                 </div>
@@ -60,7 +62,7 @@
                 </div>
                 <div class="text-right">
                     <button type="submit"
-                            class="w-full bg-blue-600 hover:translate-x-2 text-white text-2xl py-3 px-5 hover:rounded-r-xl transition-all duration-500 shadow-md hover:shadow-xl">
+                            class="w-full bg-blue-600 hover:translate-x-2 text-white text-2xl py-3 px-5 hover:rounded-r-xl transition-all duration-500 shadow-md hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2">
                         <i class="fas fa-paper-plane"></i> Enviar mensaje
                     </button>
                 </div>
@@ -73,6 +75,7 @@
     <div class="w-full">
         <img class="w-full h-full max-h-96  shadow-2xl border-0 object-cover object-center"
              alt="Imagen con Mapa ubicando la oficina de Masjubilaciones"
+             loading="lazy" decoding="async"
              src="/images/map.png"
         >
     </div>
