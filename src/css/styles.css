@@ -687,16 +687,16 @@ video {
   margin-top: 4rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
 
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .block {
@@ -925,12 +925,12 @@ video {
   border-radius: 9999px;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .border {
@@ -941,12 +941,12 @@ video {
   border-width: 0px;
 }
 
-.border-t {
-  border-top-width: 1px;
-}
-
 .border-l-4 {
   border-left-width: 4px;
+}
+
+.border-t {
+  border-top-width: 1px;
 }
 
 .border-gray-300 {
@@ -959,6 +959,11 @@ video {
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
 }
 
+.border-light-green {
+  --tw-border-opacity: 1;
+  border-color: rgb(46 204 113 / var(--tw-border-opacity));
+}
+
 .border-slate-100 {
   --tw-border-opacity: 1;
   border-color: rgb(241 245 249 / var(--tw-border-opacity));
@@ -967,11 +972,6 @@ video {
 .border-slate-200 {
   --tw-border-opacity: 1;
   border-color: rgb(226 232 240 / var(--tw-border-opacity));
-}
-
-.border-light-green {
-  --tw-border-opacity: 1;
-  border-color: rgb(46 204 113 / var(--tw-border-opacity));
 }
 
 .bg-blue-50 {
@@ -1201,10 +1201,6 @@ video {
   text-indent: 3rem;
 }
 
-.indent-8 {
-  text-indent: 2rem;
-}
-
 .align-middle {
   vertical-align: middle;
 }
@@ -1254,10 +1250,6 @@ video {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.capitalize {
-  text-transform: capitalize;
 }
 
 .italic {
@@ -1323,6 +1315,11 @@ video {
   color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
+.text-blue-700 {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
 .text-gray-300 {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
@@ -1371,17 +1368,18 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-blue-700 {
-  --tw-text-opacity: 1;
-  color: rgb(29 78 216 / var(--tw-text-opacity));
-}
-
 .underline {
   text-decoration-line: underline;
 }
 
 .opacity-80 {
   opacity: 0.8;
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-2xl {
@@ -1405,12 +1403,6 @@ video {
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow {
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1733,12 +1725,12 @@ video {
     padding: 1rem;
   }
 
-  .md\:p-8 {
-    padding: 2rem;
-  }
-
   .md\:p-5 {
     padding: 1.25rem;
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
   }
 
   .md\:text-left {
@@ -1755,14 +1747,14 @@ video {
     line-height: 2.5rem;
   }
 
-  .md\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .md\:text-xl {
@@ -1839,6 +1831,10 @@ video {
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
+.dark\:bg-slate-800\/60:where(.dark, .dark *) {
+  background-color: rgb(30 41 59 / 0.6);
+}
+
 .dark\:bg-slate-900:where(.dark, .dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
@@ -1846,10 +1842,6 @@ video {
 
 .dark\:bg-slate-950\/90:where(.dark, .dark *) {
   background-color: rgb(2 6 23 / 0.9);
-}
-
-.dark\:bg-slate-800\/60:where(.dark, .dark *) {
-  background-color: rgb(30 41 59 / 0.6);
 }
 
 .dark\:from-slate-700:where(.dark, .dark *) {
