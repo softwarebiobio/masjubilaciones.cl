@@ -44,7 +44,7 @@
     <style>
 
         body {
-            background: url('/images/logo-parcial.png') bottom left no-repeat fixed;
+            /*background: url('/images/logo-parcial.png') bottom left no-repeat fixed;*/
             font-family: "IBM Plex Serif", sans-serif !important;
         }
 
@@ -60,7 +60,8 @@
 
 </head>
 
-<body class="dark:bg-slate-900 text-slate-900 dark:text-slate-100 bg-slate-100">
+<body class="dark:bg-slate-900 text-slate-900 dark:text-slate-100 bg-slate-100 relative">
+<img src="/images/logo-parcial.png" class="-z-1 flex fixed bottom-0 left-0" />
 <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:rounded focus:z-50">Saltar al contenido principal</a>
 
 <section class="absolute right-0 top-24 z-50 text-black {{css_dark_mode_text}}">
