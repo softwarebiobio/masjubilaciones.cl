@@ -41,11 +41,11 @@
             <form action="/success" method="post" name="contacto-masjubilaciones" data-netlify="true" data-netlify-honeypot="iam-important"
                   class="w-full bg-lime-green dark:bg-gray-700 p-8 shadow-2xl hover:shadow-lg transition duration-500 rounded-md">
 
-                <p class="hidden">
-                    <label>
-                        VeRy ImPoRtAnT iNpUt: <input name="iam-important" type="text"/>
-                    </label>
-                </p>
+                <div class="mb-6 hidden">
+                    <label for="name" class="block text-left text-lg mb-2"> VeRy ImPoRtAnT iNpUt: </label>
+                    <input name="iam-important" id="iam-important" type="text" placeholder="fill this out"
+                           autocomplete="off"/>
+                </div>
 
                 <div class="mb-6">
                     <label for="name" class="block text-left text-lg mb-2">Indíquenos su Nombre:</label>
