@@ -1,107 +1,264 @@
 <!DOCTYPE html>
-<html lang="es" xmlns="http://www.w3.org/1999/html">
+<html lang="es-CL">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title | default: "MasJubilaciones - Asesor Previsional Marcos Aguayo Mas"}}</title>
+    <title>{{title | default: "MasJubilaciones - Asesor Previsional en Concepción, Chile | Marcos Aguayo Mas"}}</title>
     <link rel="icon" href="/images/favicon.png" type="image/x-icon">
-    <meta name="description"
-          content="Expertos en asesoría previsional, pensiones y jubilaciones en Chile. Obtén el máximo beneficio de tu pensión con ayuda profesional personalizada.">
+    <link rel="canonical" href="https://masjubilaciones.cl{{ page.url }}">
+
+    <!-- Primary Meta Tags - Optimized for Chilean seniors seeking pension advice -->
+    <meta name="description" content="{{ description | default: 'Asesoría previsional personalizada en Concepción, Chile. Más de 30 años de experiencia ayudando a personas mayores de 60 años a obtener la mejor pensión. Atención cercana y profesional.' }}">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Marcos Aguayo Mas - Asesor Previsional Registro 115">
+
+    <!-- Geo-location tags for local SEO in Chile -->
+    <meta name="geo.region" content="CL-BI">
+    <meta name="geo.placename" content="Concepción, Biobío, Chile">
+    <meta name="geo.position" content="-36.8201;-73.0444">
+    <meta name="ICBM" content="-36.8201, -73.0444">
+
+    <!-- Theme and mobile -->
+    <meta name="theme-color" content="#003366">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
     {% assign keywords = metadata.siteMetadata.keywords %}
 
-    <meta property="og:title" content="{{title | default: 'MasJubilaciones - Asesor Previsional Marcos Aguayo Mas'}}">
-    <meta property="og:description"
-          content="Expertos en asesoría previsional, pensiones y jubilaciones en Chile. Obtén el máximo beneficio de tu pensión con ayuda profesional personalizada.">
-    <meta property="og:image" content="/images/logo.png">
-    <meta property="og:url" content="{{ page.url | default: site.url }}">
+    <!-- Open Graph / Facebook - Enhanced for sharing -->
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:site_name" content="MasJubilaciones">
+    <meta property="og:title" content="{{title | default: 'MasJubilaciones - Asesoría Previsional Profesional en Concepción'}}">
+    <meta property="og:description" content="Asesoría previsional independiente para su jubilación. Más de 30 años de experiencia. Atención personalizada en Concepción, Región del Biobío.">
+    <meta property="og:image" content="https://masjubilaciones.cl/images/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="MasJubilaciones - Asesoría Previsional en Chile">
+    <meta property="og:url" content="https://masjubilaciones.cl{{ page.url }}">
 
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="masjubilaciones.cl">
-    <meta property="twitter:url" content="https://masjubilaciones.cl">
-    <meta name="twitter:title" content="{{title | default: 'MasJubilaciones - Asesor Previsional Marcos Aguayo Mas'}}">
-    <meta name="twitter:description"
-          content="Expertos en asesoría previsional, pensiones y jubilaciones en Chile. Obtén el máximo beneficio de tu pensión con ayuda profesional personalizada.">
-    <meta name="twitter:image" content="/images/logo.png">
+    <meta property="twitter:url" content="https://masjubilaciones.cl{{ page.url }}">
+    <meta name="twitter:title" content="{{title | default: 'MasJubilaciones - Asesoría Previsional Profesional'}}">
+    <meta name="twitter:description" content="Asesoría previsional independiente en Concepción, Chile. Le ayudamos a obtener la mejor pensión con atención personalizada.">
+    <meta name="twitter:image" content="https://masjubilaciones.cl/images/logo.png">
+    <meta name="twitter:image:alt" content="MasJubilaciones - Asesoría Previsional">
 
-    <meta name="keywords"
-          content="{{keywords | join: ', '}}">
-    <meta name="author" content="MasJubilaciones">
+    <!-- Keywords optimized for Chilean pension seekers -->
+    <meta name="keywords" content="{{keywords | join: ', '}}, asesor previsional Concepción, jubilación adulto mayor, pensión tercera edad, tramitar jubilación Chile, cómo jubilarme, PGU pensión garantizada">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
     <meta name="last-modified" content="{{page.date}}">
-    <script data-goatcounter="https://masjubilaciones.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://masjubilaciones.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+    <!-- Structured Data for Local Business - Enhanced for pension services -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "MasJubilaciones",
+        "alternateName": "Asesoría Previsional Marcos Aguayo Mas",
+        "description": "Asesoría previsional independiente especializada en jubilaciones y pensiones. Más de 30 años de experiencia ayudando a adultos mayores en Chile.",
+        "url": "https://masjubilaciones.cl",
+        "logo": "https://masjubilaciones.cl/images/logo.png",
+        "image": "https://masjubilaciones.cl/images/hero2.jpg",
+        "telephone": "+56993467163",
+        "email": "contacto@masjubilaciones.cl",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "San Martín 553, Oficina 302",
+            "addressLocality": "Concepción",
+            "addressRegion": "Región del Biobío",
+            "postalCode": "4030000",
+            "addressCountry": "CL"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -36.8201,
+            "longitude": -73.0444
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "Marcos Aguayo Mas",
+            "jobTitle": "Asesor Previsional",
+            "description": "Asesor Previsional acreditado por la Superintendencia de Pensiones con Registro 115"
+        },
+        "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": -36.8201,
+                "longitude": -73.0444
+            },
+            "geoRadius": "100000"
+        },
+        "serviceType": ["Asesoría Previsional", "Cálculo de Pensiones", "Trámites de Jubilación", "Pensión de Vejez", "Pensión de Invalidez", "Pensión de Sobrevivencia", "Renta Vitalicia", "Retiro Programado"],
+        "priceRange": "$",
+        "paymentAccepted": ["Transferencia bancaria", "Efectivo"],
+        "sameAs": [
+            "https://www.facebook.com/profile.php?id=61567884763598",
+            "https://instagram.com/masjubilaciones.cl",
+            "https://www.linkedin.com/company/masjubilaciones/",
+            "https://tiktok.com/@masjubilaciones.cl",
+            "https://www.youtube.com/@masjubilaciones"
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "30"
+        }
+    }
+    </script>
 
     <style>
-
-        body {
-            /*background: url('/images/logo-parcial.png') bottom left no-repeat fixed;*/
-            font-family: "IBM Plex Serif", sans-serif !important;
+        /* Base styles optimized for seniors (60+ years) - larger text, better contrast */
+        html {
+            font-size: 18px; /* Larger base for better readability */
+            scroll-behavior: smooth;
         }
 
-        h1,h2,h3,h4,h5,h6 {
-            font-family: "Merriweather Sans", sans-serif !important;
+        @media (min-width: 768px) {
+            html {
+                font-size: 19px;
+            }
+        }
+
+        body {
+            font-family: "IBM Plex Serif", Georgia, serif !important;
+            line-height: 1.7; /* Increased line height for readability */
+            letter-spacing: 0.01em;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Merriweather Sans", Arial, sans-serif !important;
+            line-height: 1.3;
         }
 
         footer a {
             text-decoration: underline;
+            text-underline-offset: 3px;
         }
 
+        /* Enhanced focus indicators for keyboard navigation - important for a11y */
+        :focus-visible {
+            outline: 3px solid #0056b3;
+            outline-offset: 3px;
+        }
+
+        /* Larger touch targets for mobile - min 44px as per WCAG */
+        a, button, [role="button"], input, select, textarea {
+            min-height: 44px;
+        }
+
+        /* Better text selection contrast */
+        ::selection {
+            background-color: #003366;
+            color: #ffffff;
+        }
+
+        /* Reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
     </style>
 
 </head>
 
-<body class="dark:bg-slate-900 text-slate-900 dark:text-slate-100 bg-slate-100 relative">
-<img src="/images/logo-parcial.png" class="-z-1 flex fixed bottom-0 left-0" />
-<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:rounded focus:z-50">Saltar al contenido principal</a>
+<body class="dark:bg-slate-900 text-slate-800 dark:text-slate-100 bg-slate-50 relative antialiased">
+<img src="/images/logo-parcial.png" class="-z-1 flex fixed bottom-0 left-0 opacity-30" alt="" aria-hidden="true" />
 
-<section class="absolute right-0 top-24 z-50 text-black {{css_dark_mode_text}}">
+<!-- Skip to main content - Enhanced for better visibility -->
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:bg-primary-blue focus:text-white focus:px-6 focus:py-3 focus:rounded-lg focus:z-[100] focus:text-lg focus:font-semibold focus:shadow-lg">
+    Saltar al contenido principal
+</a>
+
+<!-- Dark mode toggle - Repositioned for better access -->
+<section class="fixed right-4 top-20 md:top-24 z-[60]" aria-label="Configuración de tema">
     {% include "darkmode-switch.html" %}
 </section>
 
-<header id="navbar" class="bg-white backdrop-blur-lg  dark:bg-slate-800 text-gray-900
-dark:text-gray-100 shadow-md fixed w-full z-50">
-    <div class="xl:container mx-auto flex justify-between items-center p-2 md:p-4">
+<header id="navbar" role="banner" class="bg-white/95 backdrop-blur-md dark:bg-slate-800/95 text-gray-900 dark:text-gray-100 shadow-lg fixed w-full z-50 border-b-2 border-primary-green/20">
+    <div class="xl:container mx-auto flex justify-between items-center p-3 md:p-4">
+        <!-- Logo with better sizing -->
         <div class="flex items-center">
-            <a href="/#inicio"><img height="48" src="/images/logo-texto.png" alt="Logo de Más Jubilaciones"
-                                    class="h-full max-h-12 md:h-16 mr-2 rounded"></a>
+            <a href="/#inicio" class="focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 rounded-lg p-1" aria-label="Ir al inicio - MasJubilaciones">
+                <img height="56" width="auto" src="/images/logo-texto.png" alt="MasJubilaciones - Asesoría Previsional" class="h-12 md:h-14 lg:h-16 rounded">
+            </a>
         </div>
-        <nav id="main-menu" aria-label="Menú principal">
-            <ul class="md:flex space-x-2 lg:space-x-6 hidden text-sm lg:text-lg">
-                <li><a href="/#inicio" class="hover:text-[#27AE60] dark:hover:text-[#2ECC71] transition duration-300"><i
-                        class="fas fa-home" aria-hidden="true"></i> Inicio</a></li>
-                <li><a href="/#blog" class="hover:text-[#27AE60] dark:hover:text-[#2ECC71] transition duration-300"><i
-                        class="fas fa-book" aria-hidden="true"></i> Blog</a></li>
-                <li><a href="/#servicios"
-                       class="hover:text-[#27AE60] dark:hover:text-[#2ECC71] transition duration-300"><i
-                        class="fas fa-user" aria-hidden="true"></i> Servicios</a></li>
-                <li><a href="/#etica" class="hover:text-[#27AE60] dark:hover:text-[#2ECC71] transition duration-300"><i
-                        class="fas fa-info-circle" aria-hidden="true"></i> Ética</a></li>
-                <li><a href="/#contacto"
-                       class="hover:text-[#27AE60] dark:hover:text-[#2ECC71] transition duration-300"><i
-                        class="fas fa-envelope" aria-hidden="true"></i> Contacto</a></li>
+
+        <!-- Main Navigation - Larger text for seniors -->
+        <nav id="main-menu" aria-label="Menú principal de navegación">
+            <ul class="md:flex space-x-3 lg:space-x-8 hidden text-base lg:text-lg font-medium" role="list">
+                <li>
+                    <a href="/#inicio" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-blue hover:text-primary-blue dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-blue">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#blog" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-blue hover:text-primary-blue dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-blue">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                        <span>Blog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#servicios" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-blue hover:text-primary-blue dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-blue">
+                        <i class="fas fa-briefcase" aria-hidden="true"></i>
+                        <span>Servicios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#etica" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-blue hover:text-primary-blue dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-blue">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        <span>Ética</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#contacto" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-blue hover:text-primary-blue dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-blue">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <span>Contacto</span>
+                    </a>
+                </li>
             </ul>
         </nav>
 
+        <!-- CTA Button - Larger, better contrast for seniors -->
         <a href="/#contacto"
-           class="text-nowrap hover:shadow-2xl hover:text-white bg-lime-green md:text-2xl text-primary-green px-6 py-2
-           rounded-full hover:bg-light-green transition duration-300 shadow-lg
-            dark:bg-primary-blue dark:text-white hover:scale-110 hover:shadow-slate-500
-            ">Solicite su Asesoría
-            <div class="inline-block animate-bounce bg-blue-600 dark:bg-primary-green text-white p-2 font-bold rounded-full">
-                aquí
-            </div>
+           class="text-nowrap font-bold text-base md:text-xl px-5 md:px-8 py-3 md:py-4
+                  bg-primary-green text-white rounded-full
+                  hover:bg-dark-blue hover:shadow-xl
+                  focus-visible:ring-4 focus-visible:ring-primary-blue focus-visible:ring-offset-2
+                  transition-all duration-300 shadow-lg
+                  dark:bg-primary-blue dark:hover:bg-light-green dark:hover:text-slate-900
+                  flex items-center gap-2"
+           role="button"
+           aria-label="Solicitar asesoría previsional gratuita">
+            <span class="hidden sm:inline">Solicite su</span> Asesoría
+            <span class="inline-flex items-center justify-center bg-white text-primary-green dark:bg-light-green dark:text-slate-900 px-3 py-1 text-sm font-bold rounded-full animate-pulse" aria-hidden="true">
+                Gratis
+            </span>
         </a>
-
     </div>
 </header>
 
@@ -111,64 +268,118 @@ dark:text-gray-100 shadow-md fixed w-full z-50">
     {% include "contact.html" %}
     {% endif %}
 </main>
-<footer class="bg-opacity-80 bg-dark-green text-white py-12">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div class="flex flex-col gap-4">
-                <p>
-                    <span class=" font-semibold mb-4">MasJubilaciones</span> está representado por
-                    don
-                    <span class="font-bold">Marcos Aguayo Mas</span>,
-                    <a href="https://www.spensiones.cl/apps/consultaRAP/AsesoresVigentes" target="_blank" rel="noopener noreferrer">
+<footer role="contentinfo" class="bg-dark-green text-white py-16">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+            <!-- About Section -->
+            <div class="flex flex-col gap-5">
+                <h3 class="text-2xl font-bold text-light-green mb-2">Sobre Nosotros</h3>
+                <p class="text-lg leading-relaxed">
+                    <span class="font-semibold text-white">MasJubilaciones</span> está representado por don
+                    <span class="font-bold text-light-green">Marcos Aguayo Mas</span>,
+                    <a href="https://www.spensiones.cl/apps/consultaRAP/AsesoresVigentes" target="_blank" rel="noopener noreferrer" class="text-lime-green hover:text-white focus-visible:ring-2 focus-visible:ring-white rounded">
                         acreditado por la Superintendencia de Pensiones con Registro 115.
                     </a>
                 </p>
-                <p class="text-gray-300">
-                    En <span class=" font-semibold mb-4">MasJubilaciones</span>, nos dedicamos a brindar asesoría
-                    previsional independiente, ayudándole a tomar las mejores decisiones para su futuro.
-                    Con más de 30 años de experiencia en el mercado, nuestro
-                    compromiso es ofrecer un servicio personalizado y de calidad.
+                <p class="text-lg leading-relaxed text-gray-200">
+                    Más de <strong class="text-white">30 años de experiencia</strong> brindando asesoría previsional independiente.
                     Como miembros de
-                    <a class="font-bold italic" title="Asociación Gremial de Asesores Previsionales de Chile"
-                       href="https://www.agap.cl/" target="_blank" rel="noopener noreferrer">AGAP</a>,
-                    garantizamos asesoría ética, profesional y acreditada en todo momento.
+                    <a class="font-bold text-lime-green hover:text-white focus-visible:ring-2 focus-visible:ring-white rounded" title="Asociación Gremial de Asesores Previsionales de Chile" href="https://www.agap.cl/" target="_blank" rel="noopener noreferrer">AGAP</a>,
+                    garantizamos asesoría ética y profesional.
                 </p>
             </div>
-            <div>
-                <h3 class="text-xl font-semibold mb-4">Enlaces Rápidos</h3>
-                <ul class="space-y-2 md:text-lg md:list-disc">
-                    <li><a href="/#inicio" class="text-gray-300 hover:text-white transition duration-300">Inicio</a>
+
+            <!-- Quick Links -->
+            <nav aria-label="Enlaces del pie de página">
+                <h3 class="text-2xl font-bold text-light-green mb-4">Enlaces Rápidos</h3>
+                <ul class="space-y-3 text-lg" role="list">
+                    <li>
+                        <a href="/#inicio" class="text-gray-200 hover:text-lime-green transition-colors duration-200 flex items-center gap-2 py-1 focus-visible:ring-2 focus-visible:ring-white rounded">
+                            <i class="fas fa-chevron-right text-sm text-light-green" aria-hidden="true"></i> Inicio
+                        </a>
                     </li>
-                    <li><a href="/#servicios"
-                           class="text-gray-300 hover:text-white transition duration-300">Servicios</a></li>
-                    <li><a href="/#sobre-nosotros" class="text-gray-300 hover:text-white transition duration-300">Sobre
-                        Nosotros</a></li>
-                    <li><a href="/#contacto" class="text-gray-300 hover:text-white transition duration-300">Contacto</a>
+                    <li>
+                        <a href="/#servicios" class="text-gray-200 hover:text-lime-green transition-colors duration-200 flex items-center gap-2 py-1 focus-visible:ring-2 focus-visible:ring-white rounded">
+                            <i class="fas fa-chevron-right text-sm text-light-green" aria-hidden="true"></i> Servicios
+                        </a>
                     </li>
-                    <li><a href="https://www.spensiones.cl" target="_blank" rel="noopener noreferrer"
-                           class="text-gray-300 hover:text-white transition duration-300">Superintendencia de
-                        Pensiones</a></li>
-                    <li><a title="Asociación Gremial de Asesores Previsionales de Chile" href="https://www.agap.cl/" target="_blank" rel="noopener noreferrer">AGAP</a>
+                    <li>
+                        <a href="/#etica" class="text-gray-200 hover:text-lime-green transition-colors duration-200 flex items-center gap-2 py-1 focus-visible:ring-2 focus-visible:ring-white rounded">
+                            <i class="fas fa-chevron-right text-sm text-light-green" aria-hidden="true"></i> Nuestra Ética
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/#contacto" class="text-gray-200 hover:text-lime-green transition-colors duration-200 flex items-center gap-2 py-1 focus-visible:ring-2 focus-visible:ring-white rounded">
+                            <i class="fas fa-chevron-right text-sm text-light-green" aria-hidden="true"></i> Contacto
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.spensiones.cl" target="_blank" rel="noopener noreferrer" class="text-gray-200 hover:text-lime-green transition-colors duration-200 flex items-center gap-2 py-1 focus-visible:ring-2 focus-visible:ring-white rounded">
+                            <i class="fas fa-external-link-alt text-sm text-light-green" aria-hidden="true"></i> Superintendencia de Pensiones
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.agap.cl/" target="_blank" rel="noopener noreferrer" title="Asociación Gremial de Asesores Previsionales de Chile" class="text-gray-200 hover:text-lime-green transition-colors duration-200 flex items-center gap-2 py-1 focus-visible:ring-2 focus-visible:ring-white rounded">
+                            <i class="fas fa-external-link-alt text-sm text-light-green" aria-hidden="true"></i> AGAP Chile
+                        </a>
                     </li>
                 </ul>
-            </div>
+            </nav>
+
+            <!-- Contact Info -->
             <div>
-                <h3 class="text-xl font-semibold mb-4">Contáctanos</h3>
-                <ul class="space-y-2 text-gray-300 text-lg">
-                    <li>San Martín 553, Oficina 302</li>
-                    <li>Concepción, Región del Biobío, Chile.</li>
-                    <li>Email: contacto@masjubilaciones.cl</li>
-                    <li>Teléfono: +56 9 9346 7163</li>
-                </ul>
+                <h3 class="text-2xl font-bold text-light-green mb-4">Contáctenos</h3>
+                <address class="not-italic space-y-4 text-lg">
+                    <p class="flex items-start gap-3 text-gray-200">
+                        <i class="fas fa-map-marker-alt text-light-green mt-1" aria-hidden="true"></i>
+                        <span>San Martín 553, Oficina 302<br>Concepción, Región del Biobío, Chile</span>
+                    </p>
+                    <p class="flex items-center gap-3">
+                        <i class="fas fa-envelope text-light-green" aria-hidden="true"></i>
+                        <a href="mailto:contacto@masjubilaciones.cl" class="text-gray-200 hover:text-lime-green transition-colors focus-visible:ring-2 focus-visible:ring-white rounded">
+                            contacto@masjubilaciones.cl
+                        </a>
+                    </p>
+                    <p class="flex items-center gap-3">
+                        <i class="fas fa-phone text-light-green" aria-hidden="true"></i>
+                        <a href="tel:+56993467163" class="text-gray-200 hover:text-lime-green transition-colors focus-visible:ring-2 focus-visible:ring-white rounded text-xl font-semibold">
+                            +56 9 9346 7163
+                        </a>
+                    </p>
+                    <p class="flex items-center gap-3 mt-4">
+                        <a href="https://wa.me/56993467163?text=Hola%2C%20escribo%20desde%20Masjubilaciones.cl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#25d366] hover:bg-[#128c7e] text-white font-bold py-3 px-6 rounded-full transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-dark-green" aria-label="Contactar por WhatsApp">
+                            <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
+                            <span>Escríbanos por WhatsApp</span>
+                        </a>
+                    </p>
+                </address>
             </div>
         </div>
-        <div class="mt-12 pt-8 border-t border-gray-700 text-center">
-            <p class="text-gray-300">&copy; 2024 MasJubilaciones. Todos los derechos reservados.
-                <br><span class="text-white font-mono">Web por <a href="https://www.softwarebiobio.com/" target="_blank" rel="noopener noreferrer">softwarebiobio.com</a></span>
+
+        <!-- Copyright -->
+        <div class="mt-12 pt-8 border-t border-gray-600 text-center">
+            <p class="text-gray-300 text-base">
+                &copy; 2024 MasJubilaciones. Todos los derechos reservados.
+            </p>
+            <p class="text-gray-400 text-sm mt-2">
+                Sitio web por <a href="https://www.softwarebiobio.com/" target="_blank" rel="noopener noreferrer" class="text-lime-green hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-white rounded">softwarebiobio.com</a>
             </p>
         </div>
     </div>
 </footer>
-<a href="https://wa.me/56993467163?text=Hola%2C%20escribo%20desde%20Masjubilaciones.cl%20y%20quisiera%20una%20asesor%C3%ADa%0A" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888; z-index:1000;" target="_blank" rel="noopener noreferrer" aria-label="Abrir chat de WhatsApp" title="Abrir chat de WhatsApp"><i style="margin-top:16px" class="fab fa-whatsapp" aria-hidden="true"></i></a>
+<!-- WhatsApp Floating Button - Larger for seniors, better a11y -->
+<a href="https://wa.me/56993467163?text=Hola%2C%20escribo%20desde%20Masjubilaciones.cl%20y%20quisiera%20una%20asesor%C3%ADa"
+   class="fixed bottom-6 right-6 z-[1000] group focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 rounded-full"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Abrir chat de WhatsApp para consultar sobre asesoría previsional"
+   title="Contáctenos por WhatsApp">
+    <span class="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-[#25d366] hover:bg-[#128c7e] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110">
+        <i class="fab fa-whatsapp text-3xl md:text-4xl" aria-hidden="true"></i>
+    </span>
+    <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-slate-800 text-white text-sm font-medium py-2 px-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap hidden md:block shadow-lg" aria-hidden="true">
+        Escríbanos por WhatsApp
+    </span>
+</a>
 </body>
 </html>

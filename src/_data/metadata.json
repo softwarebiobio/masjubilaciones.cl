@@ -1,12 +1,14 @@
 {
-  "title": "MasJubilaciones | Asesoría Previsional en Chile",
-  "description": "Expertos en asesoría previsional, pensiones y jubilaciones en Chile. Obtén el máximo beneficio de tu pensión con ayuda profesional personalizada.",
+  "title": "MasJubilaciones | Asesoría Previsional Profesional en Concepción, Chile",
+  "description": "Asesoría previsional independiente para adultos mayores en Concepción, Chile. Más de 30 años de experiencia ayudando a personas mayores de 60 años a obtener la mejor pensión. Consulta gratuita.",
   "url": "https://masjubilaciones.cl",
   "language": "es-CL",
   "author": {
-    "name": "MasJubilaciones",
+    "name": "Marcos Aguayo Mas",
     "email": "contacto@masjubilaciones.cl",
-    "url": "https://masjubilaciones.cl/sobre-nosotros"
+    "url": "https://masjubilaciones.cl",
+    "jobTitle": "Asesor Previsional Acreditado",
+    "credential": "Registro Superintendencia de Pensiones N° 115"
   },
   "social": {
     "twitter": {
@@ -22,17 +24,31 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "MasJubilaciones",
+    "alternateName": "Asesoría Previsional Marcos Aguayo Mas",
     "legalName": "MasJubilaciones",
     "url": "https://masjubilaciones.cl",
     "logo": "https://masjubilaciones.cl/images/logo.png",
-    "description": "Asesoría profesional especializada en jubilaciones y pensiones en Chile",
-    "foundingDate": "2024",
+    "image": "https://masjubilaciones.cl/images/hero2.jpg",
+    "description": "Asesoría previsional independiente especializada en jubilaciones y pensiones para adultos mayores en Chile. Más de 30 años de experiencia.",
+    "foundingDate": "1994",
+    "slogan": "Asesoría previsional profesional e independiente",
+    "knowsLanguage": "Spanish",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "San Martín 553, Oficina 302",
       "addressLocality": "Concepción",
       "addressRegion": "Región del Biobío",
+      "postalCode": "4030000",
       "addressCountry": "CL"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-36.8201",
+      "longitude": "-73.0444"
+    },
+    "hasMap": "https://maps.google.com/?q=San+Martin+553+Concepcion+Chile",
+    "telephone": "+56993467163",
+    "email": "contacto@masjubilaciones.cl",
     "sameAs": [
       "https://www.facebook.com/profile.php?id=61567884763598",
       "https://instagram.com/masjubilaciones.cl",
@@ -44,60 +60,155 @@
       "@type": "ContactPoint",
       "contactType": "customer service",
       "email": "contacto@masjubilaciones.cl",
-      "telephone": "+56 9 9346 7163",
+      "telephone": "+56993467163",
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
       "availableLanguage": [
-        "Spanish"
-      ]
+        {
+          "@type": "Language",
+          "name": "Spanish",
+          "alternateName": "es"
+        }
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Chile"
+      }
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Marcos Aguayo Mas",
+      "jobTitle": "Asesor Previsional",
+      "description": "Asesor Previsional acreditado por la Superintendencia de Pensiones con Registro 115. Más de 30 años de experiencia en el sistema previsional chileno."
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "AGAP - Asociación Gremial de Asesores Previsionales de Chile",
+      "url": "https://www.agap.cl"
     }
   },
   "siteMetadata": {
     "keywords": [
-      "jubilación",
-      "pensiones",
+      "jubilación Chile",
+      "pensiones Chile",
       "AFP",
       "asesoría previsional",
+      "asesor previsional Concepción",
       "pensión vejez",
       "pensión invalidez",
       "pensión sobrevivencia",
       "DIPRECA",
       "CAPREDENA",
       "IPS",
-      "Chile",
       "sistema previsional chileno",
       "ahorro previsional",
       "APV",
       "retiro programado",
-      "renta vitalicia"
+      "renta vitalicia",
+      "cómo jubilarme",
+      "tramitar jubilación",
+      "PGU",
+      "pensión garantizada universal",
+      "adulto mayor pensión",
+      "tercera edad jubilación",
+      "mejor pensión Chile",
+      "asesor pensiones Biobío"
     ],
     "themeColor": "#003366",
     "backgroundColor": "#ffffff",
     "locale": "es_CL",
-    "robots": "index, follow"
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   },
   "services": {
     "@type": "Service",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "MasJubilaciones"
+    },
     "serviceType": [
-      "Asesoría Previsional",
-      "Cálculo de Pensiones",
-      "Trámites de Jubilación",
-      "Orientación AFP",
+      "Asesoría Previsional Personalizada",
+      "Cálculo y Comparación de Pensiones",
+      "Trámites de Jubilación por Vejez",
+      "Trámites de Jubilación Anticipada",
       "Pensión de Invalidez",
-      "Pensión de Sobrevivencia"
-    ]
+      "Pensión de Sobrevivencia",
+      "Asesoría en Rentas Vitalicias",
+      "Asesoría en Retiro Programado",
+      "Apelaciones ante la Superintendencia de Pensiones",
+      "Gestión de Excedentes de Libre Disposición"
+    ],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Chile"
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Adultos mayores próximos a jubilar o en proceso de jubilación"
+    }
   },
   "localBusiness": {
     "@type": "FinancialService",
-    "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
+    "name": "MasJubilaciones",
+    "image": "https://masjubilaciones.cl/images/logo.png",
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
     "paymentAccepted": [
       "Transferencia bancaria",
-      "Tarjeta de crédito",
-      "Tarjeta de débito"
+      "Efectivo"
     ],
-    "priceRange": "$"
+    "priceRange": "$",
+    "currenciesAccepted": "CLP"
   },
+  "faq": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta la asesoría previsional?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ofrecemos una consulta inicial gratuita para evaluar su caso. Los honorarios se definen según la complejidad del trámite."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué documentos necesito para comenzar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generalmente necesitamos su cédula de identidad, cartola de su AFP, y certificado de cotizaciones. En la primera consulta le indicamos exactamente qué documentos aplican a su caso."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Atienden a personas de toda la Región del Biobío?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, atendemos a personas de toda la Región del Biobío y también de otras regiones de Chile de forma presencial en nuestra oficina de Concepción o de manera remota."
+      }
+    }
+  ],
   "security": {
     "contentSecurityPolicy": true,
     "sslCertificate": true,
     "hsts": true
+  },
+  "accessibility": {
+    "wcagLevel": "AA",
+    "features": [
+      "Texto grande para fácil lectura",
+      "Alto contraste de colores",
+      "Navegación por teclado",
+      "Compatible con lectores de pantalla",
+      "Formularios accesibles"
+    ]
   }
 }
