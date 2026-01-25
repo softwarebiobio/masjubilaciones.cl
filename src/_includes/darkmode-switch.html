@@ -1,11 +1,11 @@
-<div class="p-2 align-middle flex justify-center">
-    <label for="mode-toggle" class="inline-flex items-center cursor-pointer gap-2">
-        <span class="mr-2 text-primary-contrast dark:text-secondary-contrast">Modo:</span>
+<div class="flex items-center">
+    <label for="mode-toggle" class="inline-flex items-center cursor-pointer gap-1">
+        <span class="sr-only">Cambiar modo de color</span>
         <input type="checkbox" id="mode-toggle" class="sr-only peer" role="switch" aria-checked="false" aria-label="Cambiar entre modo claro y oscuro"/>
-        <div class="toggle-bg text-xl w-21 h-8 bg-slate-200 dark:bg-slate-700 rounded-full relative flex items-center justify-between px-2 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-blue-600 peer-focus-visible:outline-offset-2" aria-hidden="true">
-            <i class="fas fa-circle-half-stroke text-white"></i>
-            <div class="toggle-thumb w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300"></div>
-            <i class="fas fa-circle-half-stroke text-secondary"></i>
+        <div class="toggle-bg w-14 h-8 bg-slate-200 dark:bg-slate-700 rounded-full relative flex items-center justify-between px-1.5 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-blue peer-focus-visible:ring-offset-2" aria-hidden="true">
+            <i class="fas fa-sun text-amber-500 text-sm"></i>
+            <div class="toggle-thumb absolute left-1 w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300"></div>
+            <i class="fas fa-moon text-slate-400 text-sm"></i>
         </div>
     </label>
 </div>
@@ -23,11 +23,11 @@
         const applyTheme = (theme) => {
             if (theme === 'dark') {
                 body.classList.add('dark');
-                thumb.style.transform = 'translateX(20px)';
+                thumb.style.transform = 'translateX(24px)';
                 toggle.checked = true;
             } else {
                 body.classList.remove('dark');
-                thumb.style.transform = 'translateX(-24px)';
+                thumb.style.transform = 'translateX(0)';
                 toggle.checked = false;
             }
             setAria();

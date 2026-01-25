@@ -193,11 +193,6 @@
     Saltar al contenido principal
 </a>
 
-<!-- Dark mode toggle - Repositioned for better access -->
-<section class="fixed right-4 top-20 md:top-24 z-[60]" aria-label="Configuración de tema">
-    {% include "darkmode-switch.html" %}
-</section>
-
 <header id="navbar" role="banner" class="bg-white/95 backdrop-blur-md dark:bg-slate-800/95 text-gray-900 dark:text-gray-100 shadow-lg fixed w-full z-50 border-b-2 border-primary-green/20">
     <div class="xl:container mx-auto flex justify-between items-center p-3 md:p-4">
         <!-- Logo with better sizing -->
@@ -243,22 +238,30 @@
             </ul>
         </nav>
 
-        <!-- CTA Button - Larger, better contrast for seniors -->
-        <a href="/#contacto"
-           class="text-nowrap font-bold text-base md:text-xl px-5 md:px-8 py-3 md:py-4
-                  bg-primary-green text-white rounded-full
-                  hover:bg-dark-blue hover:shadow-xl
-                  focus-visible:ring-4 focus-visible:ring-primary-blue focus-visible:ring-offset-2
-                  transition-all duration-300 shadow-lg
-                  dark:bg-primary-blue dark:hover:bg-light-green dark:hover:text-slate-900
-                  flex items-center gap-2"
-           role="button"
-           aria-label="Solicitar asesoría previsional gratuita">
-            <span class="hidden sm:inline">Solicite su</span> Asesoría
-            <span class="inline-flex items-center justify-center bg-white text-primary-green dark:bg-light-green dark:text-slate-900 px-3 py-1 text-sm font-bold rounded-full animate-pulse" aria-hidden="true">
-                Gratis
-            </span>
-        </a>
+        <!-- CTA Button and Dark Mode Toggle -->
+        <div class="flex items-center gap-3 md:gap-4">
+            <!-- Dark mode toggle - Aligned in header -->
+            <div class="hidden sm:block" aria-label="Configuración de tema">
+                {% include "darkmode-switch.html" %}
+            </div>
+
+            <!-- CTA Button - Larger, better contrast for seniors -->
+            <a href="/#contacto"
+               class="text-nowrap font-bold text-base md:text-xl px-5 md:px-8 py-3 md:py-4
+                      bg-primary-green text-white rounded-full
+                      hover:bg-dark-blue hover:shadow-xl
+                      focus-visible:ring-4 focus-visible:ring-primary-blue focus-visible:ring-offset-2
+                      transition-all duration-300 shadow-lg
+                      dark:bg-primary-blue dark:hover:bg-light-green dark:hover:text-slate-900
+                      flex items-center gap-2"
+               role="button"
+               aria-label="Solicitar primera asesoría previsional gratuita">
+                <span class="hidden sm:inline">Solicite su</span> Asesoría
+                <span class="inline-flex items-center justify-center bg-white text-primary-green dark:bg-light-green dark:text-slate-900 px-3 py-1 text-sm font-bold rounded-full animate-pulse" aria-hidden="true">
+                    1ra Gratis
+                </span>
+            </a>
+        </div>
     </div>
 </header>
 
