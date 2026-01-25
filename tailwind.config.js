@@ -21,23 +21,23 @@ module.exports = {
                 // Semantic colors
                 'primary': '#0056b3',
             },
-            // Font sizes optimized for seniors (larger base)
+            // Font sizes - slightly larger than default for comfortable reading
             fontSize: {
-                'xs': ['0.875rem', { lineHeight: '1.5' }],      // 14px
-                'sm': ['1rem', { lineHeight: '1.5' }],          // 16px (was 14px)
-                'base': ['1.125rem', { lineHeight: '1.75' }],   // 18px (was 16px)
-                'lg': ['1.25rem', { lineHeight: '1.75' }],      // 20px (was 18px)
-                'xl': ['1.5rem', { lineHeight: '1.75' }],       // 24px (was 20px)
-                '2xl': ['1.75rem', { lineHeight: '1.5' }],      // 28px (was 24px)
-                '3xl': ['2rem', { lineHeight: '1.4' }],         // 32px (was 30px)
-                '4xl': ['2.5rem', { lineHeight: '1.3' }],       // 40px (was 36px)
-                '5xl': ['3rem', { lineHeight: '1.2' }],         // 48px
-                '6xl': ['3.75rem', { lineHeight: '1.1' }],      // 60px
+                'xs': ['0.75rem', { lineHeight: '1.4' }],       // 12px
+                'sm': ['0.875rem', { lineHeight: '1.5' }],      // 14px
+                'base': ['1rem', { lineHeight: '1.6' }],        // 16px
+                'lg': ['1.125rem', { lineHeight: '1.6' }],      // 18px
+                'xl': ['1.25rem', { lineHeight: '1.5' }],       // 20px
+                '2xl': ['1.5rem', { lineHeight: '1.4' }],       // 24px
+                '3xl': ['1.875rem', { lineHeight: '1.3' }],     // 30px
+                '4xl': ['2.25rem', { lineHeight: '1.2' }],      // 36px
+                '5xl': ['2.75rem', { lineHeight: '1.15' }],     // 44px
+                '6xl': ['3.5rem', { lineHeight: '1.1' }],       // 56px
             },
-            // Improved line heights for readability
+            // Line heights for readability
             lineHeight: {
-                'relaxed': '1.75',
-                'loose': '2',
+                'relaxed': '1.65',
+                'loose': '1.8',
             },
             // Larger spacing for touch targets
             spacing: {

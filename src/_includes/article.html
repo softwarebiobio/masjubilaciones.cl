@@ -5,7 +5,7 @@ layout: 'blog.html'
 {% assign image_url = "/posts/" | concat: page.fileSlug | concat: "/" | concat: image %}
 
 <style>
-    /* Article Typography - Optimized for seniors (60+ years) */
+    /* Article Typography - Readable for 60+ audience */
 
     /* Headings */
     article :is(h1, h2, h3, h4) {
@@ -16,8 +16,8 @@ layout: 'blog.html'
     }
 
     article h1 {
-        font-size: 2rem;
-        margin: 2rem auto 0.75rem auto;
+        font-size: 1.75rem;
+        margin: 1.5rem auto 0.5rem auto;
         line-height: 1.25;
         color: #1e293b; /* slate-800 */
     }
@@ -27,8 +27,8 @@ layout: 'blog.html'
     }
 
     article h2 {
-        font-size: 1.75rem;
-        margin: 2rem auto 0.5rem auto;
+        font-size: 1.5rem;
+        margin: 1.5rem auto 0.5rem auto;
         color: #0056b3; /* primary-blue */
         border-bottom: 2px solid #e6f2ff;
         padding-bottom: 0.5rem;
@@ -44,9 +44,9 @@ layout: 'blog.html'
     }
 
     article h3 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         color: #1a8a4c; /* primary-green */
-        margin: 1.5rem auto 0.5rem auto;
+        margin: 1.25rem auto 0.5rem auto;
     }
 
     .dark article h3 {
@@ -54,33 +54,33 @@ layout: 'blog.html'
     }
 
     article h4 {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
         color: #334155;
-        margin: 1.25rem auto 0.5rem auto;
+        margin: 1rem auto 0.5rem auto;
     }
 
     .dark article h4 {
         color: #e2e8f0;
     }
 
-    /* Paragraphs - Larger text, better spacing */
+    /* Paragraphs */
     article p {
-        margin: 0 auto 1.5rem auto;
+        margin: 0 auto 1.25rem auto;
         text-wrap: pretty;
-        font-size: 1.2rem;
-        line-height: 1.9;
+        font-size: 1.05rem;
+        line-height: 1.75;
     }
 
-    /* Lists - Better spacing and markers */
+    /* Lists */
     article ul, article ol {
-        margin: 1.5rem auto;
+        margin: 1.25rem auto;
         padding-left: 1.5rem;
     }
 
     article li {
-        margin-bottom: 0.75rem;
-        font-size: 1.2rem;
-        line-height: 1.8;
+        margin-bottom: 0.5rem;
+        font-size: 1.05rem;
+        line-height: 1.7;
     }
 
     article ul li {
@@ -91,9 +91,9 @@ layout: 'blog.html'
         list-style-type: decimal;
     }
 
-    /* Blockquotes - Elegant and readable */
+    /* Blockquotes */
     article blockquote:not(.tiktok-embed) {
-        font-size: 1.2rem;
+        font-size: 1.05rem;
         background-color: #f8fafc;
         color: #1e293b;
         padding: 1.5rem 2rem;
