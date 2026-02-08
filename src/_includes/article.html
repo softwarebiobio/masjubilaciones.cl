@@ -4,7 +4,7 @@ layout: 'blog.html'
 
 {% assign image_url = "/posts/" | concat: page.fileSlug | concat: "/" | concat: image %}
 {% assign word_count = content | strip_html | number_of_words %}
-{% assign reading_time = word_count | divided_by: 200 | plus: 1 %}
+{% assign reading_time = word_count | divided_by: 200 | floor | plus: 1 %}
 
 <!-- BreadcrumbList Schema -->
 <script type="application/ld+json">
