@@ -179,8 +179,8 @@ layout: 'blog.html'
         margin: 2rem auto;
     }
 
-    /* Links - Clear and accessible */
-    article a {
+    /* Links - Clear and accessible (scoped to prose content) */
+    article .prose a {
         color: #0056b3;
         text-decoration: underline;
         text-underline-offset: 3px;
@@ -188,21 +188,21 @@ layout: 'blog.html'
         transition: color 0.2s ease;
     }
 
-    article a:hover {
+    article .prose a:hover {
         color: #003366;
     }
 
-    article a:focus-visible {
+    article .prose a:focus-visible {
         outline: 3px solid #0056b3;
         outline-offset: 2px;
         border-radius: 2px;
     }
 
-    .dark article a {
+    .dark article .prose a {
         color: #2ECC71;
     }
 
-    .dark article a:hover {
+    .dark article .prose a:hover {
         color: #c7eEa0;
     }
 
