@@ -194,6 +194,22 @@
         "@type": "Answer",
         "text": "Sí, atendemos a personas de toda la Región del Biobío y también de otras regiones de Chile de forma presencial en nuestra oficina de Concepción o de manera remota."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto demora el trámite de jubilación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los plazos varían según el tipo de pensión y la AFP. Generalmente el proceso toma entre 30 y 90 días desde que se presenta la solicitud. Nosotros le acompañamos en cada etapa para agilizar los tiempos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Son realmente independientes de las AFP y compañías de seguros?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutamente. No tenemos vínculos comerciales ni recibimos comisiones de ninguna AFP o compañía de seguros. Nuestra asesoría es 100% objetiva y orientada exclusivamente a obtener el mejor resultado para usted."
+      }
     }
   ],
   "security": {

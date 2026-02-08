@@ -56,6 +56,15 @@ module.exports = {
                 'xl': '1rem',
                 '2xl': '1.5rem',
             },
+            keyframes: {
+                'gentle-glow': {
+                    '0%, 100%': { boxShadow: '0 0 0 0 rgba(26, 138, 76, 0.4)' },
+                    '50%': { boxShadow: '0 0 12px 4px rgba(26, 138, 76, 0.25)' },
+                },
+            },
+            animation: {
+                'gentle-glow': 'gentle-glow 3s ease-in-out infinite',
+            },
         }
     },
     plugins: [],

@@ -1,7 +1,7 @@
 <div class="flex items-center">
-    <label for="mode-toggle" class="inline-flex items-center cursor-pointer gap-1">
+    <label class="darkmode-toggle inline-flex items-center cursor-pointer gap-1">
         <span class="sr-only">Cambiar modo de color</span>
-        <input type="checkbox" id="mode-toggle" class="sr-only peer" role="switch" aria-checked="false" aria-label="Cambiar entre modo claro y oscuro"/>
+        <input type="checkbox" class="sr-only peer darkmode-checkbox" role="switch" aria-checked="false" aria-label="Cambiar entre modo claro y oscuro"/>
         <div class="toggle-bg w-14 h-8 bg-slate-200 dark:bg-slate-700 rounded-full relative flex items-center justify-between px-1.5 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-blue peer-focus-visible:ring-offset-2" aria-hidden="true">
             <i class="fas fa-sun text-amber-500 text-sm"></i>
             <div class="toggle-thumb absolute left-1 w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300"></div>
@@ -9,42 +9,3 @@
         </div>
     </label>
 </div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const toggle = document.getElementById('mode-toggle');
-        const body = document.body;
-        const thumb = document.querySelector('.toggle-thumb');
-
-        const setAria = () => {
-            toggle.setAttribute('aria-checked', toggle.checked ? 'true' : 'false');
-        };
-
-        const applyTheme = (theme) => {
-            if (theme === 'dark') {
-                body.classList.add('dark');
-                thumb.style.transform = 'translateX(24px)';
-                toggle.checked = true;
-            } else {
-                body.classList.remove('dark');
-                thumb.style.transform = 'translateX(0)';
-                toggle.checked = false;
-            }
-            setAria();
-        };
-
-        const storedTheme = localStorage.getItem('theme');
-        if (storedTheme) {
-            applyTheme(storedTheme);
-        } else {
-            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            applyTheme(systemPrefersDark ? 'dark' : 'light');
-        }
-
-        toggle.addEventListener('change', () => {
-            const newTheme = toggle.checked ? 'dark' : 'light';
-            applyTheme(newTheme);
-            localStorage.setItem('theme', newTheme);
-        });
-    });
-</script>

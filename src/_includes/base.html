@@ -55,8 +55,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Merriweather+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <meta name="last-modified" content="{{page.date}}">
     <script data-goatcounter="https://masjubilaciones.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -126,6 +125,28 @@
     }
     </script>
 
+    {% if page.url == '/' %}
+    <!-- FAQ Schema for homepage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {% for item in metadata.faq %}
+            {
+                "@type": "Question",
+                "name": "{{ item.name }}",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "{{ item.acceptedAnswer.text }}"
+                }
+            }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        ]
+    }
+    </script>
+    {% endif %}
+
     <style>
         /* Base styles for seniors (60+) - comfortable reading without being excessive */
         html {
@@ -186,7 +207,6 @@
 </head>
 
 <body class="dark:bg-slate-900 text-slate-800 dark:text-slate-100 bg-slate-50 relative antialiased">
-<img src="/images/logo-parcial.png" class="-z-1 flex fixed bottom-0 left-0 opacity-30" alt="" aria-hidden="true" />
 
 <!-- Skip to main content - Enhanced for better visibility -->
 <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:bg-primary-blue focus:text-white focus:px-6 focus:py-3 focus:rounded-lg focus:z-[100] focus:text-lg focus:font-semibold focus:shadow-lg">
@@ -206,31 +226,31 @@
         <nav id="main-menu" aria-label="Menú principal de navegación">
             <ul class="md:flex space-x-2 lg:space-x-5 hidden text-sm lg:text-base font-medium" role="list">
                 <li>
-                    <a href="/#inicio" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-blue hover:text-primary-blue dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-blue">
+                    <a href="/#inicio" class="nav-link flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-blue hover:text-primary-blue dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-blue" data-section="inicio">
                         <i class="fas fa-home" aria-hidden="true"></i>
                         <span>Inicio</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/#blog" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-blue hover:text-primary-blue dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-blue">
+                    <a href="/#blog" class="nav-link flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-blue hover:text-primary-blue dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-blue" data-section="blog">
                         <i class="fas fa-book" aria-hidden="true"></i>
                         <span>Blog</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/#servicios" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-blue hover:text-primary-blue dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-blue">
+                    <a href="/#servicios" class="nav-link flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-blue hover:text-primary-blue dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-blue" data-section="servicios">
                         <i class="fas fa-briefcase" aria-hidden="true"></i>
                         <span>Servicios</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/#etica" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-blue hover:text-primary-blue dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-blue">
+                    <a href="/#etica" class="nav-link flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-blue hover:text-primary-blue dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-blue" data-section="etica">
                         <i class="fas fa-shield-alt" aria-hidden="true"></i>
                         <span>Ética</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/#contacto" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-blue hover:text-primary-blue dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-blue">
+                    <a href="/#contacto" class="nav-link flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-blue hover:text-primary-blue dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-blue" data-section="contacto">
                         <i class="fas fa-envelope" aria-hidden="true"></i>
                         <span>Contacto</span>
                     </a>
@@ -238,10 +258,10 @@
             </ul>
         </nav>
 
-        <!-- CTA Button and Dark Mode Toggle -->
+        <!-- CTA Button, Dark Mode Toggle & Hamburger -->
         <div class="flex items-center gap-3 md:gap-4">
-            <!-- Dark mode toggle - Aligned in header -->
-            <div class="hidden sm:block" aria-label="Configuración de tema">
+            <!-- Dark mode toggle - Desktop only -->
+            <div class="hidden md:block" aria-label="Configuración de tema">
                 {% include "darkmode-switch.html" %}
             </div>
 
@@ -257,12 +277,66 @@
                role="button"
                aria-label="Solicitar primera asesoría previsional gratuita">
                 <span class="hidden sm:inline">Solicite su</span> Asesoría
-                <span class="inline-flex items-center justify-center bg-white text-primary-green dark:bg-light-green dark:text-slate-900 px-3 py-1 text-sm font-bold rounded-full animate-pulse" aria-hidden="true">
+                <span class="inline-flex items-center justify-center bg-white text-primary-green dark:bg-light-green dark:text-slate-900 px-3 py-1 text-sm font-bold rounded-full animate-gentle-glow" aria-hidden="true">
                     1ra Gratis
                 </span>
             </a>
+
+            <!-- Hamburger button - Mobile only -->
+            <button id="mobile-menu-toggle"
+                    class="md:hidden flex items-center justify-center w-12 h-12 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus-visible:ring-2 focus-visible:ring-primary-blue"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                    aria-label="Abrir menú de navegación">
+                <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+            </button>
         </div>
     </div>
+
+    <!-- Mobile menu panel -->
+    <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800" aria-label="Menú de navegación móvil">
+        <ul class="flex flex-col py-2" role="list">
+            <li>
+                <a href="/#inicio" class="mobile-nav-link flex items-center gap-3 py-3 px-6 text-lg text-slate-800 dark:text-slate-100 hover:bg-light-blue dark:hover:bg-slate-700 transition-colors">
+                    <i class="fas fa-home text-primary-green w-6 text-center" aria-hidden="true"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="/#blog" class="mobile-nav-link flex items-center gap-3 py-3 px-6 text-lg text-slate-800 dark:text-slate-100 hover:bg-light-blue dark:hover:bg-slate-700 transition-colors">
+                    <i class="fas fa-book text-primary-green w-6 text-center" aria-hidden="true"></i>
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="/#servicios" class="mobile-nav-link flex items-center gap-3 py-3 px-6 text-lg text-slate-800 dark:text-slate-100 hover:bg-light-blue dark:hover:bg-slate-700 transition-colors">
+                    <i class="fas fa-briefcase text-primary-green w-6 text-center" aria-hidden="true"></i>
+                    <span>Servicios</span>
+                </a>
+            </li>
+            <li>
+                <a href="/#etica" class="mobile-nav-link flex items-center gap-3 py-3 px-6 text-lg text-slate-800 dark:text-slate-100 hover:bg-light-blue dark:hover:bg-slate-700 transition-colors">
+                    <i class="fas fa-shield-alt text-primary-green w-6 text-center" aria-hidden="true"></i>
+                    <span>Ética</span>
+                </a>
+            </li>
+            <li>
+                <a href="/#contacto" class="mobile-nav-link flex items-center gap-3 py-3 px-6 text-lg text-slate-800 dark:text-slate-100 hover:bg-light-blue dark:hover:bg-slate-700 transition-colors">
+                    <i class="fas fa-envelope text-primary-green w-6 text-center" aria-hidden="true"></i>
+                    <span>Contacto</span>
+                </a>
+            </li>
+            <li class="border-t border-slate-200 dark:border-slate-700 mt-2 pt-2">
+                <div class="flex items-center gap-3 py-3 px-6">
+                    <i class="fas fa-adjust text-primary-green w-6 text-center" aria-hidden="true"></i>
+                    <span class="text-lg text-slate-800 dark:text-slate-100">Modo oscuro</span>
+                    <div class="ml-auto">
+                        {% include "darkmode-switch.html" %}
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
 </header>
 
 <main id="main-content" class="pt-20 ">
@@ -362,7 +436,7 @@
         <!-- Copyright -->
         <div class="mt-12 pt-8 border-t border-gray-600 text-center">
             <p class="text-gray-300 text-base">
-                &copy; 2024 MasJubilaciones. Todos los derechos reservados.
+                &copy; {% year %} MasJubilaciones. Todos los derechos reservados.
             </p>
             <p class="text-gray-400 text-sm mt-2">
                 Sitio web por <a href="https://www.softwarebiobio.com/" target="_blank" rel="noopener noreferrer" class="text-lime-green hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-white rounded">softwarebiobio.com</a>
@@ -384,5 +458,126 @@
         Escríbanos por WhatsApp
     </span>
 </a>
+
+<!-- Scripts -->
+<script>
+    // === Dark mode (unified, supports multiple toggle instances) ===
+    (function() {
+        const body = document.body;
+        const checkboxes = document.querySelectorAll('.darkmode-checkbox');
+        const thumbs = document.querySelectorAll('.toggle-thumb');
+
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                body.classList.add('dark');
+            } else {
+                body.classList.remove('dark');
+            }
+            checkboxes.forEach((cb, i) => {
+                cb.checked = theme === 'dark';
+                cb.setAttribute('aria-checked', theme === 'dark' ? 'true' : 'false');
+                if (thumbs[i]) {
+                    thumbs[i].style.transform = theme === 'dark' ? 'translateX(24px)' : 'translateX(0)';
+                }
+            });
+        }
+
+        const stored = localStorage.getItem('theme');
+        if (stored) {
+            applyTheme(stored);
+        } else {
+            applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        }
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', () => {
+                const newTheme = cb.checked ? 'dark' : 'light';
+                applyTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        });
+    })();
+
+    // === Mobile hamburger menu ===
+    (function() {
+        const toggle = document.getElementById('mobile-menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        if (!toggle || !menu) return;
+
+        toggle.addEventListener('click', () => {
+            const isOpen = !menu.classList.contains('hidden');
+            menu.classList.toggle('hidden');
+            toggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+            const icon = toggle.querySelector('i');
+            if (icon) {
+                icon.className = isOpen ? 'fas fa-bars text-2xl' : 'fas fa-times text-2xl';
+            }
+        });
+
+        menu.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                toggle.setAttribute('aria-expanded', 'false');
+                const icon = toggle.querySelector('i');
+                if (icon) icon.className = 'fas fa-bars text-2xl';
+            });
+        });
+    })();
+
+    // === IntersectionObserver for scroll animations ===
+    (function() {
+        var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReduced) {
+            document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+                el.classList.add('is-visible');
+            });
+            return;
+        }
+
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+            observer.observe(el);
+        });
+    })();
+
+    // === Scroll-spy for active navbar link ===
+    (function() {
+        var sections = document.querySelectorAll('section[id]');
+        var navLinks = document.querySelectorAll('.nav-link[data-section]');
+        if (!sections.length || !navLinks.length) return;
+
+        var activeClass = 'bg-light-blue text-primary-blue dark:bg-slate-700 dark:text-light-green';
+
+        function clearActive() {
+            navLinks.forEach(function(link) {
+                activeClass.split(' ').forEach(function(c) { link.classList.remove(c); });
+            });
+        }
+
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    clearActive();
+                    var id = entry.target.getAttribute('id');
+                    navLinks.forEach(function(link) {
+                        if (link.getAttribute('data-section') === id) {
+                            activeClass.split(' ').forEach(function(c) { link.classList.add(c); });
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+
+        sections.forEach(function(section) { observer.observe(section); });
+    })();
+</script>
 </body>
 </html>

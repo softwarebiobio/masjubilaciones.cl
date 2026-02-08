@@ -15,8 +15,8 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
         background: linear-gradient(
             to top,
             rgba(255,255,255,0.98) 0%,
-            rgba(255,255,255,0.85) 25%,
-            rgba(255,255,255,0.4) 60%,
+            rgba(255,255,255,0.90) 30%,
+            rgba(255,255,255,0.5) 60%,
             transparent 100%
         );
     }
@@ -25,15 +25,15 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
         background: linear-gradient(
             to top,
             rgba(15,23,42,0.98) 0%,
-            rgba(15,23,42,0.85) 25%,
-            rgba(15,23,42,0.4) 60%,
+            rgba(15,23,42,0.90) 30%,
+            rgba(15,23,42,0.5) 60%,
             transparent 100%
         );
     }
 </style>
 
 <!-- Hero Section - Improved for seniors with better contrast and larger text -->
-<section id="inicio" class="overflow-hidden relative" aria-labelledby="hero-title" style="min-height: 85vh;">
+<section id="inicio" class="overflow-hidden relative min-h-[70vh] md:min-h-[85vh]" aria-labelledby="hero-title">
     <!-- Background Image -->
     <div class="absolute inset-0">
         <img src="images/hero2.jpg"
@@ -47,7 +47,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
     <div class="hero-overlay absolute inset-0 flex items-end pb-12 md:pb-20">
         <div class="container mx-auto px-6 md:px-8 w-full">
             <!-- Trust Badge -->
-            <div class="mb-4">
+            <div class="mb-4 animate-on-scroll stagger-1">
                 <span class="inline-flex items-center gap-2 bg-primary-green/90 text-white text-sm md:text-base font-semibold px-4 py-2 rounded-full">
                     <i class="fas fa-shield-alt" aria-hidden="true"></i>
                     Asesor Acreditado - Registro SP N° 115
@@ -55,18 +55,18 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </div>
 
             <!-- Main Heading - Larger for seniors -->
-            <h1 id="hero-title" class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-slate-900 dark:text-white mb-4 leading-tight">
+            <h1 id="hero-title" class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-slate-900 dark:text-white mb-4 leading-tight animate-on-scroll stagger-2">
                 Asesoría Previsional
                 <span class="text-primary-green block md:inline">Profesional</span>
             </h1>
 
             <!-- Subheading with better contrast -->
-            <p class="text-xl md:text-2xl text-slate-700 dark:text-slate-200 max-w-2xl mb-6 leading-relaxed">
+            <p class="text-xl md:text-2xl text-slate-700 dark:text-slate-200 max-w-2xl mb-6 leading-relaxed animate-on-scroll stagger-3">
                 <strong class="text-slate-900 dark:text-white">Más de 30 años de experiencia</strong> ayudando a personas como usted a obtener la mejor pensión posible.
             </p>
 
             <!-- Value Propositions - Easy to scan -->
-            <ul class="flex flex-wrap gap-4 mb-8 text-base md:text-lg text-slate-700 dark:text-slate-200" role="list" aria-label="Beneficios de nuestro servicio">
+            <ul class="flex flex-wrap gap-4 mb-8 text-base md:text-lg text-slate-700 dark:text-slate-200 animate-on-scroll stagger-4" role="list" aria-label="Beneficios de nuestro servicio">
                 <li class="flex items-center gap-2">
                     <i class="fas fa-check-circle text-primary-green text-xl" aria-hidden="true"></i>
                     <span>Asesoría Independiente</span>
@@ -82,7 +82,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </ul>
 
             <!-- CTA Buttons - Large and accessible -->
-            <div class="flex flex-col sm:flex-row gap-4">
+            <div class="flex flex-col sm:flex-row gap-4 animate-on-scroll stagger-5">
                 <a href="#contacto"
                    class="inline-flex items-center justify-center gap-3 bg-primary-green hover:bg-dark-blue text-white text-lg md:text-xl font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus-visible:ring-4 focus-visible:ring-primary-blue focus-visible:ring-offset-2"
                    role="button">
@@ -105,7 +105,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
 <section id="blog" class="bg-slate-100 dark:bg-slate-800/50 py-16 md:py-24" aria-labelledby="blog-title">
     <div class="container mx-auto px-6 md:px-8">
         <!-- Section Header -->
-        <div class="text-center mb-12">
+        <div class="text-center mb-12 animate-on-scroll">
             <h2 id="blog-title" class="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">
                 Información Útil para su Jubilación
             </h2>
@@ -128,9 +128,9 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
 
             {% assign cover_image_url = "/posts/" | concat: post.fileSlug | concat: "/" | concat: post.data.image %}
 
-            <article class="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group focus-within:ring-4 focus-within:ring-primary-blue focus-within:ring-offset-2">
+            <article class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group focus-within:ring-4 focus-within:ring-primary-blue focus-within:ring-offset-2 flex flex-col animate-on-scroll stagger-{{ forloop.index }}">
                 <a href="{{ post.url }}"
-                   class="block focus:outline-none"
+                   class="block focus:outline-none flex-1 flex flex-col"
                    aria-labelledby="post-{{ post.fileSlug }}-title">
                     <!-- Image Container -->
                     <div class="overflow-hidden">
@@ -142,12 +142,12 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
                     </div>
 
                     <!-- Content -->
-                    <div class="p-6">
+                    <div class="p-6 flex flex-col flex-1">
                         <h3 id="post-{{ post.fileSlug }}-title" class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4 leading-snug group-hover:text-primary-green transition-colors">
                             {{ post.data.title | truncatewords: 10 }}
                         </h3>
 
-                        <p class="text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                        <p class="text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6 flex-1">
                             {{ post.data.lead | default: post.content | strip_html | truncatewords: 25 }}
                         </p>
 
@@ -169,7 +169,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
 <section id="servicios" class="py-16 md:py-24 bg-white dark:bg-slate-900" aria-labelledby="services-title">
     <div class="container mx-auto px-6 md:px-8">
         <!-- Section Header -->
-        <div class="text-center mb-12 md:mb-16">
+        <div class="text-center mb-12 md:mb-16 animate-on-scroll">
             <h2 id="services-title" class="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">
                 ¿En Qué Podemos Ayudarle?
             </h2>
@@ -178,10 +178,10 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </p>
         </div>
 
-        <!-- Services Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8" role="list" aria-label="Lista de servicios">
+        <!-- Services Grid - 3 columns for better readability -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" role="list" aria-label="Lista de servicios">
             <!-- Service 1 -->
-            <article class="bg-light-blue/40 dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-primary-green/30" role="listitem">
+            <article class="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-1" role="listitem">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-primary-green/10 dark:bg-primary-green/20 rounded-full flex items-center justify-center mb-5">
                         <i class="fas fa-user-tie text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -194,10 +194,10 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </article>
 
             <!-- Service 2 -->
-            <article class="bg-light-blue/40 dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-primary-green/30" role="listitem">
+            <article class="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-2" role="listitem">
                 <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 md:w-20 md:h-20 bg-primary-green/10 dark:bg-primary-green/20 rounded-full flex items-center justify-center mb-5">
-                        <i class="fas fa-calculator text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-primary-blue/10 dark:bg-primary-blue/20 rounded-full flex items-center justify-center mb-5">
+                        <i class="fas fa-calculator text-primary-blue text-3xl md:text-4xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4">Cálculo de Pensiones</h3>
                     <p class="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -207,7 +207,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </article>
 
             <!-- Service 3 -->
-            <article class="bg-light-blue/40 dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-primary-green/30" role="listitem">
+            <article class="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-3" role="listitem">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-primary-green/10 dark:bg-primary-green/20 rounded-full flex items-center justify-center mb-5">
                         <i class="fas fa-gavel text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -220,10 +220,10 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </article>
 
             <!-- Service 4 -->
-            <article class="bg-light-blue/40 dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-primary-green/30" role="listitem">
+            <article class="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-4" role="listitem">
                 <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 md:w-20 md:h-20 bg-primary-green/10 dark:bg-primary-green/20 rounded-full flex items-center justify-center mb-5">
-                        <i class="fas fa-balance-scale text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-primary-blue/10 dark:bg-primary-blue/20 rounded-full flex items-center justify-center mb-5">
+                        <i class="fas fa-balance-scale text-primary-blue text-3xl md:text-4xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4">Rentas Vitalicias</h3>
                     <p class="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -233,7 +233,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </article>
 
             <!-- Service 5 -->
-            <article class="bg-light-blue/40 dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-primary-green/30" role="listitem">
+            <article class="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-5" role="listitem">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-primary-green/10 dark:bg-primary-green/20 rounded-full flex items-center justify-center mb-5">
                         <i class="fas fa-file-signature text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -246,10 +246,10 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </article>
 
             <!-- Service 6 -->
-            <article class="bg-light-blue/40 dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-primary-green/30" role="listitem">
+            <article class="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-6" role="listitem">
                 <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 md:w-20 md:h-20 bg-primary-green/10 dark:bg-primary-green/20 rounded-full flex items-center justify-center mb-5">
-                        <i class="fas fa-chart-line text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-primary-blue/10 dark:bg-primary-blue/20 rounded-full flex items-center justify-center mb-5">
+                        <i class="fas fa-chart-line text-primary-blue text-3xl md:text-4xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4">Proyección de Pensiones</h3>
                     <p class="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -259,7 +259,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </article>
 
             <!-- Service 7 -->
-            <article class="bg-light-blue/40 dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-primary-green/30" role="listitem">
+            <article class="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-7" role="listitem">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-primary-green/10 dark:bg-primary-green/20 rounded-full flex items-center justify-center mb-5">
                         <i class="fas fa-coins text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -272,10 +272,10 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </article>
 
             <!-- Service 8 -->
-            <article class="bg-light-blue/40 dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-primary-green/30" role="listitem">
+            <article class="bg-white dark:bg-slate-800 rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-8" role="listitem">
                 <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 md:w-20 md:h-20 bg-primary-green/10 dark:bg-primary-green/20 rounded-full flex items-center justify-center mb-5">
-                        <i class="fas fa-hands-helping text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-primary-blue/10 dark:bg-primary-blue/20 rounded-full flex items-center justify-center mb-5">
+                        <i class="fas fa-hands-helping text-primary-blue text-3xl md:text-4xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4">Asesoría en Reclamos</h3>
                     <p class="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -289,19 +289,21 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
 
 
 <!-- Banner Independencia - Mensaje clave para generar confianza -->
-<section class="bg-gradient-to-r from-primary-green to-dark-blue py-12 md:py-16" aria-labelledby="independence-title">
-    <div class="container mx-auto px-6 md:px-8 text-center">
-        <div class="flex flex-col items-center">
-            <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-6">
-                <i class="fas fa-handshake text-white text-4xl" aria-hidden="true"></i>
+<section class="py-12 md:py-16 bg-slate-50 dark:bg-slate-800/50" aria-labelledby="independence-title">
+    <div class="container mx-auto px-6 md:px-8">
+        <div class="bg-gradient-to-r from-primary-green to-dark-blue rounded-2xl shadow-xl p-8 md:p-12 text-center animate-on-scroll scale-up">
+            <div class="flex flex-col items-center">
+                <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-handshake text-white text-4xl" aria-hidden="true"></i>
+                </div>
+                <h2 id="independence-title" class="text-2xl md:text-3xl font-bold text-white mb-4">
+                    Somos 100% Independientes
+                </h2>
+                <p class="text-lg md:text-xl text-white/90 max-w-3xl leading-relaxed">
+                    <strong>No tenemos vínculos con AFP ni compañías de seguros.</strong>
+                    Nuestro único compromiso es con usted, garantizando asesoría objetiva basada en cálculos precisos y un análisis exhaustivo de todas sus opciones.
+                </p>
             </div>
-            <h2 id="independence-title" class="text-2xl md:text-3xl font-bold text-white mb-4">
-                Somos 100% Independientes
-            </h2>
-            <p class="text-lg md:text-xl text-white/90 max-w-3xl leading-relaxed">
-                <strong>No tenemos vínculos con AFP ni compañías de seguros.</strong>
-                Nuestro único compromiso es con usted, garantizando asesoría objetiva basada en cálculos precisos y un análisis exhaustivo de todas sus opciones.
-            </p>
         </div>
     </div>
 </section>
@@ -311,7 +313,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
 <section id="etica" class="bg-slate-800 dark:bg-slate-950 text-white py-16 md:py-24" aria-labelledby="ethics-title">
     <div class="container mx-auto px-6 md:px-8">
         <!-- Section Header -->
-        <div class="text-center mb-12">
+        <div class="text-center mb-12 animate-on-scroll">
             <h2 id="ethics-title" class="text-3xl md:text-4xl font-bold mb-6">
                 Nuestra Ética y Valores
             </h2>
@@ -329,21 +331,21 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
 
         <!-- Values Grid -->
         <ul class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12" role="list" aria-label="Nuestros valores">
-            <li class="flex flex-col items-center text-center p-6 bg-slate-700/50 rounded-xl">
+            <li class="flex flex-col items-center text-center p-6 bg-slate-700/50 rounded-xl animate-on-scroll stagger-1">
                 <div class="w-20 h-20 bg-primary-green/20 rounded-full flex items-center justify-center mb-5">
                     <i class="fas fa-eye text-light-green text-3xl" aria-hidden="true"></i>
                 </div>
                 <h3 class="text-2xl font-bold text-white mb-3">Transparencia</h3>
                 <p class="text-lg text-slate-300">Información clara y sin letras chicas. Usted siempre sabrá exactamente qué estamos haciendo y por qué.</p>
             </li>
-            <li class="flex flex-col items-center text-center p-6 bg-slate-700/50 rounded-xl">
+            <li class="flex flex-col items-center text-center p-6 bg-slate-700/50 rounded-xl animate-on-scroll stagger-2">
                 <div class="w-20 h-20 bg-primary-green/20 rounded-full flex items-center justify-center mb-5">
                     <i class="fas fa-shield-alt text-light-green text-3xl" aria-hidden="true"></i>
                 </div>
                 <h3 class="text-2xl font-bold text-white mb-3">Integridad</h3>
                 <p class="text-lg text-slate-300">Actuamos siempre en su beneficio, sin conflictos de interés. Su confianza es nuestra prioridad.</p>
             </li>
-            <li class="flex flex-col items-center text-center p-6 bg-slate-700/50 rounded-xl">
+            <li class="flex flex-col items-center text-center p-6 bg-slate-700/50 rounded-xl animate-on-scroll stagger-3">
                 <div class="w-20 h-20 bg-primary-green/20 rounded-full flex items-center justify-center mb-5">
                     <i class="fas fa-heart text-light-green text-3xl" aria-hidden="true"></i>
                 </div>
@@ -351,5 +353,36 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
                 <p class="text-lg text-slate-300">Le acompañamos en todo el proceso hasta obtener el mejor resultado para su jubilación.</p>
             </li>
         </ul>
+    </div>
+</section>
+
+
+<!-- Sección de Preguntas Frecuentes -->
+<section id="faq" class="py-16 md:py-24 bg-white dark:bg-slate-900" aria-labelledby="faq-title">
+    <div class="container mx-auto px-6 md:px-8 max-w-3xl">
+        <!-- Section Header -->
+        <div class="text-center mb-12 animate-on-scroll">
+            <h2 id="faq-title" class="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">
+                Preguntas Frecuentes
+            </h2>
+            <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300">
+                Respuestas a las consultas más comunes sobre nuestros servicios
+            </p>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="space-y-4">
+            {% for item in metadata.faq %}
+            <details class="group bg-slate-50 dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-shadow animate-on-scroll stagger-{{ forloop.index }}">
+                <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer text-lg md:text-xl font-semibold text-slate-800 dark:text-white list-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 rounded-2xl">
+                    <span>{{ item.name }}</span>
+                    <i class="fas fa-chevron-down text-primary-green transition-transform duration-300 group-open:rotate-180 flex-shrink-0" aria-hidden="true"></i>
+                </summary>
+                <div class="px-6 pb-6 text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                    {{ item.acceptedAnswer.text }}
+                </div>
+            </details>
+            {% endfor %}
+        </div>
     </div>
 </section>

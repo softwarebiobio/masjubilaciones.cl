@@ -6,5 +6,8 @@
   "scripts": {
     "dev": "eleventy --serve --watch",
     "tailwindcss-build": "npx @tailwindcss/cli -c tailwind.config.js -i src/css/source.css -o src/css/styles.css -w"
+  },
+  "dependencies": {
+    "playwright": "^1.58.1"
   }
 }

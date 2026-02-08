@@ -18,6 +18,21 @@ module.exports = function (eleventyConfig) {
         return new URL(url, base).toString();
     });
 
+    // Shortcode para año actual (copyright dinámico)
+    eleventyConfig.addShortcode("year", () => new Date().getFullYear().toString());
+
+    // Filtro para contar palabras
+    eleventyConfig.addFilter("number_of_words", (content) => {
+        if (!content) return 0;
+        return content.split(/\s+/).filter(w => w.length > 0).length;
+    });
+
+    // Filtro para eliminar HTML
+    eleventyConfig.addFilter("strip_html", (content) => {
+        if (!content) return "";
+        return content.replace(/<[^>]*>/g, "");
+    });
+
     return {
         dir: {
             input: "src",
