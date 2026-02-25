@@ -193,6 +193,28 @@
             color: #ffffff;
         }
 
+        /* Navbar floating pill morph */
+        #navbar {
+            transition: margin 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+                        border-radius 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+                        box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+                        border-color 0.4s ease;
+        }
+
+        #navbar.nav-scrolled {
+            margin: 0.75rem 1rem 0;
+            border-radius: 9999px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border-bottom-color: transparent;
+        }
+
+        @media (max-width: 767px) {
+            #navbar.nav-scrolled {
+                border-radius: 1.5rem;
+                margin: 0.5rem;
+            }
+        }
+
         /* Reduce motion for users who prefer it */
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
@@ -206,7 +228,7 @@
 
 </head>
 
-<body class="dark:bg-slate-900 text-slate-800 dark:text-slate-100 bg-slate-50 relative antialiased">
+<body class="dark:bg-slate-900 text-slate-800 dark:text-slate-100 bg-warm-white relative antialiased">
 
 <!-- Skip to main content - Enhanced for better visibility -->
 <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:bg-primary-blue focus:text-white focus:px-6 focus:py-3 focus:rounded-lg focus:z-[100] focus:text-lg focus:font-semibold focus:shadow-lg">
@@ -345,7 +367,7 @@
     {% include "contact.html" %}
     {% endif %}
 </main>
-<footer role="contentinfo" class="bg-dark-green text-white py-16">
+<footer role="contentinfo" class="bg-dark-green text-white py-16 rounded-t-[3rem] -mt-6 relative z-10" style="background-image: radial-gradient(ellipse at 20% 50%, rgba(26,138,76,0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 80%, rgba(0,86,179,0.06) 0%, transparent 50%);">
     <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
             <!-- About Section -->
@@ -433,8 +455,15 @@
             </div>
         </div>
 
-        <!-- Copyright -->
+        <!-- Copyright & Status -->
         <div class="mt-12 pt-8 border-t border-gray-600 text-center">
+            <div class="flex items-center justify-center gap-2 mb-3">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-green opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-green"></span>
+                </span>
+                <span class="text-gray-400 text-sm">Sistema operativo</span>
+            </div>
             <p class="text-gray-300 text-base">
                 &copy; {% year %} MasJubilaciones. Todos los derechos reservados.
             </p>
@@ -502,26 +531,50 @@
     (function() {
         const toggle = document.getElementById('mobile-menu-toggle');
         const menu = document.getElementById('mobile-menu');
+        const navbar = document.getElementById('navbar');
         if (!toggle || !menu) return;
 
-        toggle.addEventListener('click', () => {
-            const isOpen = !menu.classList.contains('hidden');
-            menu.classList.toggle('hidden');
-            toggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-            const icon = toggle.querySelector('i');
-            if (icon) {
-                icon.className = isOpen ? 'fas fa-bars text-2xl' : 'fas fa-times text-2xl';
+        function setMenuOpen(open) {
+            if (open) {
+                menu.classList.remove('hidden');
+                toggle.setAttribute('aria-expanded', 'true');
+                toggle.querySelector('i').className = 'fas fa-times text-2xl';
+                if (navbar) navbar.classList.remove('nav-scrolled');
+            } else {
+                menu.classList.add('hidden');
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.querySelector('i').className = 'fas fa-bars text-2xl';
             }
+        }
+
+        toggle.addEventListener('click', () => {
+            setMenuOpen(menu.classList.contains('hidden'));
         });
 
         menu.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-                toggle.setAttribute('aria-expanded', 'false');
-                const icon = toggle.querySelector('i');
-                if (icon) icon.className = 'fas fa-bars text-2xl';
-            });
+            link.addEventListener('click', () => setMenuOpen(false));
         });
+    })();
+
+    // === Navbar floating pill morph ===
+    (function() {
+        var hero = document.getElementById('inicio');
+        var navbar = document.getElementById('navbar');
+        var mobileMenu = document.getElementById('mobile-menu');
+        if (!hero || !navbar) return;
+
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                var mobileOpen = mobileMenu && !mobileMenu.classList.contains('hidden');
+                if (!entry.isIntersecting && !mobileOpen) {
+                    navbar.classList.add('nav-scrolled');
+                } else {
+                    navbar.classList.remove('nav-scrolled');
+                }
+            });
+        }, { rootMargin: '-80px 0px 0px 0px' });
+
+        observer.observe(hero);
     })();
 
     // === IntersectionObserver for scroll animations ===
@@ -546,6 +599,26 @@
         document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
             observer.observe(el);
         });
+    })();
+
+    // === Hero parallax (subtle) ===
+    (function() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var heroImg = document.querySelector('#inicio .absolute img');
+        if (!heroImg) return;
+        heroImg.style.willChange = 'transform';
+        var ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                ticking = true;
+                requestAnimationFrame(function() {
+                    if (window.scrollY < window.innerHeight) {
+                        heroImg.style.transform = 'scale(1.05) translateY(' + (window.scrollY * 0.15) + 'px)';
+                    }
+                    ticking = false;
+                });
+            }
+        }, { passive: true });
     })();
 
     // === Scroll-spy for active navbar link ===

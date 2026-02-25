@@ -18,6 +18,10 @@ module.exports = {
                 'secondary-green': '#148a6e',   // Darker teal for better contrast (was #1ABC9C)
                 'dark-green': '#2d3e4a',        // Slightly lighter for better readability
 
+                // Warm tones for Organic Tech aesthetic
+                'warm-white': '#FAFAF7',
+                'warm-gray': '#F5F5F0',
+
                 // Semantic colors
                 'primary': '#0056b3',
             },
