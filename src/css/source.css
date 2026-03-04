@@ -2,6 +2,31 @@
 @config "../../tailwind.config.js";
 
 /* ==========================================================================
+   Design Tokens — CSS Custom Properties
+   ========================================================================== */
+
+:root {
+    --color-primary-blue: #0056b3;
+    --color-primary-green: #1a8a4c;
+    --color-dark-blue: #003366;
+    --color-dark-green: #2d3e4a;
+    --color-light-blue: #e6f2ff;
+    --color-light-green: #2ECC71;
+    --color-lime-green: #c7eEa0;
+    --color-warm-white: #FAFAF7;
+    --color-warm-gray: #F5F5F0;
+    --color-whatsapp: #25d366;
+    --color-whatsapp-hover: #128c7e;
+    --color-validation-error: #dc2626;
+    --color-validation-success: #16a34a;
+}
+
+.dark {
+    --color-validation-error: #f87171;
+    --color-validation-success: #4ade80;
+}
+
+/* ==========================================================================
    Scroll-triggered animations
    ========================================================================== */
 
@@ -44,12 +69,12 @@
 
 input:user-invalid,
 textarea:user-invalid {
-    border-color: #dc2626 !important;
+    border-color: var(--color-validation-error) !important;
 }
 
 input:user-valid,
 textarea:user-valid {
-    border-color: #16a34a !important;
+    border-color: var(--color-validation-success) !important;
 }
 
 /* ==========================================================================
@@ -103,7 +128,7 @@ body::before {
 
 a[role="button"]:hover,
 button[type="submit"]:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 a[role="button"],

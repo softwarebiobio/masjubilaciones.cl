@@ -80,23 +80,23 @@ layout: 'blog.html'
         font-size: 1.75rem;
         margin: 1.5rem auto 0.5rem auto;
         line-height: 1.25;
-        color: #1e293b; /* slate-800 */
+        color: #1e293b;
     }
 
     .dark article h1 {
-        color: #f1f5f9; /* slate-100 */
+        color: #f1f5f9;
     }
 
     article h2 {
         font-size: 1.5rem;
         margin: 1.5rem auto 0.5rem auto;
-        color: #0056b3; /* primary-blue */
-        border-bottom: 2px solid #e6f2ff;
+        color: var(--color-primary-blue);
+        border-bottom: 2px solid var(--color-light-blue);
         padding-bottom: 0.5rem;
     }
 
     .dark article h2 {
-        color: #2ECC71; /* light-green */
+        color: var(--color-light-green);
         border-bottom-color: #334155;
     }
 
@@ -106,12 +106,12 @@ layout: 'blog.html'
 
     article h3 {
         font-size: 1.25rem;
-        color: #1a8a4c; /* primary-green */
+        color: var(--color-primary-green);
         margin: 1.25rem auto 0.5rem auto;
     }
 
     .dark article h3 {
-        color: #2ECC71;
+        color: var(--color-light-green);
     }
 
     article h4 {
@@ -158,7 +158,7 @@ layout: 'blog.html'
         background-color: #f8fafc;
         color: #1e293b;
         padding: 1.5rem 2rem;
-        border-left: 6px solid #1a8a4c;
+        border-left: 6px solid var(--color-primary-green);
         margin: 2rem 0;
         border-radius: 0.5rem;
         font-style: italic;
@@ -167,7 +167,7 @@ layout: 'blog.html'
     .dark article blockquote:not(.tiktok-embed) {
         background-color: #1e293b;
         color: #e2e8f0;
-        border-left-color: #2ECC71;
+        border-left-color: var(--color-light-green);
     }
 
     article blockquote p {
@@ -181,7 +181,7 @@ layout: 'blog.html'
 
     /* Links - Clear and accessible (scoped to prose content) */
     article .prose a {
-        color: #0056b3;
+        color: var(--color-primary-blue);
         text-decoration: underline;
         text-underline-offset: 3px;
         font-weight: 500;
@@ -189,21 +189,21 @@ layout: 'blog.html'
     }
 
     article .prose a:hover {
-        color: #003366;
+        color: var(--color-dark-blue);
     }
 
     article .prose a:focus-visible {
-        outline: 3px solid #0056b3;
+        outline: 3px solid var(--color-primary-blue);
         outline-offset: 2px;
         border-radius: 2px;
     }
 
     .dark article .prose a {
-        color: #2ECC71;
+        color: var(--color-light-green);
     }
 
     .dark article .prose a:hover {
-        color: #c7eEa0;
+        color: var(--color-lime-green);
     }
 
     /* Tables - If any */
@@ -225,12 +225,20 @@ layout: 'blog.html'
         font-weight: 600;
     }
 
+    article tr:nth-child(even) td {
+        background-color: #f8fafc;
+    }
+
     .dark article th, .dark article td {
         border-color: #475569;
     }
 
     .dark article th {
         background-color: #334155;
+    }
+
+    .dark article tr:nth-child(even) td {
+        background-color: #1e293b;
     }
 
     /* Strong and emphasis */
@@ -258,7 +266,7 @@ layout: 'blog.html'
 
 
 <article
-    class="rounded-2xl mx-auto max-w-[75ch] p-4 md:p-10 lg:p-12 mt-8
+    class="rounded-[2rem] mx-auto max-w-[75ch] p-4 md:p-10 lg:p-12 mt-8
            bg-white dark:bg-slate-900 shadow-xl
            text-slate-800 dark:text-slate-200"
     role="article"
@@ -267,7 +275,7 @@ layout: 'blog.html'
     <!-- Breadcrumb Navigation -->
     <nav class="mb-6" aria-label="Navegación de migas de pan">
         <a href="/#blog"
-           class="inline-flex items-center gap-2 text-primary-blue dark:text-light-green hover:underline text-lg font-medium py-2 focus-visible:ring-2 focus-visible:ring-primary-blue rounded">
+           class="inline-flex items-center gap-2 text-primary-blue dark:text-light-green hover:underline text-lg font-medium py-2 focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2 rounded">
             <i class="fas fa-arrow-left" aria-hidden="true"></i>
             Volver al Blog
         </a>
@@ -333,7 +341,7 @@ layout: 'blog.html'
                 Podemos ayudarle a resolver sus consultas de forma personalizada.
             </p>
             <a href="/#contacto"
-               class="inline-flex items-center gap-2 bg-primary-green hover:bg-dark-blue text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg focus-visible:ring-4 focus-visible:ring-primary-blue focus-visible:ring-offset-2">
+               class="inline-flex items-center gap-2 bg-primary-green hover:bg-dark-blue text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg md:text-xl focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2">
                 <i class="fas fa-envelope" aria-hidden="true"></i>
                 Contáctenos
             </a>

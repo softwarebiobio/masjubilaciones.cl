@@ -305,7 +305,7 @@
                       focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2
                       transition-all duration-300 shadow-lg
                       dark:bg-primary-blue dark:hover:bg-light-green dark:hover:text-slate-900
-                      flex items-center gap-2"
+                      hidden sm:flex items-center gap-2"
                role="button"
                aria-label="Solicitar primera asesoría previsional gratuita">
                 <span class="hidden sm:inline">Solicite su</span> Asesoría
@@ -371,7 +371,7 @@
     </nav>
 </header>
 
-<main id="main-content" class="pt-20 ">
+<main id="main-content" class="pt-16 md:pt-20">
     {{ content }}
     {% if page.url == '/' %}
     {% include "contact.html" %}
