@@ -4,6 +4,10 @@ module.exports = {
     darkMode: "selector",
     theme: {
         extend: {
+            fontFamily: {
+                serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+                sans: ['"Merriweather Sans"', 'Arial', 'sans-serif'],
+            },
             colors: {
                 // Primary Blues - Enhanced for better contrast (WCAG AA compliant)
                 'primary-blue': '#0056b3',      // Good contrast on white (4.5:1+)

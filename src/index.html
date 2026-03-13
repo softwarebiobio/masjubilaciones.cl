@@ -12,39 +12,43 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
 
     /* Cinematic hero gradient — warm-white base with extended reveal */
     .hero-overlay {
+        --hero-base: var(--color-warm-white);
         background: linear-gradient(
             to top,
-            rgba(250,250,247,0.99) 0%,
-            rgba(250,250,247,0.92) 25%,
-            rgba(250,250,247,0.60) 50%,
-            rgba(250,250,247,0.15) 75%,
+            color-mix(in srgb, var(--hero-base) 99%, transparent) 0%,
+            color-mix(in srgb, var(--hero-base) 92%, transparent) 25%,
+            color-mix(in srgb, var(--hero-base) 60%, transparent) 50%,
+            color-mix(in srgb, var(--hero-base) 15%, transparent) 75%,
             transparent 100%
         );
     }
 
     .dark .hero-overlay {
+        --hero-base: #0f172a;
         background: linear-gradient(
             to top,
-            rgba(15,23,42,0.99) 0%,
-            rgba(15,23,42,0.92) 25%,
-            rgba(15,23,42,0.60) 50%,
-            rgba(15,23,42,0.15) 75%,
+            color-mix(in srgb, var(--hero-base) 99%, transparent) 0%,
+            color-mix(in srgb, var(--hero-base) 92%, transparent) 25%,
+            color-mix(in srgb, var(--hero-base) 60%, transparent) 50%,
+            color-mix(in srgb, var(--hero-base) 15%, transparent) 75%,
             transparent 100%
         );
     }
 
     /* Wave divider dark mode fill overrides */
-    .dark .divider-1 svg path { fill: rgb(30 41 59 / 0.5); }
+    .dark .divider-1 svg path { fill: rgb(30 41 59 / 0.8); }
     .dark .divider-2 svg path { fill: rgb(15 23 42); }
-    .dark .divider-3 svg path { fill: rgb(30 41 59 / 0.5); }
+    .dark .divider-3 svg path { fill: rgb(30 41 59 / 0.8); }
 </style>
 
 <!-- Hero Section - Improved for seniors with better contrast and larger text -->
 <section id="inicio" class="overflow-hidden relative min-h-[85vh]" aria-labelledby="hero-title">
     <!-- Background Image -->
-    <div class="absolute inset-0">
+    <div class="absolute inset-0 bg-warm-gray dark:bg-slate-800">
         <img src="images/hero2.jpg"
              alt="Pareja de adultos mayores felices revisando documentos de pensión"
+             width="3608"
+             height="2378"
              decoding="async"
              fetchpriority="high"
              class="w-full h-full object-cover object-top">
@@ -64,7 +68,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             <!-- Main Heading - Larger for seniors -->
             <h1 id="hero-title" class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-slate-900 dark:text-white mb-4 leading-tight animate-on-scroll stagger-2">
                 Asesoría Previsional
-                <span class="text-primary-green block md:inline text-4xl sm:text-5xl md:text-6xl xl:text-7xl italic" style="font-family: 'IBM Plex Serif', Georgia, serif;">Profesional</span>
+                <span class="text-primary-green block md:inline text-4xl sm:text-5xl md:text-6xl xl:text-7xl italic font-serif">Profesional</span>
             </h1>
 
             <!-- Subheading with better contrast -->
@@ -152,7 +156,8 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
                              loading="lazy"
                              decoding="async"
                              src="{{cover_image_url}}"
-                             alt="Imagen ilustrativa: {{post.data.title}}">
+                             alt=""
+                             role="presentation">
                     </div>
 
                     <!-- Content -->

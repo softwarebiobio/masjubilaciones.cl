@@ -50,11 +50,14 @@
     <!-- Keywords optimized for Chilean pension seekers -->
     <meta name="keywords" content="{{keywords | join: ', '}}, asesor previsional Concepción, jubilación adulto mayor, pensión tercera edad, tramitar jubilación Chile, cómo jubilarme, PGU pensión garantizada">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/fontawesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/solid.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/brands.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Merriweather+Sans:wght@400;500;600;700;800&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Merriweather+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <meta name="last-modified" content="{{page.date}}">
@@ -197,13 +200,13 @@
         #navbar {
             left: 0;
             right: 0;
-            transition: margin 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-                        border-radius 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-                        box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+            transition: margin 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                        border-radius 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                        box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
                         border-color 0.4s ease,
-                        left 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-                        right 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-                        width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+                        left 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                        right 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                        width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
         #navbar.nav-scrolled {
@@ -326,7 +329,7 @@
     </div>
 
     <!-- Mobile menu panel -->
-    <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800" aria-label="Menú de navegación móvil">
+    <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 max-h-[calc(100vh-4rem)] overflow-y-auto" aria-label="Menú de navegación móvil">
         <ul class="flex flex-col py-2" role="list">
             <li>
                 <a href="/#inicio" class="mobile-nav-link flex items-center gap-3 py-3 px-6 text-lg text-slate-800 dark:text-slate-100 hover:bg-light-green/15 dark:hover:bg-slate-700 transition-colors">
@@ -377,7 +380,7 @@
     {% include "contact.html" %}
     {% endif %}
 </main>
-<footer role="contentinfo" class="bg-dark-green text-white py-16 rounded-t-[3rem] -mt-6 relative z-10" style="background-image: radial-gradient(ellipse at 20% 50%, rgba(26,138,76,0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 80%, rgba(0,86,179,0.06) 0%, transparent 50%);">
+<footer role="contentinfo" class="bg-dark-green text-white py-16 rounded-t-[3rem] -mt-6 relative z-10" style="background-image: radial-gradient(ellipse at 20% 50%, color-mix(in srgb, var(--color-primary-green) 8%, transparent) 0%, transparent 50%), radial-gradient(ellipse at 80% 80%, color-mix(in srgb, var(--color-primary-blue) 6%, transparent) 0%, transparent 50%);">
     <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
             <!-- About Section -->
