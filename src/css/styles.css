@@ -43,11 +43,9 @@
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
     --blur-md: 12px;
+    --aspect-video: 16 / 9;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    --default-font-family: "Merriweather Sans", Arial, sans-serif;
-    --default-font-feature-settings: normal;
-    --default-font-variation-settings: normal;
     --default-mono-font-family: var(--font-mono);
   }
 }
@@ -352,6 +350,12 @@
   .table {
     display: table;
   }
+  .aspect-\[4\/3\] {
+    aspect-ratio: 4/3;
+  }
+  .aspect-video {
+    aspect-ratio: var(--aspect-video);
+  }
   .h-2\.5 {
     height: calc(var(--spacing) * 2.5);
   }
@@ -375,9 +379,6 @@
   }
   .h-20 {
     height: calc(var(--spacing) * 20);
-  }
-  .h-56 {
-    height: calc(var(--spacing) * 56);
   }
   .h-64 {
     height: calc(var(--spacing) * 64);
@@ -1147,9 +1148,9 @@
       --tw-ring-offset-shadow: var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
     }
   }
-  .placeholder\:text-slate-400 {
+  .placeholder\:text-slate-500 {
     &::placeholder {
-      color: var(--color-slate-400);
+      color: var(--color-slate-500);
     }
   }
   .focus-within\:ring-3 {
@@ -1465,6 +1466,11 @@
       flex-direction: row;
     }
   }
+  .sm\:p-6 {
+    @media (width >= 40rem) {
+      padding: calc(var(--spacing) * 6);
+    }
+  }
   .sm\:text-4xl {
     @media (width >= 40rem) {
       font-size: 2.25rem;
@@ -1515,11 +1521,6 @@
   .md\:h-20 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 20);
-    }
-  }
-  .md\:h-64 {
-    @media (width >= 48rem) {
-      height: calc(var(--spacing) * 64);
     }
   }
   .md\:h-80 {
@@ -1737,6 +1738,11 @@
       line-height: var(--tw-leading, var(--text-7xl--line-height));
     }
   }
+  .dark\:border-light-green {
+    &:where(.dark, .dark *) {
+      border-color: #2ECC71;
+    }
+  }
   .dark\:border-slate-600 {
     &:where(.dark, .dark *) {
       border-color: var(--color-slate-600);
@@ -1777,6 +1783,14 @@
       background-color: color-mix(in srgb, oklch(37.2% 0.044 257.287) 50%, transparent);
       @supports (color: color-mix(in lab, red, red)) {
         background-color: color-mix(in oklab, var(--color-slate-700) 50%, transparent);
+      }
+    }
+  }
+  .dark\:bg-slate-700\/80 {
+    &:where(.dark, .dark *) {
+      background-color: color-mix(in srgb, oklch(37.2% 0.044 257.287) 80%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-slate-700) 80%, transparent);
       }
     }
   }
@@ -1941,10 +1955,10 @@
       color: var(--color-white);
     }
   }
-  .dark\:placeholder\:text-slate-500 {
+  .dark\:placeholder\:text-slate-400 {
     &:where(.dark, .dark *) {
       &::placeholder {
-        color: var(--color-slate-500);
+        color: var(--color-slate-400);
       }
     }
   }
@@ -2048,28 +2062,28 @@
   transform: translateY(0) translateX(0) scale(1);
 }
 .stagger-1 {
-  transition-delay: 0.1s;
+  transition-delay: 0.06s;
 }
 .stagger-2 {
-  transition-delay: 0.2s;
+  transition-delay: 0.12s;
 }
 .stagger-3 {
-  transition-delay: 0.3s;
+  transition-delay: 0.17s;
 }
 .stagger-4 {
-  transition-delay: 0.4s;
+  transition-delay: 0.21s;
 }
 .stagger-5 {
-  transition-delay: 0.5s;
+  transition-delay: 0.25s;
 }
 .stagger-6 {
-  transition-delay: 0.6s;
+  transition-delay: 0.29s;
 }
 .stagger-7 {
-  transition-delay: 0.7s;
+  transition-delay: 0.33s;
 }
 .stagger-8 {
-  transition-delay: 0.8s;
+  transition-delay: 0.37s;
 }
 input:user-invalid, textarea:user-invalid {
   border-color: var(--color-validation-error) !important;

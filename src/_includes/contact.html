@@ -124,7 +124,7 @@
                                class="w-full text-lg md:text-xl text-slate-800 p-4 border-2 border-slate-300 dark:border-slate-600 rounded-xl
                                       focus:outline-none focus:border-primary-green focus:ring-3 focus:ring-primary-green/20
                                       dark:bg-slate-700 dark:text-white dark:focus:border-light-green
-                                      placeholder:text-slate-400 dark:placeholder:text-slate-500
+                                      placeholder:text-slate-500 dark:placeholder:text-slate-400
                                       transition-all duration-200">
                     </div>
 
@@ -147,9 +147,9 @@
                                class="w-full text-lg md:text-xl text-slate-800 p-4 border-2 border-slate-300 dark:border-slate-600 rounded-xl
                                       focus:outline-none focus:border-primary-green focus:ring-3 focus:ring-primary-green/20
                                       dark:bg-slate-700 dark:text-white dark:focus:border-light-green
-                                      placeholder:text-slate-400 dark:placeholder:text-slate-500
+                                      placeholder:text-slate-500 dark:placeholder:text-slate-400
                                       transition-all duration-200">
-                        <p id="phone-hint" class="mt-2 text-sm text-slate-500 dark:text-slate-400">
+                        <p id="phone-hint" class="mt-2 text-sm text-slate-600 dark:text-slate-400">
                             Puede ser su teléfono o el de un familiar para contactarle
                         </p>
                     </div>
@@ -170,7 +170,7 @@
                                   class="w-full text-lg md:text-xl text-slate-800 p-4 border-2 border-slate-300 dark:border-slate-600 rounded-xl
                                          focus:outline-none focus:border-primary-green focus:ring-3 focus:ring-primary-green/20
                                          dark:bg-slate-700 dark:text-white dark:focus:border-light-green
-                                         placeholder:text-slate-400 dark:placeholder:text-slate-500
+                                         placeholder:text-slate-500 dark:placeholder:text-slate-400
                                          transition-all duration-200 resize-y min-h-[150px]"></textarea>
                     </div>
 
@@ -199,13 +199,16 @@
                 Nuestra Ubicación
             </h3>
             <figure class="rounded-[2rem] overflow-hidden shadow-xl">
-                <img src="/images/map.png"
-                     alt="Mapa mostrando la ubicación de MasJubilaciones en San Martín 553, Concepción"
-                     width="2042"
-                     height="1472"
-                     loading="lazy"
-                     decoding="async"
-                     class="w-full h-64 md:h-80 object-cover object-center">
+                <picture>
+                    <source srcset="/images/map.webp" type="image/webp">
+                    <img src="/images/map.png"
+                         alt="Mapa mostrando la ubicación de MasJubilaciones en San Martín 553, Concepción"
+                         width="2042"
+                         height="1472"
+                         loading="lazy"
+                         decoding="async"
+                         class="w-full h-64 md:h-80 object-cover object-center">
+                </picture>
                 <figcaption class="sr-only">
                     Oficina ubicada en San Martín 553, Oficina 302, Concepción, Región del Biobío, Chile
                 </figcaption>

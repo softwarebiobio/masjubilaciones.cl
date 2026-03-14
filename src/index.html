@@ -37,7 +37,6 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
 
     /* Wave divider dark mode fill overrides */
     .dark .divider-1 svg path { fill: rgb(30 41 59 / 0.8); }
-    .dark .divider-2 svg path { fill: rgb(15 23 42); }
     .dark .divider-3 svg path { fill: rgb(30 41 59 / 0.8); }
 </style>
 
@@ -95,14 +94,12 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             <!-- CTA Buttons - Large and accessible -->
             <div class="flex flex-col sm:flex-row gap-4 animate-on-scroll stagger-5">
                 <a href="#contacto"
-                   class="inline-flex items-center justify-center gap-3 bg-primary-green hover:bg-dark-blue text-white text-lg md:text-xl font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2"
-                   role="button">
+                   class="inline-flex items-center justify-center gap-3 bg-primary-green hover:bg-dark-blue text-white text-lg md:text-xl font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2">
                     <i class="fas fa-calendar-check" aria-hidden="true"></i>
                     Solicitar 1ra Asesoría Gratis
                 </a>
                 <a href="tel:+56993467163"
                    class="inline-flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-slate-900 text-lg md:text-xl font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl border-2 border-slate-300 transition-all duration-300 focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700 dark:border-slate-600"
-                   role="button"
                    aria-label="Llamar al teléfono +56 9 9346 7163">
                     <i class="fas fa-phone" aria-hidden="true"></i>
                     Llamar Ahora
@@ -152,9 +149,11 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
                    aria-labelledby="post-{{ post.fileSlug }}-title">
                     <!-- Image Container -->
                     <div class="overflow-hidden">
-                        <img class="w-full h-56 md:h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        <img class="w-full aspect-[4/3] object-cover transform group-hover:scale-105 transition-transform duration-500"
                              loading="lazy"
                              decoding="async"
+                             width="1024"
+                             height="768"
                              src="{{cover_image_url}}"
                              alt=""
                              role="presentation">
@@ -186,7 +185,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
 <!-- Wave divider: blog → services -->
 <div class="relative z-[1] -mt-1 divider-2 bg-warm-gray dark:bg-slate-800/50" aria-hidden="true">
     <svg viewBox="0 0 1440 48" preserveAspectRatio="none" class="w-full h-3 md:h-4 block">
-        <path d="M0,24 C360,48 720,0 1080,24 C1260,36 1380,12 1440,24 L1440,48 L0,48 Z" fill="white"/>
+        <path d="M0,24 C360,48 720,0 1080,24 C1260,36 1380,12 1440,24 L1440,48 L0,48 Z" class="fill-white dark:fill-slate-900"/>
     </svg>
 </div>
 
@@ -206,7 +205,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
         <!-- Services Grid - 3 columns for better readability -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" role="list" aria-label="Lista de servicios">
             <!-- Service 1 -->
-            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-1" role="listitem">
+            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-1" role="listitem">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-green/15 to-primary-green/5 dark:from-primary-green/25 dark:to-primary-green/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
                         <i class="fas fa-user-tie text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -219,7 +218,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </article>
 
             <!-- Service 2 -->
-            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-2" role="listitem">
+            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-2" role="listitem">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-blue/15 to-primary-blue/5 dark:from-primary-blue/25 dark:to-primary-blue/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
                         <i class="fas fa-calculator text-primary-blue text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -232,7 +231,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </article>
 
             <!-- Service 3 -->
-            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-3" role="listitem">
+            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-3" role="listitem">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-green/15 to-primary-green/5 dark:from-primary-green/25 dark:to-primary-green/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
                         <i class="fas fa-gavel text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -245,7 +244,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </article>
 
             <!-- Service 4 -->
-            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-4" role="listitem">
+            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-4" role="listitem">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-blue/15 to-primary-blue/5 dark:from-primary-blue/25 dark:to-primary-blue/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
                         <i class="fas fa-balance-scale text-primary-blue text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -258,7 +257,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </article>
 
             <!-- Service 5 -->
-            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-5" role="listitem">
+            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-5" role="listitem">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-green/15 to-primary-green/5 dark:from-primary-green/25 dark:to-primary-green/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
                         <i class="fas fa-file-signature text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -271,7 +270,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </article>
 
             <!-- Service 6 -->
-            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-6" role="listitem">
+            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-6" role="listitem">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-blue/15 to-primary-blue/5 dark:from-primary-blue/25 dark:to-primary-blue/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
                         <i class="fas fa-chart-line text-primary-blue text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -284,7 +283,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </article>
 
             <!-- Service 7 -->
-            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-7" role="listitem">
+            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-7" role="listitem">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-green/15 to-primary-green/5 dark:from-primary-green/25 dark:to-primary-green/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
                         <i class="fas fa-coins text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -297,7 +296,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </article>
 
             <!-- Service 8 -->
-            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-8" role="listitem">
+            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-8" role="listitem">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-blue/15 to-primary-blue/5 dark:from-primary-blue/25 dark:to-primary-blue/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
                         <i class="fas fa-hands-helping text-primary-blue text-3xl md:text-4xl" aria-hidden="true"></i>
