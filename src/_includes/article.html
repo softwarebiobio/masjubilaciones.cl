@@ -360,8 +360,74 @@ layout: 'blog.html'
     .dark article code {
         background-color: #334155;
     }
+
+    /* Reading progress bar */
+    .reading-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: var(--color-primary-green);
+        z-index: 100;
+        width: 0%;
+        transition: width 0.1s linear;
+        border-radius: 0 2px 2px 0;
+    }
+
+    /* "Volver al Blog" arrow nudge on hover */
+    .back-link i {
+        transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .back-link:hover i {
+        transform: translateX(-4px);
+    }
+
+    /* Smooth section entrance */
+    .article-entrance {
+        opacity: 0;
+        transform: translateY(16px);
+        animation: article-fade-in 0.5s ease-out forwards;
+    }
+
+    .article-entrance-delay-1 { animation-delay: 0.1s; }
+    .article-entrance-delay-2 { animation-delay: 0.2s; }
+    .article-entrance-delay-3 { animation-delay: 0.3s; }
+
+    @keyframes article-fade-in {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* CTA button satisfying press */
+    .cta-press:active {
+        transform: translateY(2px) scale(0.98);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .reading-progress {
+            transition: none;
+        }
+        .back-link i {
+            transition: none;
+        }
+        .article-entrance {
+            opacity: 1;
+            transform: none;
+            animation: none;
+        }
+        .cta-press:active {
+            transform: none;
+        }
+    }
 </style>
 
+
+<!-- Reading Progress Bar -->
+<div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
 
 <article
     class="rounded-xl sm:rounded-[2rem] mx-auto max-w-[75ch] p-4 sm:p-6 md:p-10 lg:p-12 mt-4 sm:mt-8
@@ -373,7 +439,7 @@ layout: 'blog.html'
     <!-- Breadcrumb Navigation -->
     <nav class="mb-6" aria-label="Navegación de migas de pan">
         <a href="/#blog"
-           class="inline-flex items-center gap-2 text-primary-blue dark:text-light-green hover:underline text-lg font-medium py-2 focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2 rounded">
+           class="back-link inline-flex items-center gap-2 text-primary-blue dark:text-light-green hover:underline text-lg font-medium py-2 focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2 rounded">
             <i class="fas fa-arrow-left" aria-hidden="true"></i>
             Volver al Blog
         </a>
@@ -381,10 +447,10 @@ layout: 'blog.html'
 
     <!-- Article Header -->
     <header class="mb-10">
-        <h1 id="article-title" class="text-3xl md:text-[2.5rem] md:leading-[1.15] font-extrabold text-dark-blue dark:text-white tracking-tight mb-5">
+        <h1 id="article-title" class="article-entrance text-3xl md:text-[2.5rem] md:leading-[1.15] font-extrabold text-dark-blue dark:text-white tracking-tight mb-5">
             {{title}}
         </h1>
-        <div class="flex flex-wrap items-center gap-4 text-base text-slate-500 dark:text-slate-400">
+        <div class="article-entrance article-entrance-delay-1 flex flex-wrap items-center gap-4 text-base text-slate-500 dark:text-slate-400">
             {% if page.date %}
             <p class="flex items-center gap-2">
                 <i class="fas fa-calendar-alt text-primary-green" aria-hidden="true"></i>
@@ -396,7 +462,7 @@ layout: 'blog.html'
                 <span>{{ reading_time }} min de lectura</span>
             </p>
         </div>
-        <div class="mt-5 h-1 w-24 rounded-full bg-primary-green" aria-hidden="true"></div>
+        <div class="article-entrance article-entrance-delay-2 mt-5 h-1 w-24 rounded-full bg-primary-green" aria-hidden="true"></div>
     </header>
 
     <!-- Featured Image -->
@@ -439,7 +505,7 @@ layout: 'blog.html'
                 Podemos ayudarle a resolver sus consultas de forma personalizada.
             </p>
             <a href="/#contacto"
-               class="inline-flex items-center gap-2 bg-primary-green hover:bg-dark-blue text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg md:text-xl focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2">
+               class="cta-press inline-flex items-center gap-2 bg-primary-green hover:bg-dark-blue text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg md:text-xl focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2">
                 <i class="fas fa-envelope" aria-hidden="true"></i>
                 Contáctenos
             </a>
@@ -452,3 +518,27 @@ layout: 'blog.html'
         </div>
     </footer>
 </article>
+
+<script>
+// Reading progress bar
+(function() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var bar = document.getElementById('reading-progress');
+    var article = document.querySelector('article');
+    if (!bar || !article) return;
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(function() {
+                var rect = article.getBoundingClientRect();
+                var total = article.offsetHeight - window.innerHeight;
+                var scrolled = -rect.top;
+                var pct = Math.min(Math.max(scrolled / total * 100, 0), 100);
+                bar.style.width = pct + '%';
+                ticking = false;
+            });
+        }
+    }, { passive: true });
+})();
+</script>
