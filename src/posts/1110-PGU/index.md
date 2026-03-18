@@ -3,7 +3,7 @@ title: "Pensión Universal Garantizada 2024"
 featured: true
 image: "PGU.png"
 imageAlt: "Infografía sobre la Pensión Universal Garantizada (PGU) en Chile, requisitos y montos 2024"
-date: "2024-11-10"
+date: "2024-10-10"
 ---
 
 ## Pensión Universal Garantizada 2024: Lo que Necesitas Saber
