@@ -173,14 +173,6 @@
   "faq": [
     {
       "@type": "Question",
-      "name": "¿Cuánto cuesta la asesoría previsional?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ofrecemos una consulta inicial gratuita para evaluar su caso. Los honorarios se definen según la complejidad del trámite."
-      }
-    },
-    {
-      "@type": "Question",
       "name": "¿Qué documentos necesito para comenzar?",
       "acceptedAnswer": {
         "@type": "Answer",
