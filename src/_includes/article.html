@@ -90,14 +90,22 @@ layout: 'blog.html'
     article h2 {
         font-size: 1.5rem;
         margin: 1.5rem auto 0.5rem auto;
-        color: var(--color-primary-blue);
-        border-bottom: 2px solid var(--color-light-blue);
-        padding-bottom: 0.5rem;
     }
 
-    .dark article h2 {
+    article .prose h2 {
+        font-size: 1.5rem;
+        margin: 2rem auto 0.75rem auto;
+        color: var(--color-dark-blue);
+        border-left: 5px solid var(--color-primary-green);
+        border-bottom: none;
+        padding: 0.4rem 0 0.4rem 0.75rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+    }
+
+    .dark article .prose h2 {
         color: var(--color-light-green);
-        border-bottom-color: #334155;
+        border-left-color: var(--color-light-green);
     }
 
     article h2:first-of-type {
@@ -145,7 +153,25 @@ layout: 'blog.html'
     }
 
     article ul li {
-        list-style-type: disc;
+        list-style-type: none;
+        position: relative;
+        padding-left: 0.25rem;
+    }
+
+    article ul li::before {
+        content: '';
+        position: absolute;
+        left: -1.25rem;
+        top: 0.7em;
+        width: 8px;
+        height: 8px;
+        border-radius: 2px;
+        background-color: var(--color-primary-green);
+        transform: rotate(45deg);
+    }
+
+    .dark article ul li::before {
+        background-color: var(--color-light-green);
     }
 
     article ol li {
@@ -206,39 +232,111 @@ layout: 'blog.html'
         color: var(--color-lime-green);
     }
 
-    /* Tables - If any */
+    /* Tables — Bold branded style */
     article table {
         width: 100%;
-        border-collapse: collapse;
+        border-collapse: separate;
+        border-spacing: 0;
         margin: 2rem 0;
         font-size: 1.1rem;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        box-shadow: 0 4px 24px -4px rgba(0, 51, 102, 0.10);
     }
 
     article th, article td {
-        padding: 1rem;
-        border: 1px solid var(--color-light-blue);
+        padding: 0.85rem 1rem;
+        border-bottom: 1px solid var(--color-light-blue);
         text-align: left;
     }
 
     article th {
-        background-color: var(--color-warm-gray);
-        font-weight: 600;
+        background-color: var(--color-dark-blue);
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 1rem;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        border-bottom: none;
     }
 
     article tr:nth-child(even) td {
-        background-color: var(--color-warm-white);
+        background-color: var(--color-light-blue);
     }
 
-    .dark article th, .dark article td {
-        border-color: #475569;
+    article tr:nth-child(odd) td {
+        background-color: #ffffff;
+    }
+
+    article tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    article tbody tr:hover td {
+        background-color: color-mix(in srgb, var(--color-primary-green) 8%, white);
     }
 
     .dark article th {
-        background-color: #334155;
+        background-color: var(--color-primary-blue);
+    }
+
+    .dark article th, .dark article td {
+        border-color: #334155;
     }
 
     .dark article tr:nth-child(even) td {
         background-color: #1e293b;
+    }
+
+    .dark article tr:nth-child(odd) td {
+        background-color: #0f172a;
+    }
+
+    .dark article tbody tr:hover td {
+        background-color: #1e3a5f;
+    }
+
+    /* Tables — Mobile adaptation */
+    @media (max-width: 639px) {
+        article table {
+            font-size: 0.85rem;
+            margin: 1.25rem -0.25rem;
+            width: calc(100% + 0.5rem);
+        }
+
+        article th {
+            font-size: 0.75rem;
+            text-transform: none;
+            font-weight: 700;
+            padding: 0.6rem 0.5rem;
+        }
+
+        article td {
+            padding: 0.6rem 0.5rem;
+        }
+    }
+
+    /* Callout paragraphs — targets "Importante:" and similar */
+    article .prose p:has(> strong:first-child) {
+        background-color: #fef9e7;
+        border-left: 5px solid #d4a017;
+        padding: 0.85rem 1rem;
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    @media (min-width: 640px) {
+        article .prose p:has(> strong:first-child) {
+            padding: 1rem 1.25rem;
+        }
+    }
+
+    .dark article .prose p:has(> strong:first-child) {
+        background-color: #422006;
+        border-left-color: #facc15;
+        color: #fef9c3;
     }
 
     /* Strong and emphasis */
@@ -266,7 +364,7 @@ layout: 'blog.html'
 
 
 <article
-    class="rounded-[2rem] mx-auto max-w-[75ch] p-4 md:p-10 lg:p-12 mt-8
+    class="rounded-xl sm:rounded-[2rem] mx-auto max-w-[75ch] p-4 sm:p-6 md:p-10 lg:p-12 mt-4 sm:mt-8
            bg-white dark:bg-slate-900 shadow-xl
            text-slate-800 dark:text-slate-200"
     role="article"
@@ -282,25 +380,24 @@ layout: 'blog.html'
     </nav>
 
     <!-- Article Header -->
-    <header class="text-center mb-8">
-        <h1 id="article-title" class="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white leading-tight mb-4">
+    <header class="mb-10">
+        <h1 id="article-title" class="text-3xl md:text-[2.5rem] md:leading-[1.15] font-extrabold text-dark-blue dark:text-white tracking-tight mb-5">
             {{title}}
         </h1>
-        <div class="flex flex-wrap items-center justify-center gap-4 text-base text-slate-500 dark:text-slate-400">
+        <div class="flex flex-wrap items-center gap-4 text-base text-slate-500 dark:text-slate-400">
             {% if page.date %}
             <p class="flex items-center gap-2">
-                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                <i class="fas fa-calendar-alt text-primary-green" aria-hidden="true"></i>
                 <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | readableDate }}</time>
             </p>
             {% endif %}
             <p class="flex items-center gap-2">
-                <i class="fas fa-clock" aria-hidden="true"></i>
+                <i class="fas fa-clock text-primary-green" aria-hidden="true"></i>
                 <span>{{ reading_time }} min de lectura</span>
             </p>
         </div>
+        <div class="mt-5 h-1 w-24 rounded-full bg-primary-green" aria-hidden="true"></div>
     </header>
-
-    <hr class="border-slate-200 dark:border-slate-700 mb-8" aria-hidden="true">
 
     <!-- Featured Image -->
     {% if image %}
@@ -321,7 +418,7 @@ layout: 'blog.html'
 
     <!-- Lead/Summary -->
     {% if lead != nil and lead.size > 0 %}
-    <section class="text-lg md:text-xl bg-light-blue/50 dark:bg-slate-700/80 p-5 md:p-6 rounded-xl border-l-4 border-primary-green dark:border-light-green text-slate-700 dark:text-slate-200 mb-10 leading-relaxed" aria-label="Resumen del artículo">
+    <section class="text-lg md:text-xl bg-dark-blue/[0.04] dark:bg-slate-700/80 p-6 md:p-8 rounded-2xl border-l-[6px] border-primary-green dark:border-light-green text-slate-700 dark:text-slate-200 mb-12 leading-relaxed shadow-sm" aria-label="Resumen del artículo">
         {{lead}}
     </section>
     {% endif %}
