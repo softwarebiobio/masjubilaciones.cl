@@ -12,13 +12,12 @@ imageAlt: "Pareja de adultos mayores revisando opciones de pensión y modalidade
 
 Con el Retiro Programado, la AFP utiliza los ahorros de su cuenta para pagarle una pensión mensual. El monto que recibirá puede variar cada año, dependiendo del desempeño de los fondos y las tasas de retiro programado informadas por la Superintendencia de Pensiones.
 
-Si elige esta opción, podrá cambiarla más adelante, ya que es revocable. Además, si al fallecer quedan fondos en su cuenta y no hay beneficiarios legales, este dinero se incluirá como parte de su herencia. Cuando sus ahorros se agoten, tendrá acceso a una pensión mínima garantizada.
-
+Si elige esta opción, podrá cambiarla más adelante, ya que es revocable. Además, si al fallecer quedan fondos en su cuenta y no hay beneficiarios legales, este dinero se incluirá como parte de su herencia.
 ## Renta Vitalicia Inmediata
 
 La Renta Vitalicia Inmediata es un contrato con una aseguradora que le garantiza una pensión fija, calculada en UF, que recibirá de por vida.
 
-Este tipo de pensión ofrece estabilidad, ya que el monto no cambia y nunca será inferior a la pensión mínima. Sin embargo, no podrá modificar esta elección una vez tomada, ya que es irrevocable. También podrá designar beneficiarios, sean legales o no, para protegerlos económicamente tras su fallecimiento.
+Este tipo de pensión ofrece estabilidad, ya que el monto no cambia. Sin embargo, no podrá modificar esta elección una vez tomada, ya que es irrevocable. También podrá designar beneficiarios, sean legales o no, para protegerlos económicamente tras su fallecimiento.
 
 ## Renta Vitalicia con Retiro Programado
 
