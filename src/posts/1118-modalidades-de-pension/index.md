@@ -25,9 +25,9 @@ Esta alternativa combina las dos opciones anteriores. Parte de sus ahorros se de
 
 La renta vitalicia será fija y no podrá cambiarse, mientras que el retiro programado sigue siendo flexible y puede ajustarse si lo necesita.
 
-## Renta Vitalicia con Aumento Temporal
+## Renta Vitalicia con Aumento Temporal (CATP)
 
-Si necesita un ingreso mayor en los primeros años de su jubilación, esta opción le permite incrementar su pensión hasta en un 100 % por un periodo de entre 1 y 10 años. Al término de este periodo, el monto regresa al nivel estándar de la renta vitalicia.
+Si necesita un ingreso mayor en los primeros años de su jubilación, esta opción le permite incrementar su pensión hasta en un 100 % por un periodo de entre 1 y 10 años. Al término de este periodo, el monto regresa al valor de la pensión base de la renta vitalicia contratada.
 
 ## Renta Temporal con Renta Vitalicia Diferida
 
