@@ -10,7 +10,7 @@ imageAlt: "Pareja de adultos mayores revisando opciones de pensión y modalidade
 
 ## Retiro Programado
 
-Con el Retiro Programado, la AFP utiliza los ahorros de su cuenta para pagarle una pensión mensual. El monto que recibirá puede variar cada año, dependiendo del desempeño de los fondos y las tasas económicas del momento.
+Con el Retiro Programado, la AFP utiliza los ahorros de su cuenta para pagarle una pensión mensual. El monto que recibirá puede variar cada año, dependiendo del desempeño de los fondos y las tasas de retiro programado informadas por la Superintendencia de Pensiones.
 
 Si elige esta opción, podrá cambiarla más adelante, ya que es revocable. Además, si al fallecer quedan fondos en su cuenta y no hay beneficiarios legales, este dinero se incluirá como parte de su herencia. Cuando sus ahorros se agoten, tendrá acceso a una pensión mínima garantizada.
 
