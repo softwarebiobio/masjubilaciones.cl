@@ -8,8 +8,7 @@ date: "2026-03-18"
 
 ## Pensión Universal Garantizada 2026: Lo que Necesita Saber
 
-La **Pensión Universal Garantizada (PGU)**, establecida por la Ley 21.419 y modificada por la **Ley 21.735** (Reforma Previsional), es un beneficio mensual otorgado por el Estado a personas mayores de 65 años que cumplan ciertos requisitos. El monto máximo es de **$231.732** para personas de 65 a 81 años, y de **$250.275** para personas de 82 años o más. Esta pensión reemplaza a la Pensión Básica Solidaria y al Aporte Previsional Solidario, siendo administrada por el Instituto de Previsión Social (IPS).
-
+La **Pensión Universal Garantizada (PGU)**, establecida por la Ley 21.419 y modificada por la **Ley 21.735** (Reforma Previsional), es un beneficio mensual otorgado por el Estado a personas mayores de 65 años que cumplan ciertos requisitos. El monto máximo es de **$231.732** para personas de 65 a 81 años, y de **$250.275** para personas de 82 años o más.
 ## ¿Quiénes Pueden Acceder?
 
 Para ser beneficiario de la PGU, es necesario cumplir con los siguientes criterios:
