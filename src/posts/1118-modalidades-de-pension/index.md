@@ -31,7 +31,7 @@ Si necesita un ingreso mayor en los primeros años de su jubilación, esta opci�
 
 ## Renta Temporal con Renta Vitalicia Diferida
 
-Con esta opción, una parte de sus ahorros se destina a una renta temporal, que cubrirá los primeros años de su jubilación. Después, comienza a recibir una renta vitalicia fija contratada con una aseguradora.
+Con esta opción, una parte de sus ahorros se destina a una renta temporal, que cubrirá los primeros años de su jubilación, que los pagará la AFP pudiendo ser el 100% de la renta vitalicia. Después, comienza a recibir una renta vitalicia fija contratada con una aseguradora.
 
 Es una buena alternativa si desea más flexibilidad o mayores ingresos al inicio de esta nueva etapa.
 
