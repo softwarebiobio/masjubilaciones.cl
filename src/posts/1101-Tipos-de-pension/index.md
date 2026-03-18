@@ -1,6 +1,7 @@
---- 
+---
 title: "Guía sobre los Tipos de Pensión y el Proceso de Jubilación en Chile"
-image: "cover.jpg" 
+image: "cover.jpg"
+imageAlt: "Guía ilustrativa sobre los tipos de pensión en Chile: vejez, anticipada, invalidez y sobrevivencia"
 lead: "La jubilación representa un momento significativo en la vida de cada persona, y es fundamental entender las diversas modalidades de pensión disponibles para asegurar una transición exitosa. Este artículo examina las principales opciones de pensión en Chile, desde la pensión por vejez hasta la pensión de sobrevivencia, y subraya la importancia de una planificación adecuada y de contar con asesoría profesional para garantizar un futuro financiero seguro."
 ---
 
@@ -38,6 +39,6 @@ En [Masjubilaciones](https://www.masjubilaciones.cl), contamos con la experienci
 Si tiene preguntas o requiere más información, no dude en ponerse en contacto con nosotros. Estamos aquí para ayudarle a planificar un futuro seguro y tranquilo.
 
 
-<iframe class="tiktok-embed rounded shadow-md w-full" height="400" width="300" src="https://www.tiktok.com/player/v1/7435047973433642296?&music_info=0&description=0&controls=1&autoplay=1&rel=0&loop=1" allow="fullscreen" title="TikTok @Masjubilaciones - Modalidades de Pensión">
+<iframe class="tiktok-embed rounded shadow-md w-full" height="400" width="300" src="https://www.tiktok.com/player/v1/7435047973433642296?&music_info=0&description=0&controls=1&autoplay=1&rel=0&loop=1" allow="fullscreen" loading="lazy" title="TikTok @Masjubilaciones - Modalidades de Pensión">
 @Masjubilaciones en TikTok
 </iframe>

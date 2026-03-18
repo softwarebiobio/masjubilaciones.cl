@@ -17,8 +17,19 @@
     --color-warm-gray: #F5F5F0;
     --color-whatsapp: #25d366;
     --color-whatsapp-hover: #128c7e;
+    --color-instagram: #C13584;
+    --color-facebook: #1877F2;
+    --color-youtube: #FF0000;
+    --color-twitter: #1DA1F2;
+    --color-linkedin: #0A66C2;
     --color-validation-error: #dc2626;
     --color-validation-success: #16a34a;
+}
+
+/* Footer background texture */
+.footer-bg {
+    background-image: radial-gradient(ellipse at 20% 50%, color-mix(in srgb, var(--color-primary-green) 8%, transparent) 0%, transparent 50%),
+                       radial-gradient(ellipse at 80% 80%, color-mix(in srgb, var(--color-primary-blue) 6%, transparent) 0%, transparent 50%);
 }
 
 .dark {

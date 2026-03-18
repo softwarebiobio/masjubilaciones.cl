@@ -4,6 +4,7 @@ date: "Last modified"
 lead: "
 Planificar su jubilación es una decisión muy importante. En Chile, existen distintas opciones para recibir su pensión, como el Retiro Programado y las Rentas Vitalicias. Cada alternativa tiene sus propias ventajas y características, y conocerlas le ayudará a elegir la que mejor se ajuste a sus necesidades y proyectos de vida."
 image: "image.jpg"
+imageAlt: "Pareja de adultos mayores revisando opciones de pensión y modalidades de jubilación en Chile"
 ---
 
 

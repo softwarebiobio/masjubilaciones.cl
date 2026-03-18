@@ -155,8 +155,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
                              width="1024"
                              height="768"
                              src="{{cover_image_url}}"
-                             alt=""
-                             role="presentation">
+                             alt="{{ post.data.imageAlt | default: post.data.title }}">
                     </div>
 
                     <!-- Content -->
@@ -203,9 +202,9 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
         </div>
 
         <!-- Services Grid - 3 columns for better readability -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" role="list" aria-label="Lista de servicios">
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" role="list" aria-label="Lista de servicios">
             <!-- Service 1 -->
-            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-1" role="listitem">
+            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-1 list-none">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-green/15 to-primary-green/5 dark:from-primary-green/25 dark:to-primary-green/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
                         <i class="fas fa-user-tie text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -215,10 +214,10 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
                         Orientación personalizada para obtener la <strong>pensión más alta posible</strong>. Analizamos todas las variables y beneficios disponibles para usted.
                     </p>
                 </div>
-            </article>
+            </li>
 
             <!-- Service 2 -->
-            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-2" role="listitem">
+            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-2 list-none">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-blue/15 to-primary-blue/5 dark:from-primary-blue/25 dark:to-primary-blue/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
                         <i class="fas fa-calculator text-primary-blue text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -228,10 +227,10 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
                         Estudios detallados y comparativos entre <strong>retiros programados y rentas vitalicias</strong>, incluyendo combinaciones según su caso.
                     </p>
                 </div>
-            </article>
+            </li>
 
             <!-- Service 3 -->
-            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-3" role="listitem">
+            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-3 list-none">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-green/15 to-primary-green/5 dark:from-primary-green/25 dark:to-primary-green/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
                         <i class="fas fa-gavel text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -241,10 +240,10 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
                         Le guiamos y asistimos durante el proceso de apelación para asegurar que reciba el <strong>beneficio de invalidez</strong> que le corresponde.
                     </p>
                 </div>
-            </article>
+            </li>
 
             <!-- Service 4 -->
-            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-4" role="listitem">
+            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-4 list-none">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-blue/15 to-primary-blue/5 dark:from-primary-blue/25 dark:to-primary-blue/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
                         <i class="fas fa-balance-scale text-primary-blue text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -254,10 +253,10 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
                         Analizamos y proyectamos las mejores opciones entre <strong>rentas vitalicias y retiros programados</strong> según su situación.
                     </p>
                 </div>
-            </article>
+            </li>
 
             <!-- Service 5 -->
-            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-5" role="listitem">
+            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-5 list-none">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-green/15 to-primary-green/5 dark:from-primary-green/25 dark:to-primary-green/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
                         <i class="fas fa-file-signature text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -267,10 +266,10 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
                         Le acompañamos en <strong>todas las etapas</strong> de su jubilación: vejez, anticipada, invalidez y sobrevivencia.
                     </p>
                 </div>
-            </article>
+            </li>
 
             <!-- Service 6 -->
-            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-6" role="listitem">
+            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-6 list-none">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-blue/15 to-primary-blue/5 dark:from-primary-blue/25 dark:to-primary-blue/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
                         <i class="fas fa-chart-line text-primary-blue text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -280,10 +279,10 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
                         Calculamos y proyectamos su <strong>edad óptima de jubilación</strong> considerando todas las variables de su caso.
                     </p>
                 </div>
-            </article>
+            </li>
 
             <!-- Service 7 -->
-            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-7" role="listitem">
+            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-7 list-none">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-green/15 to-primary-green/5 dark:from-primary-green/25 dark:to-primary-green/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
                         <i class="fas fa-coins text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -293,10 +292,10 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
                         Cálculos precisos para <strong>retiros de excedentes</strong> y proyección de la rentabilidad futura de su capital.
                     </p>
                 </div>
-            </article>
+            </li>
 
             <!-- Service 8 -->
-            <article class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-8" role="listitem">
+            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-8 list-none">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-blue/15 to-primary-blue/5 dark:from-primary-blue/25 dark:to-primary-blue/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
                         <i class="fas fa-hands-helping text-primary-blue text-3xl md:text-4xl" aria-hidden="true"></i>
@@ -306,8 +305,8 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
                         Asistencia ante <strong>AFP, Superintendencia de Pensiones, CMR e IPS</strong> en la resolución de irregularidades.
                     </p>
                 </div>
-            </article>
-        </div>
+            </li>
+        </ul>
     </div>
 </section>
 
