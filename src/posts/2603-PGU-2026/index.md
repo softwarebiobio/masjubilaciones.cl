@@ -18,8 +18,6 @@ Para ser beneficiario de la PGU, es necesario cumplir con los siguientes criteri
 - Haber residido en Chile durante al menos **20 años**, o **4 de los últimos 5 años**.
 - Tener una pensión base menor o igual a **$1.252.602**.
 
-**Importante:** La PGU no exige cotizaciones previas ni estar pensionado. Estos requisitos corresponden al Beneficio por Años Cotizados (BAC), que se detalla más adelante.
-
 ## Aumento Escalonado por Edad
 
 La Ley 21.735 establece un aumento gradual de la PGU hasta alcanzar **$250.275** para todos los beneficiarios:
