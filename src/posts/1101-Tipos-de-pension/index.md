@@ -1,5 +1,6 @@
 ---
 title: "Guía sobre los Tipos de Pensión y el Proceso de Jubilación en Chile"
+date: "2024-11-01"
 image: "cover.jpg"
 imageAlt: "Guía ilustrativa sobre los tipos de pensión en Chile: vejez, anticipada, invalidez y sobrevivencia"
 lead: "La jubilación representa un momento significativo en la vida de cada persona, y es fundamental entender las diversas modalidades de pensión disponibles para asegurar una transición exitosa. Este artículo examina las principales opciones de pensión en Chile, desde la pensión por vejez hasta la pensión de sobrevivencia, y subraya la importancia de una planificación adecuada y de contar con asesoría profesional para garantizar un futuro financiero seguro."
