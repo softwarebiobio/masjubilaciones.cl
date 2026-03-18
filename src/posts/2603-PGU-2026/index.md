@@ -2,27 +2,40 @@
 title: "Pensión Universal Garantizada 2026: Nuevos Montos y Requisitos"
 image: "PGU2026.png"
 imageAlt: "Tabla de montos de la Pensión Universal Garantizada (PGU) 2026 en Chile según nivel de pensión"
-lead: "La Pensión Universal Garantizada (PGU) se actualiza para 2026 con un monto máximo de $231.732. Conozca los nuevos requisitos, la tabla de montos según su pensión, y el nuevo Bono BAC."
+lead: "La PGU se actualiza para 2026: hasta $231.732 para mayores de 65 años y $250.275 para mayores de 82 años. Conozca los requisitos, la tabla de montos según su pensión, el aumento escalonado por edad, y el nuevo Beneficio por Años Cotizados (BAC)."
 date: "2026-03-18"
 ---
 
 ## Pensión Universal Garantizada 2026: Lo que Necesita Saber
 
-La **Pensión Universal Garantizada (PGU)**, establecida por la Ley 21.419, es un beneficio mensual de hasta **$231.732** otorgado por el Estado a personas mayores de 65 años que cumplan ciertos requisitos. Esta pensión reemplaza a la Pensión Básica Solidaria y al Aporte Previsional Solidario, siendo administrada por el Instituto de Previsión Social (IPS).
+La **Pensión Universal Garantizada (PGU)**, establecida por la Ley 21.419 y modificada por la **Ley 21.735** (Reforma Previsional), es un beneficio mensual otorgado por el Estado a personas mayores de 65 años que cumplan ciertos requisitos. El monto máximo es de **$231.732** para personas de 65 a 81 años, y de **$250.275** para personas de 82 años o más. Esta pensión reemplaza a la Pensión Básica Solidaria y al Aporte Previsional Solidario, siendo administrada por el Instituto de Previsión Social (IPS).
 
 ## ¿Quiénes Pueden Acceder?
 
 Para ser beneficiario de la PGU, es necesario cumplir con los siguientes criterios:
 
 - Tener al menos **65 años** de edad.
-- Estar pensionado.
-- Contar con al menos **240 meses de cotizaciones** (hombres) o **120 meses de cotizaciones** (mujeres).
 - No pertenecer al **10% más rico** de la población.
 - Haber residido en Chile durante al menos **20 años**, o **4 de los últimos 5 años**.
+- Tener una pensión base menor o igual a **$1.252.602**.
 
-## Montos de la PGU Según su Pensión
+**Importante:** La PGU no exige cotizaciones previas ni estar pensionado. Estos requisitos corresponden al Beneficio por Años Cotizados (BAC), que se detalla más adelante.
 
-La PGU se adapta según el monto de la pensión que ya recibe el beneficiario. Si su pensión base es menor a **$789.139**, recibe la PGU completa de **$231.732**. A partir de ese monto, el beneficio disminuye proporcionalmente hasta llegar a $0 con una pensión de **$1.252.602**.
+## Aumento Escalonado por Edad
+
+La Ley 21.735 establece un aumento gradual de la PGU hasta alcanzar **$250.275** para todos los beneficiarios:
+
+| Tramo de edad | Monto máximo | Vigencia |
+|---|---|---|
+| 82 años o más | $250.275 | Desde septiembre 2025 |
+| 75 años o más | $250.275 | Desde septiembre 2026 |
+| 65 años o más | $250.275 | Desde septiembre 2027 |
+
+Mientras no entre en vigencia el aumento para su tramo de edad, el monto máximo es de **$231.732**.
+
+## Montos de la PGU Según su Pensión (65 a 81 años)
+
+La PGU se adapta según el monto de la pensión que ya recibe el beneficiario. Si su pensión base es menor a **$789.139**, recibe la PGU completa de **$231.732**. A partir de ese monto, el beneficio disminuye proporcionalmente hasta llegar a $0 con una pensión de **$1.252.602**. Para personas de **82 años o más**, el monto máximo es de **$250.275**.
 
 | Pensión Base | Monto PGU |
 |---|---|
@@ -38,14 +51,23 @@ La PGU se adapta según el monto de la pensión que ya recibe el beneficiario. S
 
 *Los valores indicados son referenciales.*
 
-## Nuevo: Bono BAC (Bono por Años Cotizados)
+## Nuevo: Beneficio por Años Cotizados (BAC)
 
-A partir de enero de 2026, los beneficiarios de la PGU pueden acceder al **Bono BAC**, un beneficio adicional que premia los años de cotización:
+A partir de enero de 2026, la Ley 21.735 crea el **Beneficio por Años Cotizados (BAC)**, un complemento que premia los años de cotización. El BAC se suma a la PGU.
+
+### Requisitos del BAC
+
+- Estar **pensionado por vejez o invalidez** en una AFP.
+- Tener al menos **65 años** de edad.
+- Hombres: mínimo **240 meses** (20 años) de cotizaciones.
+- Mujeres: mínimo **120 meses** (10 años) de cotizaciones, aumentando gradualmente hasta 180 meses en 2036.
+
+### Monto del BAC
 
 - **0,1 UF por cada año cotizado**.
-- **Tope máximo de 2,5 UF** (equivalente a 25 años de cotizaciones).
+- **Máximo contabilizado: 300 meses** (25 años), equivalente a un tope de **2,5 UF**.
 
-Este bono se suma a la PGU y busca reconocer el esfuerzo de quienes han contribuido al sistema previsional durante su vida laboral.
+Este beneficio busca reconocer el esfuerzo de quienes han contribuido al sistema previsional durante su vida laboral.
 
 ## Asesoría Profesional para Maximizar sus Beneficios
 
