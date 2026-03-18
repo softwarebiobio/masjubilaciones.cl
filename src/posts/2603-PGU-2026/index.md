@@ -32,8 +32,6 @@ Mientras no entre en vigencia el aumento para su tramo de edad, el monto máximo
 
 ## Montos de la PGU Según su Pensión (65 a 81 años)
 
-La PGU se adapta según el monto de la pensión que ya recibe el beneficiario. Si su pensión base es menor a **$789.139**, recibe la PGU completa de **$231.732**. A partir de ese monto, el beneficio disminuye proporcionalmente hasta llegar a $0 con una pensión de **$1.252.602**. Para personas de **82 años o más**, el monto máximo es de **$250.275**.
-
 | Pensión Base | Monto PGU |
 |---|---|
 | $0 | $231.732 |
