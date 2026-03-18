@@ -290,7 +290,7 @@ layout: 'blog.html'
             {% if page.date %}
             <p class="flex items-center gap-2">
                 <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-                <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%d de %B, %Y" }}</time>
+                <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | readableDate }}</time>
             </p>
             {% endif %}
             <p class="flex items-center gap-2">

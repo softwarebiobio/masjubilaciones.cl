@@ -18,6 +18,11 @@ module.exports = function (eleventyConfig) {
         return new URL(url, base).toString();
     });
 
+    // Filtro para fecha legible en español
+    eleventyConfig.addFilter("readableDate", (date) => {
+        return DateTime.fromJSDate(date).setLocale("es").toFormat("d 'de' MMMM, yyyy");
+    });
+
     // Shortcode para año actual (copyright dinámico)
     eleventyConfig.addShortcode("year", () => new Date().getFullYear().toString());
 
