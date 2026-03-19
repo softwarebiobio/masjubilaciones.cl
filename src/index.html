@@ -94,12 +94,12 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             <!-- CTA Buttons - Large and accessible -->
             <div class="flex flex-col sm:flex-row gap-4 animate-on-scroll stagger-5">
                 <a href="#contacto"
-                   class="inline-flex items-center justify-center gap-3 bg-primary-green hover:bg-dark-blue text-white text-lg md:text-xl font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2">
+                   class="inline-flex items-center justify-center gap-3 bg-primary-green hover:bg-dark-blue text-white text-lg md:text-xl font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-[background-color,box-shadow,transform] duration-300 focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2">
                     <i class="fas fa-calendar-check" aria-hidden="true"></i>
                     Solicitar 1ra Asesoría Gratis
                 </a>
                 <a href="tel:+56993467163"
-                   class="inline-flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-slate-900 text-lg md:text-xl font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl border-2 border-slate-300 transition-all duration-300 focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700 dark:border-slate-600"
+                   class="inline-flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-slate-900 text-lg md:text-xl font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl border-2 border-slate-300 transition-[background-color,box-shadow,transform] duration-300 focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700 dark:border-slate-600"
                    aria-label="Llamar al teléfono +56 9 9346 7163">
                     <i class="fas fa-phone" aria-hidden="true"></i>
                     Llamar Ahora
@@ -143,7 +143,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
 
             {% assign cover_image_url = "/posts/" | concat: post.fileSlug | concat: "/" | concat: post.data.image %}
 
-            <article class="card-hover bg-white dark:bg-slate-800 rounded-[2rem] shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group focus-within:ring-3 focus-within:ring-primary-blue focus-within:ring-offset-2 flex flex-col animate-on-scroll stagger-{{ forloop.index }}">
+            <article class="card-hover bg-white dark:bg-slate-800 rounded-[2rem] shadow-md overflow-hidden group focus-within:ring-3 focus-within:ring-primary-blue focus-within:ring-offset-2 flex flex-col animate-on-scroll stagger-{{ forloop.index }}">
                 <a href="{{ post.url }}"
                    class="block focus:outline-none flex-1 flex flex-col"
                    aria-labelledby="post-{{ post.fileSlug }}-title">
@@ -168,7 +168,7 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
                             {{ post.data.lead | default: post.content | strip_html | truncatewords: 25 }}
                         </p>
 
-                        <span class="inline-flex items-center gap-2 text-primary-blue dark:text-light-green font-semibold text-lg group-hover:gap-3 transition-all" aria-hidden="true">
+                        <span class="inline-flex items-center gap-2 text-primary-blue dark:text-light-green font-semibold text-lg group-hover:gap-3 transition-[gap] duration-300" aria-hidden="true">
                             Leer artículo completo
                             <i class="fas fa-arrow-right"></i>
                         </span>
@@ -201,112 +201,92 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </p>
         </div>
 
-        <!-- Services Grid - 3 columns for better readability -->
-        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" role="list" aria-label="Lista de servicios">
-            <!-- Service 1 -->
-            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-1 list-none">
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-green/15 to-primary-green/5 dark:from-primary-green/25 dark:to-primary-green/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
-                        <i class="fas fa-user-tie text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
+        <!-- Featured Services — top 3 as prominent cards -->
+        <ul class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mb-12" role="list" aria-label="Servicios principales">
+            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-6 md:p-8 shadow-md animate-on-scroll stagger-1 list-none">
+                <div class="flex items-start gap-5">
+                    <div class="w-14 h-14 shrink-0 bg-primary-green/10 dark:bg-primary-green/20 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-user-tie text-primary-green text-2xl" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4">Asesoría Previsional</h3>
-                    <p class="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-                        Orientación personalizada para obtener la <strong>pensión más alta posible</strong>. Analizamos todas las variables y beneficios disponibles para usted.
-                    </p>
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-3">Asesoría Previsional</h3>
+                        <p class="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+                            Orientación personalizada para obtener la <strong>pensión más alta posible</strong>. Analizamos todas las variables y beneficios disponibles para usted.
+                        </p>
+                    </div>
                 </div>
             </li>
 
-            <!-- Service 2 -->
-            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-2 list-none">
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-blue/15 to-primary-blue/5 dark:from-primary-blue/25 dark:to-primary-blue/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
-                        <i class="fas fa-calculator text-primary-blue text-3xl md:text-4xl" aria-hidden="true"></i>
+            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-6 md:p-8 shadow-md animate-on-scroll stagger-2 list-none">
+                <div class="flex items-start gap-5">
+                    <div class="w-14 h-14 shrink-0 bg-primary-blue/10 dark:bg-primary-blue/20 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-calculator text-primary-blue text-2xl" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4">Cálculo de Pensiones</h3>
-                    <p class="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-                        Estudios detallados y comparativos entre <strong>retiros programados y rentas vitalicias</strong>, incluyendo combinaciones según su caso.
-                    </p>
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-3">Cálculo de Pensiones</h3>
+                        <p class="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+                            Estudios detallados y comparativos entre <strong>retiros programados y rentas vitalicias</strong>, incluyendo combinaciones según su caso.
+                        </p>
+                    </div>
                 </div>
             </li>
 
-            <!-- Service 3 -->
-            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-3 list-none">
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-green/15 to-primary-green/5 dark:from-primary-green/25 dark:to-primary-green/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
-                        <i class="fas fa-gavel text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
+            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-6 md:p-8 shadow-md animate-on-scroll stagger-3 list-none">
+                <div class="flex items-start gap-5">
+                    <div class="w-14 h-14 shrink-0 bg-primary-green/10 dark:bg-primary-green/20 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-file-signature text-primary-green text-2xl" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4">Apelaciones de Invalidez</h3>
-                    <p class="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-                        Le guiamos y asistimos durante el proceso de apelación para asegurar que reciba el <strong>beneficio de invalidez</strong> que le corresponde.
-                    </p>
-                </div>
-            </li>
-
-            <!-- Service 4 -->
-            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-4 list-none">
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-blue/15 to-primary-blue/5 dark:from-primary-blue/25 dark:to-primary-blue/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
-                        <i class="fas fa-balance-scale text-primary-blue text-3xl md:text-4xl" aria-hidden="true"></i>
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-3">Trámites de Jubilación</h3>
+                        <p class="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+                            Le acompañamos en <strong>todas las etapas</strong> de su jubilación: vejez, anticipada, invalidez y sobrevivencia.
+                        </p>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4">Rentas Vitalicias</h3>
-                    <p class="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-                        Analizamos y proyectamos las mejores opciones entre <strong>rentas vitalicias y retiros programados</strong> según su situación.
-                    </p>
-                </div>
-            </li>
-
-            <!-- Service 5 -->
-            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-5 list-none">
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-green/15 to-primary-green/5 dark:from-primary-green/25 dark:to-primary-green/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
-                        <i class="fas fa-file-signature text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4">Trámites de Jubilación</h3>
-                    <p class="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-                        Le acompañamos en <strong>todas las etapas</strong> de su jubilación: vejez, anticipada, invalidez y sobrevivencia.
-                    </p>
-                </div>
-            </li>
-
-            <!-- Service 6 -->
-            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-6 list-none">
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-blue/15 to-primary-blue/5 dark:from-primary-blue/25 dark:to-primary-blue/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
-                        <i class="fas fa-chart-line text-primary-blue text-3xl md:text-4xl" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4">Proyección de Pensiones</h3>
-                    <p class="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-                        Calculamos y proyectamos su <strong>edad óptima de jubilación</strong> considerando todas las variables de su caso.
-                    </p>
-                </div>
-            </li>
-
-            <!-- Service 7 -->
-            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-green animate-on-scroll stagger-7 list-none">
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-green/15 to-primary-green/5 dark:from-primary-green/25 dark:to-primary-green/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
-                        <i class="fas fa-coins text-primary-green text-3xl md:text-4xl" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4">Gestión de Excedentes</h3>
-                    <p class="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-                        Cálculos precisos para <strong>retiros de excedentes</strong> y proyección de la rentabilidad futura de su capital.
-                    </p>
-                </div>
-            </li>
-
-            <!-- Service 8 -->
-            <li class="card-hover group bg-white dark:bg-slate-800 rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-primary-blue animate-on-scroll stagger-8 list-none">
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary-blue/15 to-primary-blue/5 dark:from-primary-blue/25 dark:to-primary-blue/10 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-105">
-                        <i class="fas fa-hands-helping text-primary-blue text-3xl md:text-4xl" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4">Asesoría en Reclamos</h3>
-                    <p class="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-                        Asistencia ante <strong>AFP, Superintendencia de Pensiones, CMR e IPS</strong> en la resolución de irregularidades.
-                    </p>
                 </div>
             </li>
         </ul>
+
+        <!-- Additional Services — compact grid, no cards -->
+        <div class="animate-on-scroll stagger-4">
+            <h3 class="text-lg font-semibold text-slate-500 dark:text-slate-400 mb-6 uppercase tracking-wide">También le ayudamos con</h3>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-5" role="list" aria-label="Servicios adicionales">
+                <li class="flex items-start gap-3 list-none">
+                    <i class="fas fa-balance-scale text-primary-blue mt-1" aria-hidden="true"></i>
+                    <div>
+                        <strong class="text-slate-800 dark:text-white">Rentas Vitalicias</strong>
+                        <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">Análisis y proyección de las mejores opciones según su situación.</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3 list-none">
+                    <i class="fas fa-gavel text-primary-green mt-1" aria-hidden="true"></i>
+                    <div>
+                        <strong class="text-slate-800 dark:text-white">Apelaciones de Invalidez</strong>
+                        <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">Asistencia en el proceso de apelación para asegurar su beneficio.</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3 list-none">
+                    <i class="fas fa-chart-line text-primary-blue mt-1" aria-hidden="true"></i>
+                    <div>
+                        <strong class="text-slate-800 dark:text-white">Proyección de Pensiones</strong>
+                        <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">Cálculo de su edad óptima de jubilación considerando todas las variables.</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3 list-none">
+                    <i class="fas fa-coins text-primary-green mt-1" aria-hidden="true"></i>
+                    <div>
+                        <strong class="text-slate-800 dark:text-white">Gestión de Excedentes</strong>
+                        <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">Retiros de excedentes y proyección de rentabilidad futura.</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3 list-none">
+                    <i class="fas fa-hands-helping text-primary-blue mt-1" aria-hidden="true"></i>
+                    <div>
+                        <strong class="text-slate-800 dark:text-white">Asesoría en Reclamos</strong>
+                        <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">Asistencia ante AFP, Superintendencia de Pensiones, CMR e IPS.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
 
@@ -364,28 +344,28 @@ description: "Asesoría previsional profesional e independiente en Concepción, 
             </p>
         </div>
 
-        <!-- Values Grid -->
-        <ul class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12" role="list" aria-label="Nuestros valores">
-            <li class="flex flex-col items-center text-center p-6 bg-slate-700/50 rounded-[2rem] animate-on-scroll stagger-1">
-                <div class="w-20 h-20 bg-primary-green/20 rounded-full flex items-center justify-center mb-5">
-                    <i class="fas fa-eye text-light-green text-3xl" aria-hidden="true"></i>
+        <!-- Values — horizontal layout, no cards -->
+        <ul class="max-w-4xl mx-auto divide-y divide-slate-700 dark:divide-slate-800" role="list" aria-label="Nuestros valores">
+            <li class="flex items-start gap-5 py-6 animate-on-scroll stagger-1">
+                <i class="fas fa-eye text-light-green text-2xl mt-1 shrink-0" aria-hidden="true"></i>
+                <div>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Transparencia</h3>
+                    <p class="text-lg text-slate-300 leading-relaxed">Información clara y sin letras chicas. Usted siempre sabrá exactamente qué estamos haciendo y por qué.</p>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Transparencia</h3>
-                <p class="text-lg text-slate-300">Información clara y sin letras chicas. Usted siempre sabrá exactamente qué estamos haciendo y por qué.</p>
             </li>
-            <li class="flex flex-col items-center text-center p-6 bg-slate-700/50 rounded-[2rem] animate-on-scroll stagger-2">
-                <div class="w-20 h-20 bg-primary-green/20 rounded-full flex items-center justify-center mb-5">
-                    <i class="fas fa-shield-alt text-light-green text-3xl" aria-hidden="true"></i>
+            <li class="flex items-start gap-5 py-6 animate-on-scroll stagger-2">
+                <i class="fas fa-shield-alt text-light-green text-2xl mt-1 shrink-0" aria-hidden="true"></i>
+                <div>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Integridad</h3>
+                    <p class="text-lg text-slate-300 leading-relaxed">Actuamos siempre en su beneficio, sin conflictos de interés. Su confianza es nuestra prioridad.</p>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Integridad</h3>
-                <p class="text-lg text-slate-300">Actuamos siempre en su beneficio, sin conflictos de interés. Su confianza es nuestra prioridad.</p>
             </li>
-            <li class="flex flex-col items-center text-center p-6 bg-slate-700/50 rounded-[2rem] animate-on-scroll stagger-3">
-                <div class="w-20 h-20 bg-primary-green/20 rounded-full flex items-center justify-center mb-5">
-                    <i class="fas fa-heart text-light-green text-3xl" aria-hidden="true"></i>
+            <li class="flex items-start gap-5 py-6 animate-on-scroll stagger-3">
+                <i class="fas fa-heart text-light-green text-2xl mt-1 shrink-0" aria-hidden="true"></i>
+                <div>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Compromiso</h3>
+                    <p class="text-lg text-slate-300 leading-relaxed">Le acompañamos en todo el proceso hasta obtener el mejor resultado para su jubilación.</p>
                 </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Compromiso</h3>
-                <p class="text-lg text-slate-300">Le acompañamos en todo el proceso hasta obtener el mejor resultado para su jubilación.</p>
             </li>
         </ul>
     </div>
