@@ -2,7 +2,7 @@
 title: "Pensión Universal Garantizada 2026: Nuevos Montos y Requisitos"
 image: "PGU2026.png"
 imageAlt: "Tabla de montos de la Pensión Universal Garantizada (PGU) 2026 en Chile según nivel de pensión"
-lead: "La PGU se actualiza para 2026: hasta $231.732 para mayores de 65 años y $250.275 para mayores de 82 años. Conozca los requisitos, la tabla de montos según su pensión, el aumento escalonado por edad, y el nuevo Beneficio por Años Cotizados (BAC)."
+lead: "La PGU se actualiza para 2026: hasta $231.732 para mayores de 65 años y $250.275 para mayores de 82 años. Conozca los requisitos, la tabla de montos según su pensión, el aumento escalonado por edad, y los nuevos Bono BAC y CEV."
 date: "2026-03-18"
 ---
 
@@ -46,23 +46,20 @@ Mientras no entre en vigencia el aumento para su tramo de edad, el monto máximo
 
 *Los valores indicados son referenciales.*
 
-## Nuevo: Beneficio por Años Cotizados (BAC)
+## Nuevo: Bono BAC y CEV (Beneficio por Años Cotizados y Compensación)
 
-A partir de enero de 2026, la Ley 21.735 crea el **Beneficio por Años Cotizados (BAC)**, un complemento que premia los años de cotización. El BAC se suma a la PGU.
+A partir de enero de 2026, nuevos beneficios de la Reforma Previsional: el **Beneficio por Años Cotizados (BAC)** y la **Compensación por Diferencias de Expectativa de Vida para mujeres (CEV)** son nuevos aportes que buscan mejorar las pensiones, reconociendo las trayectorias previsionales de las y los trabajadores.
 
-### Requisitos del BAC
+### Requisitos Bono BAC y CEV
 
-- Estar **pensionado por vejez o invalidez** en una AFP.
-- Tener al menos **65 años** de edad.
-- Hombres: mínimo **240 meses** (20 años) de cotizaciones.
-- Mujeres: mínimo **120 meses** (10 años) de cotizaciones, aumentando gradualmente hasta 180 meses en 2036.
+**BAC:** El Beneficio por Años Cotizados (BAC) está dirigido a hombres y mujeres de **65 años o más**, pensionados por vejez o invalidez en una **AFP o compañía de seguros**, que cuenten con un mínimo de cotizaciones reconocidas por ley:
 
-### Monto del BAC
+- Mujeres: **120 meses** de cotizaciones (10 años).
+- Hombres: **240 meses** de cotizaciones (20 años).
 
-- **0,1 UF por cada año cotizado**.
-- **Máximo contabilizado: 300 meses** (25 años), equivalente a un tope de **2,5 UF**.
+El monto del beneficio depende de los años cotizados reconocidos y corresponde a **0,1 UF por cada 12 meses cotizados**, con un máximo de **2,5 UF mensuales**, equivalente a 25 años de cotizaciones.
 
-Este beneficio busca reconocer el esfuerzo de quienes han contribuido al sistema previsional durante su vida laboral.
+**CEV:** La Compensación por Diferencias de Expectativa de Vida (CEV) está dirigida a **mujeres de 65 años o más**, pensionadas por vejez o invalidez en una **AFP o compañía de seguros**, que no estén cubiertas por el **Seguro de Invalidez y Sobrevivencia (SIS)**.
 
 ## Asesoría Profesional para Maximizar sus Beneficios
 
