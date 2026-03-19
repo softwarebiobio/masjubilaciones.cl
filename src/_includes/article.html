@@ -409,15 +409,15 @@ layout: 'blog.html'
     /* Table of Contents */
     #article-toc {
         background-color: var(--color-warm-gray);
-        border-left: 5px solid var(--color-primary-green);
         border-radius: 1rem;
         padding: 1.25rem 1.5rem;
         margin-bottom: 2rem;
+        border-top: 3px solid var(--color-primary-green);
     }
 
     .dark #article-toc {
         background-color: #1e293b;
-        border-left-color: var(--color-light-green);
+        border-top-color: var(--color-light-green);
     }
 
     .toc-title {
@@ -580,7 +580,7 @@ layout: 'blog.html'
 
 <article
     class="rounded-xl sm:rounded-[2rem] mx-auto max-w-[75ch] p-4 sm:p-6 md:p-10 lg:p-12 mt-4 sm:mt-8
-           bg-white dark:bg-slate-900 shadow-xl
+           bg-white dark:bg-slate-900 shadow-lg
            text-slate-800 dark:text-slate-200"
     aria-labelledby="article-title"
 >
@@ -632,7 +632,7 @@ layout: 'blog.html'
 
     <!-- Lead/Summary -->
     {% if lead != nil and lead.size > 0 %}
-    <section class="text-lg md:text-xl bg-dark-blue/[0.04] dark:bg-slate-700/80 p-6 md:p-8 rounded-2xl border-l-[6px] border-primary-green dark:border-light-green text-slate-700 dark:text-slate-200 mb-12 leading-relaxed shadow-sm" aria-label="Resumen del artículo">
+    <section class="text-lg md:text-xl bg-dark-blue/[0.04] dark:bg-slate-700/80 p-6 md:p-8 rounded-2xl text-slate-700 dark:text-slate-200 mb-12 leading-relaxed shadow-sm" aria-label="Resumen del artículo">
         {{lead}}
     </section>
     {% endif %}
@@ -651,7 +651,7 @@ layout: 'blog.html'
     <!-- Article Footer -->
     <footer class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700">
         <!-- Call to Action -->
-        <div class="bg-gradient-to-r from-primary-green/10 to-primary-blue/10 dark:from-slate-800 dark:to-slate-800 rounded-2xl p-6 md:p-8 text-center mb-8">
+        <div class="bg-warm-gray dark:bg-slate-800 rounded-2xl p-6 md:p-8 text-center mb-8">
             <h2 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-3">
                 ¿Tiene dudas sobre su pensión?
             </h2>
