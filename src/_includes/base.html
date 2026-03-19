@@ -62,7 +62,6 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400&family=Merriweather+Sans:wght@400;600;700;800&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400&family=Merriweather+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <meta name="last-modified" content="{{page.date}}">
@@ -333,7 +332,7 @@
     </div>
 
     <!-- Mobile menu panel -->
-    <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 max-h-[calc(100vh-4rem)] overflow-y-auto" aria-label="Menú de navegación móvil">
+    <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 max-h-[calc(100vh-4rem)] overflow-y-auto" aria-label="Menú de navegación móvil" inert>
         <ul class="flex flex-col py-2" role="list">
             <li>
                 <a href="/#inicio" class="mobile-nav-link flex items-center gap-3 py-3 px-6 text-lg text-slate-800 dark:text-slate-100 hover:bg-light-green/15 dark:hover:bg-slate-700 transition-colors">
@@ -554,11 +553,13 @@
         function setMenuOpen(open) {
             if (open) {
                 menu.classList.remove('hidden');
+                menu.removeAttribute('inert');
                 toggle.setAttribute('aria-expanded', 'true');
                 toggle.querySelector('i').className = 'fas fa-times text-2xl';
                 if (navbar) navbar.classList.remove('nav-scrolled');
             } else {
                 menu.classList.add('hidden');
+                menu.setAttribute('inert', '');
                 toggle.setAttribute('aria-expanded', 'false');
                 toggle.querySelector('i').className = 'fas fa-bars text-2xl';
             }
@@ -649,6 +650,7 @@
         function clearActive() {
             navLinks.forEach(function(link) {
                 activeClass.split(' ').forEach(function(c) { link.classList.remove(c); });
+                link.removeAttribute('aria-current');
             });
         }
 
@@ -660,6 +662,7 @@
                     navLinks.forEach(function(link) {
                         if (link.getAttribute('data-section') === id) {
                             activeClass.split(' ').forEach(function(c) { link.classList.add(c); });
+                            link.setAttribute('aria-current', 'true');
                         }
                     });
                 }
