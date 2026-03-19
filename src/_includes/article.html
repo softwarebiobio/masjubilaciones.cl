@@ -87,11 +87,6 @@ layout: 'blog.html'
         color: #f1f5f9;
     }
 
-    article h2 {
-        font-size: 1.5rem;
-        margin: 1.5rem auto 0.5rem auto;
-    }
-
     article .prose h2 {
         font-size: 1.5rem;
         margin: 2rem auto 0.75rem auto;
@@ -318,8 +313,8 @@ layout: 'blog.html'
 
     /* Callout paragraphs — targets "Importante:" and similar */
     article .prose p:has(> strong:first-child) {
-        background-color: #fef9e7;
-        border-left: 5px solid #d4a017;
+        background-color: var(--color-callout-bg);
+        border-left: 5px solid var(--color-callout-border);
         padding: 0.85rem 1rem;
         border-radius: 0.5rem;
         margin: 1.5rem auto;
@@ -334,9 +329,9 @@ layout: 'blog.html'
     }
 
     .dark article .prose p:has(> strong:first-child) {
-        background-color: #422006;
-        border-left-color: #facc15;
-        color: #fef9c3;
+        background-color: var(--color-callout-bg);
+        border-left-color: var(--color-callout-border);
+        color: var(--color-callout-text);
     }
 
     /* Strong and emphasis */
@@ -407,6 +402,148 @@ layout: 'blog.html'
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
 
+    /* Table of Contents */
+    #article-toc {
+        background-color: var(--color-warm-gray);
+        border-left: 5px solid var(--color-primary-green);
+        border-radius: 1rem;
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .dark #article-toc {
+        background-color: #1e293b;
+        border-left-color: var(--color-light-green);
+    }
+
+    .toc-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: var(--color-dark-blue);
+        margin: 0 0 0.75rem 0;
+    }
+
+    .dark .toc-title {
+        color: #f1f5f9;
+    }
+
+    #toc-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        counter-reset: toc-counter;
+    }
+
+    #toc-list li {
+        list-style-type: none;
+        margin-bottom: 0.35rem;
+        position: relative;
+        padding-left: 0;
+    }
+
+    #toc-list li:not(.toc-sub) {
+        counter-increment: toc-counter;
+    }
+
+    #toc-list li:not(.toc-sub)::before {
+        content: counter(toc-counter) ". ";
+        font-weight: 600;
+        color: var(--color-primary-green);
+    }
+
+    .dark #toc-list li:not(.toc-sub)::before {
+        color: var(--color-light-green);
+    }
+
+    #toc-list li.toc-sub {
+        padding-left: 1.5rem;
+    }
+
+    #toc-list li.toc-sub::before {
+        content: "– ";
+        font-weight: 400;
+        color: var(--color-primary-green);
+    }
+
+    .dark #toc-list li.toc-sub::before {
+        color: var(--color-light-green);
+    }
+
+    #toc-list a {
+        color: var(--color-primary-blue);
+        text-decoration: none;
+        font-size: 1.05rem;
+        line-height: 1.6;
+        transition: color 0.2s ease;
+    }
+
+    #toc-list a:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        color: var(--color-dark-blue);
+    }
+
+    #toc-list a:focus-visible {
+        outline: 3px solid var(--color-primary-blue);
+        outline-offset: 2px;
+        border-radius: 2px;
+    }
+
+    .dark #toc-list a {
+        color: var(--color-light-green);
+    }
+
+    .dark #toc-list a:hover {
+        color: var(--color-lime-green);
+    }
+
+    /* TOC scroll-spy active state */
+    #toc-list a.toc-active {
+        font-weight: 700;
+        color: var(--color-dark-blue);
+        background-color: color-mix(in srgb, var(--color-primary-green) 12%, transparent);
+        padding: 0.1rem 0.4rem;
+        border-radius: 0.25rem;
+        transition: background-color 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                    color 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .dark #toc-list a.toc-active {
+        color: #f1f5f9;
+        background-color: color-mix(in srgb, var(--color-light-green) 15%, transparent);
+    }
+
+    /* Heading anchor links */
+    .heading-anchor {
+        color: var(--color-primary-green);
+        text-decoration: none;
+        font-weight: 400;
+        opacity: 0;
+        margin-left: 0.5rem;
+        font-size: 0.75em;
+        transition: opacity 0.2s ease;
+        vertical-align: middle;
+    }
+
+    article .prose :is(h2, h3):hover .heading-anchor,
+    .heading-anchor:focus-visible {
+        opacity: 0.5;
+    }
+
+    .heading-anchor:hover {
+        opacity: 1;
+    }
+
+    .dark .heading-anchor {
+        color: var(--color-light-green);
+    }
+
+    @media (max-width: 639px) {
+        .heading-anchor {
+            display: none;
+        }
+    }
+
     @media (prefers-reduced-motion: reduce) {
         .reading-progress {
             transition: none;
@@ -422,6 +559,12 @@ layout: 'blog.html'
         .cta-press:active {
             transform: none;
         }
+        #toc-list a.toc-active {
+            transition: none;
+        }
+        .heading-anchor {
+            transition: none;
+        }
     }
 </style>
 
@@ -433,7 +576,6 @@ layout: 'blog.html'
     class="rounded-xl sm:rounded-[2rem] mx-auto max-w-[75ch] p-4 sm:p-6 md:p-10 lg:p-12 mt-4 sm:mt-8
            bg-white dark:bg-slate-900 shadow-xl
            text-slate-800 dark:text-slate-200"
-    role="article"
     aria-labelledby="article-title"
 >
     <!-- Breadcrumb Navigation -->
@@ -467,7 +609,7 @@ layout: 'blog.html'
 
     <!-- Featured Image -->
     {% if image %}
-    <figure class="mb-10">
+    <figure class="mb-10 animate-on-scroll scale-up">
         <img src="{{image_url}}"
              alt="{{ imageAlt | default: '' }}"
              {% if imageAlt == nil or imageAlt == '' %}role="presentation"{% endif %}
@@ -488,6 +630,12 @@ layout: 'blog.html'
         {{lead}}
     </section>
     {% endif %}
+
+    <!-- Table of Contents -->
+    <nav id="article-toc" hidden aria-label="Tabla de contenidos" class="article-entrance article-entrance-delay-3">
+        <p class="toc-title">En este artículo</p>
+        <ol id="toc-list"></ol>
+    </nav>
 
     <!-- Article Content -->
     <section class="leading-loose prose prose-lg max-w-none">
@@ -540,5 +688,71 @@ layout: 'blog.html'
             });
         }
     }, { passive: true });
+})();
+
+// Table of Contents generation
+(function() {
+    var prose = document.querySelector('article .prose');
+    var tocNav = document.getElementById('article-toc');
+    var tocList = document.getElementById('toc-list');
+    if (!prose || !tocNav || !tocList) return;
+
+    var headings = prose.querySelectorAll('h2, h3');
+    if (headings.length < 2) return;
+
+    headings.forEach(function(heading) {
+        if (!heading.id) {
+            heading.id = heading.textContent.trim()
+                .toLowerCase()
+                .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/(^-|-$)/g, '');
+        }
+        var anchor = document.createElement('a');
+        anchor.className = 'heading-anchor';
+        anchor.href = '#' + heading.id;
+        anchor.setAttribute('aria-label', 'Enlace a esta sección');
+        anchor.textContent = '#';
+        heading.appendChild(anchor);
+        var li = document.createElement('li');
+        if (heading.tagName === 'H3') li.className = 'toc-sub';
+        var a = document.createElement('a');
+        a.href = '#' + heading.id;
+        a.textContent = heading.textContent.replace(/#$/, '').trim();
+        li.appendChild(a);
+        tocList.appendChild(li);
+    });
+
+    tocNav.removeAttribute('hidden');
+})();
+
+// TOC scroll-spy
+(function() {
+    var tocList = document.getElementById('toc-list');
+    if (!tocList || !tocList.children.length) return;
+    var prose = document.querySelector('article .prose');
+    if (!prose) return;
+    var headings = prose.querySelectorAll('h2, h3');
+    if (headings.length < 2) return;
+
+    var links = tocList.querySelectorAll('a');
+    var current = links[0];
+    if (current) current.classList.add('toc-active');
+
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var id = entry.target.id;
+                var link = tocList.querySelector('a[href="#' + id + '"]');
+                if (link && link !== current) {
+                    if (current) current.classList.remove('toc-active');
+                    link.classList.add('toc-active');
+                    current = link;
+                }
+            }
+        });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+
+    headings.forEach(function(h) { observer.observe(h); });
 })();
 </script>
