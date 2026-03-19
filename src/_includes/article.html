@@ -78,7 +78,6 @@ layout: 'blog.html'
     }
 
     article h1 {
-        font-size: 1.75rem;
         margin: 1.5rem auto 0.5rem auto;
         line-height: 1.25;
         color: var(--color-dark-blue);
@@ -109,9 +108,9 @@ layout: 'blog.html'
     }
 
     article h3 {
-        font-size: 1.25rem;
+        font-size: 1.35rem;
         color: #167a40;
-        margin: 1.25rem auto 0.5rem auto;
+        margin: 1.5rem auto 0.5rem auto;
     }
 
     .dark article h3 {
@@ -132,7 +131,7 @@ layout: 'blog.html'
     article p {
         margin: 0 auto 1.25rem auto;
         text-wrap: pretty;
-        font-size: 1.05rem;
+        font-size: 1rem;
         line-height: 1.75;
     }
 
@@ -144,7 +143,7 @@ layout: 'blog.html'
 
     article li {
         margin-bottom: 0.5rem;
-        font-size: 1.05rem;
+        font-size: 1rem;
         line-height: 1.7;
     }
 
@@ -176,7 +175,7 @@ layout: 'blog.html'
 
     /* Blockquotes */
     article blockquote:not(.tiktok-embed) {
-        font-size: 1.05rem;
+        font-size: 1rem;
         background-color: var(--color-warm-gray);
         color: var(--color-dark-blue);
         padding: 1.5rem 2rem;
@@ -234,7 +233,8 @@ layout: 'blog.html'
         border-collapse: separate;
         border-spacing: 0;
         margin: 2rem 0;
-        font-size: 1.1rem;
+        font-size: 1rem;
+        font-variant-numeric: tabular-nums;
         border-radius: 0.75rem;
         overflow: hidden;
         box-shadow: 0 4px 24px -4px rgba(0, 51, 102, 0.10);
@@ -422,7 +422,7 @@ layout: 'blog.html'
 
     .toc-title {
         font-weight: 700;
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: var(--color-dark-blue);
         margin: 0 0 0.75rem 0;
     }
@@ -451,7 +451,7 @@ layout: 'blog.html'
 
     #toc-list li:not(.toc-sub)::before {
         content: counter(toc-counter) ". ";
-        font-weight: 600;
+        font-weight: 700;
         color: var(--color-primary-green);
     }
 
@@ -476,7 +476,7 @@ layout: 'blog.html'
     #toc-list a {
         color: var(--color-primary-blue);
         text-decoration: none;
-        font-size: 1.05rem;
+        font-size: 1rem;
         line-height: 1.6;
         transition: color 0.2s ease;
     }
