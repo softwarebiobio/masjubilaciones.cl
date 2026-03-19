@@ -110,7 +110,7 @@ layout: 'blog.html'
 
     article h3 {
         font-size: 1.25rem;
-        color: var(--color-primary-green);
+        color: #167a40;
         margin: 1.25rem auto 0.5rem auto;
     }
 
@@ -269,6 +269,7 @@ layout: 'blog.html'
     }
 
     article tbody tr:hover td {
+        background-color: #e8f5ec;
         background-color: color-mix(in srgb, var(--color-primary-green) 8%, white);
     }
 
@@ -312,7 +313,9 @@ layout: 'blog.html'
         }
     }
 
-    /* Callout paragraphs — targets "Importante:" and similar */
+    /* Callout paragraphs — targets "Importante:" and similar.
+       Note: matches ANY paragraph starting with <strong>. Authors should
+       avoid starting regular paragraphs with bold text in article markdown. */
     article .prose p:has(> strong:first-child) {
         background-color: var(--color-callout-bg);
         border-left: 5px solid var(--color-callout-border);
@@ -502,6 +505,7 @@ layout: 'blog.html'
     #toc-list a.toc-active {
         font-weight: 700;
         color: var(--color-dark-blue);
+        background-color: rgba(26, 138, 76, 0.12);
         background-color: color-mix(in srgb, var(--color-primary-green) 12%, transparent);
         padding: 0.1rem 0.4rem;
         border-radius: 0.25rem;
@@ -511,6 +515,7 @@ layout: 'blog.html'
 
     .dark #toc-list a.toc-active {
         color: #f1f5f9;
+        background-color: rgba(46, 204, 113, 0.15);
         background-color: color-mix(in srgb, var(--color-light-green) 15%, transparent);
     }
 
@@ -614,7 +619,7 @@ layout: 'blog.html'
         <img src="{{image_url}}"
              alt="{{ imageAlt | default: '' }}"
              {% if imageAlt == nil or imageAlt == '' %}role="presentation"{% endif %}
-             loading="lazy"
+             loading="eager"
              decoding="async"
              class="w-full aspect-video rounded-2xl shadow-lg object-cover">
         {% if image_caption %}
@@ -639,7 +644,7 @@ layout: 'blog.html'
     </nav>
 
     <!-- Article Content -->
-    <section class="leading-loose prose prose-lg max-w-none">
+    <section class="leading-loose prose prose-lg max-w-none" aria-label="Contenido del artículo">
         {{content}}
     </section>
 
@@ -654,7 +659,7 @@ layout: 'blog.html'
                 Podemos ayudarle a resolver sus consultas de forma personalizada.
             </p>
             <a href="/#contacto"
-               class="cta-press inline-flex items-center gap-2 bg-primary-green hover:bg-dark-blue text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg md:text-xl focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2">
+               class="cta-press inline-flex items-center gap-2 bg-primary-green hover:bg-dark-blue text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-[background-color,box-shadow,transform] duration-300 text-lg md:text-xl focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2">
                 <i class="fas fa-envelope" aria-hidden="true"></i>
                 Contáctenos
             </a>
@@ -702,8 +707,9 @@ layout: 'blog.html'
     if (headings.length < 2) return;
 
     headings.forEach(function(heading) {
+        var text = heading.textContent.trim();
         if (!heading.id) {
-            heading.id = heading.textContent.trim()
+            heading.id = text
                 .toLowerCase()
                 .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
                 .replace(/[^a-z0-9]+/g, '-')
@@ -712,14 +718,14 @@ layout: 'blog.html'
         var anchor = document.createElement('a');
         anchor.className = 'heading-anchor';
         anchor.href = '#' + heading.id;
-        anchor.setAttribute('aria-label', 'Enlace a esta sección');
+        anchor.setAttribute('aria-label', 'Enlace a sección: ' + text);
         anchor.textContent = '#';
         heading.appendChild(anchor);
         var li = document.createElement('li');
         if (heading.tagName === 'H3') li.className = 'toc-sub';
         var a = document.createElement('a');
         a.href = '#' + heading.id;
-        a.textContent = heading.textContent.replace(/#$/, '').trim();
+        a.textContent = text;
         li.appendChild(a);
         tocList.appendChild(li);
     });
