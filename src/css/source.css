@@ -93,18 +93,8 @@ textarea:user-valid {
     border-color: var(--color-validation-success);
 }
 
-/* ==========================================================================
-   Gentle glow keyframe (replaces aggressive animate-pulse on CTA badge)
-   ========================================================================== */
-
-@keyframes gentle-glow {
-    0%, 100% {
-        box-shadow: 0 0 0 0 rgba(26, 138, 76, 0.4);
-    }
-    50% {
-        box-shadow: 0 0 12px 4px rgba(26, 138, 76, 0.25);
-    }
-}
+/* gentle-glow keyframe is defined in tailwind.config.js (theme.extend.keyframes)
+   and emitted as the animate-gentle-glow utility class */
 
 /* ==========================================================================
    Organic Tech — Noise overlay (subtle film grain texture)

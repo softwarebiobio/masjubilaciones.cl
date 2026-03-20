@@ -269,6 +269,7 @@ layout: 'blog.html'
     }
 
     article tbody tr:hover td {
+        /* fallback for browsers without color-mix() */
         background-color: #e8f5ec;
         background-color: color-mix(in srgb, var(--color-primary-green) 8%, white);
     }
@@ -360,14 +361,14 @@ layout: 'blog.html'
         background-color: #334155;
     }
 
-    /* Reading progress bar */
+    /* Reading progress bar — z-index: 51 sits just above navbar (z-50) */
     .reading-progress {
         position: fixed;
         top: 0;
         left: 0;
         height: 3px;
         background: var(--color-primary-green);
-        z-index: 100;
+        z-index: 51;
         width: 0%;
         transition: width 0.1s linear;
         border-radius: 0 2px 2px 0;
@@ -505,6 +506,7 @@ layout: 'blog.html'
     #toc-list a.toc-active {
         font-weight: 700;
         color: var(--color-dark-blue);
+        /* fallback for browsers without color-mix() */
         background-color: rgba(26, 138, 76, 0.12);
         background-color: color-mix(in srgb, var(--color-primary-green) 12%, transparent);
         padding: 0.1rem 0.4rem;
@@ -515,6 +517,7 @@ layout: 'blog.html'
 
     .dark #toc-list a.toc-active {
         color: #f1f5f9;
+        /* fallback for browsers without color-mix() */
         background-color: rgba(46, 204, 113, 0.15);
         background-color: color-mix(in srgb, var(--color-light-green) 15%, transparent);
     }
@@ -637,7 +640,8 @@ layout: 'blog.html'
     </section>
     {% endif %}
 
-    <!-- Table of Contents -->
+    <!-- Table of Contents (hidden by default, JS reveals if ≥2 headings) -->
+    <noscript><style>#article-toc { display: none; }</style></noscript>
     <nav id="article-toc" hidden aria-label="Tabla de contenidos" class="article-entrance article-entrance-delay-3">
         <p class="toc-title">En este artículo</p>
         <ol id="toc-list"></ol>
@@ -718,7 +722,8 @@ layout: 'blog.html'
         var anchor = document.createElement('a');
         anchor.className = 'heading-anchor';
         anchor.href = '#' + heading.id;
-        anchor.setAttribute('aria-label', 'Enlace a sección: ' + text);
+        anchor.setAttribute('aria-hidden', 'true');
+        anchor.tabIndex = -1;
         anchor.textContent = '#';
         heading.appendChild(anchor);
         var li = document.createElement('li');
@@ -750,7 +755,9 @@ layout: 'blog.html'
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 var id = entry.target.id;
-                var link = tocList.querySelector('a[href="#' + id + '"]');
+                var link = Array.prototype.find.call(links, function(l) {
+                    return l.getAttribute('href') === '#' + id;
+                });
                 if (link && link !== current) {
                     if (current) current.classList.remove('toc-active');
                     link.classList.add('toc-active');
