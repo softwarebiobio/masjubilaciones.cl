@@ -1,2 +1,12 @@
+# === MODO MANTENIMIENTO: ACTIVO ===
+# Netlify aplica la primera regla que coincide, por lo que esta linea captura
+# todo el sitio y las reglas de abajo quedan inactivas mientras este presente.
+# El signo "!" fuerza la regla incluso sobre archivos que existen, asi que
+# /css/styles.css y /images/*.png tambien devuelven esta pagina. Por eso
+# src/mantenimiento.html no hace ninguna peticion al mismo dominio.
+#
+# PARA DESACTIVAR EL MANTENIMIENTO: borre la linea siguiente y despliegue.
+/* /mantenimiento.html 200!
+
 /modalidades-de-pension-en-chile-opciones-para-una-jubilacion-segura/ /opciones-de-pension-en-chile-cual-es-la-ideal-para-usted/ 301
 /* /404.html 404
