@@ -345,6 +345,90 @@ h1 .accent {
 
 html.dark .channel a { color: var(--light-green); }
 
+/* ---------- Fondo E notice ---------- */
+
+.fondo-e {
+    width: 100%;
+    max-width: 52rem;
+    text-align: center;
+}
+
+.fondo-e h2 {
+    margin: 0 0 0.75rem;
+    color: var(--ink);
+    font-size: clamp(1.625rem, 4.6vw, 2.375rem);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+}
+
+.fondo-e h2 .accent { color: var(--accent); white-space: nowrap; }
+
+.fondo-e .claim {
+    margin: 0 auto 1rem;
+    max-width: 36rem;
+    color: var(--ink);
+    font-family: "Merriweather Sans", Arial, sans-serif;
+    font-size: clamp(1.125rem, 2.6vw, 1.375rem);
+    font-weight: 700;
+    line-height: 1.35;
+    text-wrap: balance;
+}
+
+.fondo-e .claim-detail {
+    margin: 0 auto 1.75rem;
+    max-width: 38rem;
+    font-size: 1.0625rem;
+    text-wrap: pretty;
+}
+
+.fondo-e .claim-detail strong { color: var(--ink); }
+
+.points {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    text-align: left;
+}
+
+@media (min-width: 48rem) {
+    .points { grid-template-columns: repeat(3, 1fr); }
+}
+
+.point {
+    padding: 1.25rem 1.25rem 1.35rem;
+    border-radius: 1.25rem;
+    background-color: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.point svg {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.6rem;
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.point h3 {
+    margin: 0 0 0.35rem;
+    color: var(--ink);
+    font-family: "Merriweather Sans", Arial, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.3;
+}
+
+.point p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
 /* ---------- Credential footer ---------- */
 
 .credential {
@@ -372,6 +456,7 @@ html.dark .channel a { color: var(--light-green); }
     .reveal-2 { animation-delay: 0.18s; }
     .reveal-3 { animation-delay: 0.31s; }
     .reveal-4 { animation-delay: 0.44s; }
+    .reveal-5 { animation-delay: 0.57s; }
 
     @keyframes rise {
         from {
@@ -434,9 +519,45 @@ html.dark .channel a { color: var(--light-green); }
     </p>
 </main>
 
-<section class="contact reveal reveal-3" aria-labelledby="contacto-titulo">
+<section class="fondo-e reveal reveal-3" aria-labelledby="fondo-e-titulo">
+    <h2 id="fondo-e-titulo">Ante la caída del <span class="accent">Fondo E</span></h2>
+    <p class="claim">No tome decisiones sobre su jubilación sin antes asesorarse.</p>
+    <p class="claim-detail">
+        <strong>Cada afiliado tiene una realidad distinta.</strong>
+        Una recomendación que puede ser conveniente para una persona,
+        puede ser perjudicial para otra.
+    </p>
+    <ul class="points">
+        <li class="point">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/>
+                <circle cx="17" cy="9" r="2.75"/><path d="M16.5 13.6c2.8.3 5 2.6 5 5.4"/>
+            </svg>
+            <h3>Su situación es única</h3>
+            <p>Edad, salud, situación laboral, necesidades económicas, familia y beneficios previsionales.</p>
+        </li>
+        <li class="point">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6 2.75h8l4 4V20a1.25 1.25 0 0 1-1.25 1.25H6A1.25 1.25 0 0 1 4.75 20V4A1.25 1.25 0 0 1 6 2.75z"/>
+                <path d="M14 2.75V7h4.25M8 11h8M8 14.5h8M8 18h5"/>
+            </svg>
+            <h3>Asesoría personalizada</h3>
+            <p>Evaluamos su caso y le orientamos sobre las mejores alternativas de pensión.</p>
+        </li>
+        <li class="point">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 2.5l8 3v6c0 5-3.4 8.7-8 10-4.6-1.3-8-5-8-10v-6z"/>
+                <path d="M8.25 12l2.5 2.5 5-5"/>
+            </svg>
+            <h3>Profesional acreditado</h3>
+            <p>La asesoría previsional es una actividad regulada por ley. Exija su registro, es su derecho.</p>
+        </li>
+    </ul>
+</section>
+
+<section class="contact reveal reveal-4" aria-labelledby="contacto-titulo">
     <h2 id="contacto-titulo">Converse con nosotros</h2>
-    <p class="contact-intro">Le atendemos de lunes a viernes, de 9:00 a 18:00 horas.</p>
+    <p class="contact-intro">Atención presencial y remota, de lunes a viernes, de 9:00 a 18:00 horas.</p>
 
     <div class="actions">
     <a class="phone" href="tel:+56993467163" aria-label="Llamar al +56 9 9346 7163">
@@ -471,10 +592,11 @@ html.dark .channel a { color: var(--light-green); }
     </div>
 </section>
 
-<footer class="credential reveal reveal-4">
+<footer class="credential reveal reveal-5">
     <p>
         <span class="name">Marcos Aguayo Mas</span>, Asesor Previsional acreditado
         por la Superintendencia de Pensiones, Registro N° 115.
+        Más de 30 años de experiencia.
     </p>
     <p>&copy; {% year %} MasJubilaciones. Todos los derechos reservados.</p>
 </footer>
