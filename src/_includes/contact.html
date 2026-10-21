@@ -19,7 +19,7 @@
                 <!-- Quick Contact Options -->
                 <div class="bg-white dark:bg-slate-800 rounded-[2rem] p-6 md:p-8 shadow-md hover:shadow-xl">
                     <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-6">
-                        <i class="fas fa-phone-alt text-primary-green mr-2" aria-hidden="true"></i>
+                        <i class="fas fa-phone-alt text-primary-green dark:text-light-green mr-2" aria-hidden="true"></i>
                         Contacto Directo
                     </h3>
 
@@ -28,7 +28,7 @@
                        target="_blank"
                        rel="noopener noreferrer"
                        class="flex items-center justify-center gap-3 w-full bg-[var(--color-whatsapp)] hover:bg-[var(--color-whatsapp-hover)] text-white text-lg md:text-xl font-bold py-4 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300 mb-6 focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2"
-                       aria-label="Contactar por WhatsApp">
+                       aria-label="Escríbanos por WhatsApp (se abre en una pestaña nueva)">
                         <i class="fab fa-whatsapp text-2xl md:text-3xl" aria-hidden="true"></i>
                         Escríbanos por WhatsApp
                     </a>
@@ -75,12 +75,6 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- Social Media -->
-                <div class="bg-white dark:bg-slate-800 rounded-[2rem] p-6 shadow-md hover:shadow-xl">
-                    <h3 class="text-lg font-bold text-slate-800 dark:text-white mb-4">Síganos en Redes Sociales</h3>
-                    {% include "social-buttons.html" %}
-                </div>
             </div>
 
             <!-- Contact Form Column -->
@@ -94,11 +88,11 @@
                       aria-labelledby="form-title">
 
                     <h3 id="form-title" class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-2">
-                        <i class="fas fa-paper-plane text-primary-green mr-2" aria-hidden="true"></i>
+                        <i class="fas fa-paper-plane text-primary-green dark:text-light-green mr-2" aria-hidden="true"></i>
                         Envíenos un Mensaje
                     </h3>
                     <p class="text-slate-600 dark:text-slate-300 mb-6 text-base md:text-lg">
-                        Complete el formulario y nos comunicaremos con usted. Los campos marcados con <span class="text-red-500 font-semibold">(requerido)</span> son obligatorios.
+                        Complete el formulario y nos comunicaremos con usted. Los campos marcados con <span class="text-red-700 dark:text-red-300 font-semibold">(requerido)</span> son obligatorios.
                     </p>
 
                     <!-- Honeypot field for spam prevention -->
@@ -110,9 +104,9 @@
                     <!-- Name Field -->
                     <div class="mb-6">
                         <label for="name" class="block text-lg md:text-xl font-semibold text-slate-800 dark:text-white mb-2">
-                            <i class="fas fa-user text-primary-green mr-2" aria-hidden="true"></i>
+                            <i class="fas fa-user text-primary-green dark:text-light-green mr-2" aria-hidden="true"></i>
                             Su Nombre Completo
-                            <span class="text-red-500 text-base font-normal">(requerido)</span>
+                            <span class="text-red-700 dark:text-red-300 text-base font-normal">(requerido)</span>
                         </label>
                         <input type="text"
                                id="name"
@@ -121,19 +115,25 @@
                                autocomplete="name"
                                required
                                aria-required="true"
+                               aria-describedby="name-error"
+                               data-error-missing="Por favor, escriba su nombre."
                                class="w-full text-lg md:text-xl text-slate-800 p-4 border-2 border-slate-300 dark:border-slate-600 rounded-xl
                                       focus:outline-none focus:border-primary-green focus:ring-3 focus:ring-primary-green/20
                                       dark:bg-slate-700 dark:text-white dark:focus:border-light-green
                                       placeholder:text-slate-500 dark:placeholder:text-slate-400
                                       transition-all duration-200">
+                        <p id="name-error" class="mt-2 text-base md:text-lg font-semibold text-red-700 dark:text-red-300" hidden>
+                            <i class="fas fa-exclamation-circle mr-1" aria-hidden="true"></i>
+                            <span class="field-error-text">Por favor, escriba su nombre.</span>
+                        </p>
                     </div>
 
                     <!-- Phone Field -->
                     <div class="mb-6">
                         <label for="phone" class="block text-lg md:text-xl font-semibold text-slate-800 dark:text-white mb-2">
-                            <i class="fas fa-phone text-primary-green mr-2" aria-hidden="true"></i>
+                            <i class="fas fa-phone text-primary-green dark:text-light-green mr-2" aria-hidden="true"></i>
                             Su Número de Teléfono
-                            <span class="text-red-500 text-base font-normal">(requerido)</span>
+                            <span class="text-red-700 dark:text-red-300 text-base font-normal">(requerido)</span>
                         </label>
                         <input type="tel"
                                id="phone"
@@ -143,7 +143,10 @@
                                inputmode="tel"
                                required
                                aria-required="true"
-                               aria-describedby="phone-hint"
+                               pattern="[0-9+\(\)\s\-]{8,20}"
+                               aria-describedby="phone-hint phone-error"
+                               data-error-missing="Por favor, escriba un número de teléfono para llamarle."
+                               data-error-pattern="Revise el número. Use solo números, por ejemplo: +56 9 1234 5678."
                                class="w-full text-lg md:text-xl text-slate-800 p-4 border-2 border-slate-300 dark:border-slate-600 rounded-xl
                                       focus:outline-none focus:border-primary-green focus:ring-3 focus:ring-primary-green/20
                                       dark:bg-slate-700 dark:text-white dark:focus:border-light-green
@@ -152,34 +155,44 @@
                         <p id="phone-hint" class="mt-2 text-sm text-slate-600 dark:text-slate-400">
                             Puede ser su teléfono o el de un familiar para contactarle
                         </p>
+                        <p id="phone-error" class="mt-2 text-base md:text-lg font-semibold text-red-700 dark:text-red-300" hidden>
+                            <i class="fas fa-exclamation-circle mr-1" aria-hidden="true"></i>
+                            <span class="field-error-text">Por favor, escriba un número de teléfono para llamarle.</span>
+                        </p>
                     </div>
 
                     <!-- Message Field -->
                     <div class="mb-8">
                         <label for="message" class="block text-lg md:text-xl font-semibold text-slate-800 dark:text-white mb-2">
-                            <i class="fas fa-comment-alt text-primary-green mr-2" aria-hidden="true"></i>
+                            <i class="fas fa-comment-alt text-primary-green dark:text-light-green mr-2" aria-hidden="true"></i>
                             Su Mensaje o Consulta
-                            <span class="text-red-500 text-base font-normal">(requerido)</span>
+                            <span class="text-slate-600 dark:text-slate-300 text-base font-normal">(opcional)</span>
                         </label>
                         <textarea id="message"
                                   name="message"
                                   rows="5"
                                   placeholder="Cuéntenos brevemente en qué podemos ayudarle. Por ejemplo: estoy próximo a jubilarme y necesito asesoría..."
-                                  required
-                                  aria-required="true"
+                                  aria-describedby="message-hint"
                                   class="w-full text-lg md:text-xl text-slate-800 p-4 border-2 border-slate-300 dark:border-slate-600 rounded-xl
                                          focus:outline-none focus:border-primary-green focus:ring-3 focus:ring-primary-green/20
                                          dark:bg-slate-700 dark:text-white dark:focus:border-light-green
                                          placeholder:text-slate-500 dark:placeholder:text-slate-400
                                          transition-all duration-200 resize-y min-h-[150px]"></textarea>
+                        <p id="message-hint" class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                            Si prefiere, déjelo en blanco y le explicamos todo por teléfono
+                        </p>
                     </div>
+
+                    <!-- Form-level error summary (shown on failed submit) -->
+                    <p id="form-error" class="mb-4 text-base md:text-lg font-semibold text-red-700 dark:text-red-300" role="alert" hidden></p>
 
                     <!-- Submit Button -->
                     <button type="submit"
                             class="w-full bg-primary-green hover:bg-dark-blue text-white text-lg md:text-xl font-bold py-4 px-8 rounded-full
                                    shadow-lg hover:shadow-xl transition-all duration-300
                                    focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2
-                                   flex items-center justify-center gap-3">
+                                   flex items-center justify-center gap-3
+                                   disabled:opacity-75 disabled:cursor-wait">
                         <i class="fas fa-paper-plane" aria-hidden="true"></i>
                         Enviar Mensaje
                     </button>
@@ -188,6 +201,17 @@
                         <i class="fas fa-lock mr-1" aria-hidden="true"></i>
                         Sus datos están protegidos y no serán compartidos con terceros.
                     </p>
+
+                    <ul class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-700 space-y-3 text-base md:text-lg text-slate-700 dark:text-slate-200" role="list">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-primary-green dark:text-light-green mt-1" aria-hidden="true"></i>
+                            <span>La primera asesoría es <strong>gratis</strong> y sin compromiso.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-clock text-primary-green dark:text-light-green mt-1" aria-hidden="true"></i>
+                            <span>Atendemos de lunes a viernes, de 9:00 a 18:00 horas.</span>
+                        </li>
+                    </ul>
                 </form>
             </div>
         </div>
@@ -195,7 +219,7 @@
         <!-- Map Section -->
         <div class="mt-12 animate-on-scroll">
             <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4 text-center">
-                <i class="fas fa-map-marked-alt text-primary-green mr-2" aria-hidden="true"></i>
+                <i class="fas fa-map-marked-alt text-primary-green dark:text-light-green mr-2" aria-hidden="true"></i>
                 Nuestra Ubicación
             </h3>
             <figure class="rounded-[2rem] overflow-hidden shadow-xl">
@@ -213,6 +237,87 @@
                     Oficina ubicada en San Martín 553, Oficina 302, Concepción, Región del Biobío, Chile
                 </figcaption>
             </figure>
+            <p class="mt-6 text-center">
+                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=San+Mart%C3%ADn+553%2C+Concepci%C3%B3n%2C+Chile"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center gap-3 min-h-[44px] py-3 px-6 rounded-full border-2 border-primary-blue dark:border-light-green text-primary-blue dark:text-light-green text-lg font-semibold hover:bg-primary-blue hover:text-white dark:hover:bg-light-green dark:hover:text-slate-900 transition-colors focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2">
+                    <i class="fas fa-directions text-xl" aria-hidden="true"></i>
+                    Cómo llegar con Google Maps
+                    <span class="sr-only">(se abre en una pestaña nueva)</span>
+                </a>
+            </p>
         </div>
     </div>
 </section>
+
+<script>
+    // === Contact form: inline error text (progressive enhancement over native validation) ===
+    (function() {
+        var form = document.querySelector('form[name="contacto-masjubilaciones"]');
+        if (!form) return;
+        var fields = form.querySelectorAll('[data-error-missing]');
+        var summary = document.getElementById('form-error');
+        var submit = form.querySelector('button[type="submit"]');
+        var submitLabel = submit ? submit.innerHTML : '';
+        form.noValidate = true;
+
+        function errorFor(field) {
+            if (field.value.trim() === '') return field.dataset.errorMissing;
+            if (field.validity.patternMismatch) return field.dataset.errorPattern;
+            return '';
+        }
+
+        function check(field) {
+            var box = document.getElementById(field.id + '-error');
+            var msg = errorFor(field);
+            if (msg) {
+                box.querySelector('.field-error-text').textContent = msg;
+                box.hidden = false;
+                field.setAttribute('aria-invalid', 'true');
+            } else {
+                box.hidden = true;
+                field.removeAttribute('aria-invalid');
+            }
+            return !msg;
+        }
+
+        fields.forEach(function(field) {
+            field.addEventListener('blur', function(event) {
+                // Skip when focus moves to "Enviar": a message appearing here would shift the button and lose the click
+                if (event.relatedTarget === submit) return;
+                if (field.value !== '' || field.hasAttribute('aria-invalid')) check(field);
+            });
+            field.addEventListener('input', function() {
+                if (field.hasAttribute('aria-invalid')) check(field);
+            });
+        });
+
+        form.addEventListener('submit', function(event) {
+            var invalid = [];
+            fields.forEach(function(field) { if (!check(field)) invalid.push(field); });
+            if (invalid.length) {
+                event.preventDefault();
+                summary.textContent = invalid.length === 1
+                    ? 'Hay 1 dato por revisar. Vea el mensaje en rojo más arriba.'
+                    : 'Hay ' + invalid.length + ' datos por revisar. Vea los mensajes en rojo más arriba.';
+                summary.hidden = false;
+                invalid[0].focus();
+                return;
+            }
+            summary.hidden = true;
+            if (submit) {
+                submit.disabled = true;
+                submit.innerHTML = '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Enviando su mensaje…';
+            }
+        });
+
+        // Restore the button if the visitor comes back with the browser "Atrás" button
+        window.addEventListener('pageshow', function() {
+            if (submit) {
+                submit.disabled = false;
+                submit.innerHTML = submitLabel;
+            }
+        });
+    })();
+</script>

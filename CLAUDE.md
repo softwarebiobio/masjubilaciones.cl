@@ -48,7 +48,14 @@ Posts live in `src/posts/<slug>/index.md` with front matter fields: `title`, `im
 - **Dark mode**: selector-based (`.dark` class), persisted via localStorage
 - **Accessibility (WCAG AA)**: All custom colors are chosen for 4.5:1+ contrast ratios. Minimum touch targets are 44px. Use semantic HTML, proper heading hierarchy, ARIA labels, and focus-visible indicators.
 - **Typography**: Merriweather Sans (headings), IBM Plex Serif (body) — loaded via Google Fonts CDN
-- **Custom color tokens**: `primary-blue` (#0056b3), `primary-green` (#1a8a4c), `dark-blue` (#003366), `dark-green` (#2d3e4a) — do not change these without verifying WCAG contrast compliance
+- **Custom color tokens** (WCAG 2.x ratios, verified 2026-10-20). Do not change these without verifying WCAG contrast compliance:
+  - `primary-blue` #0056b3: white on it 7.04:1
+  - `primary-green` #157f45: white on it 5.06:1, on `warm-white` 4.83:1. Do not use as text on dark backgrounds (2.89:1 on slate-800); add `dark:text-light-green`.
+  - `light-green` #2ECC71: dark-mode accent text, 6.96:1 on slate-800, 8.49:1 on slate-900
+  - `dark-blue` #003366: white on it 12.6:1
+  - `dark-green` #2d3e4a: footer background; white 11.06:1, `gray-300` text 7.50:1 (do not use `gray-400`, 4.35:1)
+  - `--color-whatsapp` #0f7568 (white 5.58:1), `--color-whatsapp-hover` #075e54 (white 7.67:1). Use only these two vars for every WhatsApp button, also in `mantenimiento.html`.
+  - "(requerido)" markers: `text-red-700 dark:text-red-300`
 
 ## External Services
 

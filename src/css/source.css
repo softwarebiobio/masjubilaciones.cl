@@ -7,7 +7,7 @@
 
 :root {
     --color-primary-blue: #0056b3;
-    --color-primary-green: #1a8a4c;
+    --color-primary-green: #157f45;
     --color-dark-blue: #003366;
     --color-dark-green: #2d3e4a;
     --color-light-blue: #e6f2ff;
@@ -15,8 +15,8 @@
     --color-lime-green: #c7eEa0;
     --color-warm-white: #FAFAF7;
     --color-warm-gray: #F5F5F0;
-    --color-whatsapp: #25d366;
-    --color-whatsapp-hover: #128c7e;
+    --color-whatsapp: #0f7568;
+    --color-whatsapp-hover: #075e54;
     --color-instagram: #C13584;
     --color-facebook: #1877F2;
     --color-youtube: #FF0000;
@@ -84,7 +84,9 @@
    ========================================================================== */
 
 input:user-invalid,
-textarea:user-invalid {
+textarea:user-invalid,
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
     border-color: var(--color-validation-error);
 }
 
@@ -92,9 +94,6 @@ input:user-valid,
 textarea:user-valid {
     border-color: var(--color-validation-success);
 }
-
-/* gentle-glow keyframe is defined in tailwind.config.js (theme.extend.keyframes)
-   and emitted as the animate-gentle-glow utility class */
 
 /* ==========================================================================
    Organic Tech — Noise overlay (subtle film grain texture)

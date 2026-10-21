@@ -16,7 +16,7 @@ module.exports = {
                 'dark-blue': '#003366',         // High contrast for important text
 
                 // Primary Greens - Adjusted for WCAG AA compliance
-                'primary-green': '#1a8a4c',     // Darker green for better contrast (was #27AE60)
+                'primary-green': '#157f45',     // 5.06:1 white on it, 4.83:1 on warm-white (was #1a8a4c, 4.39:1)
                 'light-green': '#2ECC71',       // Kept for accents/dark mode
                 'lime-green': '#c7eEa0',        // Background use only
                 'secondary-green': '#148a6e',   // Darker teal for better contrast (was #1ABC9C)
@@ -63,15 +63,6 @@ module.exports = {
             borderRadius: {
                 'xl': '1rem',
                 '2xl': '1.5rem',
-            },
-            keyframes: {
-                'gentle-glow': {
-                    '0%, 100%': { boxShadow: '0 0 0 0 rgba(26, 138, 76, 0.4)' },
-                    '50%': { boxShadow: '0 0 12px 4px rgba(26, 138, 76, 0.25)' },
-                },
-            },
-            animation: {
-                'gentle-glow': 'gentle-glow 3s ease-in-out infinite',
             },
         }
     },

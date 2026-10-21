@@ -200,35 +200,113 @@
             color: #ffffff;
         }
 
-        /* Navbar floating pill morph */
+        /* Navbar floating pill morph: the surface (::before) is clipped into a
+           pill and the bar drops with transform, so no layout property animates */
         #navbar {
+            --nav-ease: cubic-bezier(0.22, 1, 0.36, 1);
+            --nav-inset: 1rem;
+            --nav-radius: 9999px;
             left: 0;
             right: 0;
-            transition: margin 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-                        border-radius 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-                        box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-                        border-color 0.4s ease,
-                        left 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-                        right 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-                        width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s var(--nav-ease), box-shadow 0.4s var(--nav-ease);
+        }
+
+        #navbar::before,
+        #navbar::after {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+        }
+
+        #navbar::before {
+            inset: 0;
+            z-index: -1;
+            background-color: rgba(255, 255, 255, 0.95);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            border-bottom: 2px solid rgba(21, 127, 69, 0.2);
+            -webkit-clip-path: inset(0 0 0 0 round 0);
+            clip-path: inset(0 0 0 0 round 0);
+            transition: -webkit-clip-path 0.4s var(--nav-ease), clip-path 0.4s var(--nav-ease),
+                        border-color 0.4s ease;
+        }
+
+        .dark #navbar::before {
+            background-color: rgba(30, 41, 59, 0.95);
+        }
+
+        /* Pill shadow: fixed geometry, only its opacity animates */
+        #navbar::after {
+            top: 0;
+            bottom: 0;
+            left: var(--nav-inset);
+            right: var(--nav-inset);
+            z-index: -2;
+            border-radius: var(--nav-radius);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            opacity: 0;
+            transition: opacity 0.4s var(--nav-ease);
         }
 
         #navbar.nav-scrolled {
-            margin-top: 0.75rem;
-            left: 1rem;
-            right: 1rem;
-            width: auto;
-            border-radius: 9999px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            transform: translateY(0.75rem);
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        }
+
+        #navbar.nav-scrolled::before {
             border-bottom-color: transparent;
+            -webkit-clip-path: inset(0 var(--nav-inset) 0 var(--nav-inset) round var(--nav-radius));
+            clip-path: inset(0 var(--nav-inset) 0 var(--nav-inset) round var(--nav-radius));
+        }
+
+        #navbar.nav-scrolled::after {
+            opacity: 1;
         }
 
         @media (max-width: 767px) {
+            #navbar {
+                --nav-inset: 0.5rem;
+                --nav-radius: 1.5rem;
+            }
+
             #navbar.nav-scrolled {
-                border-radius: 1.5rem;
-                margin-top: 0.5rem;
-                left: 0.5rem;
-                right: 0.5rem;
+                transform: translateY(0.5rem);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #navbar,
+            #navbar::before,
+            #navbar::after {
+                transition: none;
+            }
+        }
+
+        /* Floating WhatsApp: steps aside while the reader reads or types */
+        #wa-float {
+            right: 1rem;
+            bottom: 1rem;
+            bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                        opacity 0.35s ease,
+                        visibility 0s linear 0s;
+        }
+
+        #wa-float.wa-float-hidden {
+            transform: translateY(160%);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                        opacity 0.35s ease,
+                        visibility 0s linear 0.35s;
+        }
+
+        @media (min-width: 768px) {
+            #wa-float {
+                right: 1.5rem;
+                bottom: 1.5rem;
             }
         }
 
@@ -252,7 +330,7 @@
     Saltar al contenido principal
 </a>
 
-<header id="navbar" role="banner" class="bg-white/95 backdrop-blur-md dark:bg-slate-800/95 text-gray-900 dark:text-gray-100 shadow-lg fixed w-full z-50 border-b-2 border-primary-green/20">
+<header id="navbar" role="banner" class="text-gray-900 dark:text-gray-100 fixed w-full z-50">
     <div class="w-full flex justify-between items-center px-4 md:px-6 lg:px-8 py-2 md:py-3">
         <!-- Logo with better sizing -->
         <div class="flex items-center shrink-0">
@@ -268,12 +346,6 @@
                     <a href="/#inicio" class="nav-link flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-green/15 hover:text-primary-green dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2" data-section="inicio">
                         <i class="fas fa-home" aria-hidden="true"></i>
                         <span>Inicio</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/#blog" class="nav-link flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-green/15 hover:text-primary-green dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2" data-section="blog">
-                        <i class="fas fa-book" aria-hidden="true"></i>
-                        <span>Blog</span>
                     </a>
                 </li>
                 <li>
@@ -294,6 +366,12 @@
                         <span>Contacto</span>
                     </a>
                 </li>
+                <li>
+                    <a href="/#blog" class="nav-link flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-light-green/15 hover:text-primary-green dark:hover:bg-slate-700 dark:hover:text-light-green transition-colors duration-200 focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2" data-section="blog">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                        <span>Blog</span>
+                    </a>
+                </li>
             </ul>
         </nav>
 
@@ -311,11 +389,11 @@
                       hover:bg-dark-blue hover:shadow-xl
                       focus-visible:ring-3 focus-visible:ring-primary-blue focus-visible:ring-offset-2
                       transition-all duration-300 shadow-lg
-                      dark:bg-primary-blue dark:hover:bg-light-green dark:hover:text-slate-900
+                      dark:hover:bg-light-green dark:hover:text-slate-900
                       hidden sm:flex md:hidden xl:flex items-center gap-2"
                aria-label="Solicitar primera asesoría previsional gratuita">
                 <span class="hidden 2xl:inline">Solicite su</span> Asesoría
-                <span class="inline-flex items-center justify-center bg-white text-primary-green dark:bg-light-green dark:text-slate-900 px-2.5 2xl:px-3 py-0.5 2xl:py-1 text-xs 2xl:text-sm font-bold rounded-full animate-gentle-glow" aria-hidden="true">
+                <span class="inline-flex items-center justify-center bg-white text-primary-green dark:bg-light-green dark:text-slate-900 px-2.5 2xl:px-3 py-0.5 2xl:py-1 text-xs 2xl:text-sm font-bold rounded-full" aria-hidden="true">
                     1ra Gratis
                 </span>
             </a>
@@ -336,37 +414,37 @@
         <ul class="flex flex-col py-2" role="list">
             <li>
                 <a href="/#inicio" class="mobile-nav-link flex items-center gap-3 py-3 px-6 text-lg text-slate-800 dark:text-slate-100 hover:bg-light-green/15 dark:hover:bg-slate-700 transition-colors">
-                    <i class="fas fa-home text-primary-green w-6 text-center" aria-hidden="true"></i>
+                    <i class="fas fa-home text-primary-green dark:text-light-green w-6 text-center" aria-hidden="true"></i>
                     <span>Inicio</span>
                 </a>
             </li>
             <li>
-                <a href="/#blog" class="mobile-nav-link flex items-center gap-3 py-3 px-6 text-lg text-slate-800 dark:text-slate-100 hover:bg-light-green/15 dark:hover:bg-slate-700 transition-colors">
-                    <i class="fas fa-book text-primary-green w-6 text-center" aria-hidden="true"></i>
-                    <span>Blog</span>
-                </a>
-            </li>
-            <li>
                 <a href="/#servicios" class="mobile-nav-link flex items-center gap-3 py-3 px-6 text-lg text-slate-800 dark:text-slate-100 hover:bg-light-green/15 dark:hover:bg-slate-700 transition-colors">
-                    <i class="fas fa-briefcase text-primary-green w-6 text-center" aria-hidden="true"></i>
+                    <i class="fas fa-briefcase text-primary-green dark:text-light-green w-6 text-center" aria-hidden="true"></i>
                     <span>Servicios</span>
                 </a>
             </li>
             <li>
                 <a href="/#etica" class="mobile-nav-link flex items-center gap-3 py-3 px-6 text-lg text-slate-800 dark:text-slate-100 hover:bg-light-green/15 dark:hover:bg-slate-700 transition-colors">
-                    <i class="fas fa-shield-alt text-primary-green w-6 text-center" aria-hidden="true"></i>
+                    <i class="fas fa-shield-alt text-primary-green dark:text-light-green w-6 text-center" aria-hidden="true"></i>
                     <span>Ética</span>
                 </a>
             </li>
             <li>
                 <a href="/#contacto" class="mobile-nav-link flex items-center gap-3 py-3 px-6 text-lg text-slate-800 dark:text-slate-100 hover:bg-light-green/15 dark:hover:bg-slate-700 transition-colors">
-                    <i class="fas fa-envelope text-primary-green w-6 text-center" aria-hidden="true"></i>
+                    <i class="fas fa-envelope text-primary-green dark:text-light-green w-6 text-center" aria-hidden="true"></i>
                     <span>Contacto</span>
+                </a>
+            </li>
+            <li>
+                <a href="/#blog" class="mobile-nav-link flex items-center gap-3 py-3 px-6 text-lg text-slate-800 dark:text-slate-100 hover:bg-light-green/15 dark:hover:bg-slate-700 transition-colors">
+                    <i class="fas fa-book text-primary-green dark:text-light-green w-6 text-center" aria-hidden="true"></i>
+                    <span>Blog</span>
                 </a>
             </li>
             <li class="border-t border-slate-200 dark:border-slate-700 mt-2 pt-2">
                 <div class="flex items-center gap-3 py-3 px-6">
-                    <i class="fas fa-adjust text-primary-green w-6 text-center" aria-hidden="true"></i>
+                    <i class="fas fa-adjust text-primary-green dark:text-light-green w-6 text-center" aria-hidden="true"></i>
                     <span class="text-lg text-slate-800 dark:text-slate-100">Modo oscuro</span>
                     <div class="ml-auto">
                         {% include "darkmode-switch.html" %}
@@ -379,16 +457,13 @@
 
 <main id="main-content" class="pt-16 md:pt-20">
     {{ content }}
-    {% if page.url == '/' %}
-    {% include "contact.html" %}
-    {% endif %}
 </main>
 <footer role="contentinfo" class="footer-bg bg-dark-green text-white py-16 rounded-t-[3rem] -mt-6 relative z-10">
     <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
             <!-- About Section -->
             <div class="flex flex-col gap-5">
-                <h3 class="text-2xl font-bold text-light-green mb-2">Sobre Nosotros</h3>
+                <h2 class="text-2xl font-bold text-light-green mb-2">Sobre Nosotros</h2>
                 <p class="text-lg leading-relaxed">
                     <span class="font-semibold text-white">MasJubilaciones</span> está representado por don
                     <span class="font-bold text-light-green">Marcos Aguayo Mas</span>,
@@ -406,7 +481,7 @@
 
             <!-- Quick Links -->
             <nav aria-label="Enlaces del pie de página">
-                <h3 class="text-2xl font-bold text-light-green mb-4">Enlaces Rápidos</h3>
+                <h2 class="text-2xl font-bold text-light-green mb-4">Enlaces Rápidos</h2>
                 <ul class="space-y-3 text-lg" role="list">
                     <li>
                         <a href="/#inicio" class="text-gray-200 hover:text-light-green transition-colors duration-200 flex items-center gap-2 py-1 focus-visible:ring-3 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-dark-green rounded">
@@ -443,7 +518,7 @@
 
             <!-- Contact Info -->
             <div>
-                <h3 class="text-2xl font-bold text-light-green mb-4">Contáctenos</h3>
+                <h2 class="text-2xl font-bold text-light-green mb-4">Contáctenos</h2>
                 <address class="not-italic space-y-4 text-lg">
                     <p class="flex items-start gap-3 text-gray-200">
                         <i class="fas fa-map-marker-alt text-light-green mt-1" aria-hidden="true"></i>
@@ -462,7 +537,7 @@
                         </a>
                     </p>
                     <p class="flex items-center gap-3 mt-4">
-                        <a href="https://wa.me/56993467163?text=Hola%2C%20escribo%20desde%20Masjubilaciones.cl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[var(--color-whatsapp)] hover:bg-[var(--color-whatsapp-hover)] text-white font-bold py-3 px-6 rounded-full transition-colors focus-visible:ring-3 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-dark-green" aria-label="Contactar por WhatsApp">
+                        <a href="https://wa.me/56993467163?text=Hola%2C%20escribo%20desde%20Masjubilaciones.cl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[var(--color-whatsapp)] hover:bg-[var(--color-whatsapp-hover)] text-white font-bold py-3 px-6 rounded-full transition-colors focus-visible:ring-3 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-dark-green" aria-label="Escríbanos por WhatsApp (se abre en una pestaña nueva)">
                             <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
                             <span>Escríbanos por WhatsApp</span>
                         </a>
@@ -471,19 +546,22 @@
             </div>
         </div>
 
-        <!-- Copyright & Status -->
+        <!-- Social Media: the single home for social links on the site -->
+        <div class="mt-12 text-center">
+            <h2 class="text-xl font-bold text-light-green mb-4">Síganos en Redes Sociales</h2>
+            {% include "social-buttons.html" %}
+        </div>
+
+        <!-- Office hours & Copyright -->
         <div class="mt-12 pt-8 border-t border-gray-600 text-center">
-            <div class="flex items-center justify-center gap-2 mb-3">
-                <span class="relative flex h-2.5 w-2.5">
-                    <span class="animate-gentle-glow absolute inline-flex h-full w-full rounded-full bg-primary-green opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-green"></span>
-                </span>
-                <span class="text-gray-400 text-sm">Sistema operativo</span>
-            </div>
+            <p class="flex items-center justify-center gap-3 mb-4 text-gray-200 text-lg">
+                <i class="fas fa-clock text-light-green" aria-hidden="true"></i>
+                <span>Atención de lunes a viernes, de 9:00 a 18:00 horas</span>
+            </p>
             <p class="text-gray-300 text-base">
                 &copy; {% year %} MasJubilaciones. Todos los derechos reservados.
             </p>
-            <p class="text-gray-400 text-sm mt-2">
+            <p class="text-gray-300 text-sm mt-2">
                 Sitio web por <a href="https://www.softwarebiobio.com/" target="_blank" rel="noopener noreferrer" class="text-light-green hover:text-white transition-colors focus-visible:ring-3 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-dark-green rounded">softwarebiobio.com</a>
             </p>
         </div>
@@ -491,12 +569,13 @@
 </footer>
 <!-- WhatsApp Floating Button - Larger for seniors, better a11y -->
 <a href="https://wa.me/56993467163?text=Hola%2C%20escribo%20desde%20Masjubilaciones.cl%20y%20quisiera%20una%20asesor%C3%ADa"
-   class="fixed bottom-6 right-6 z-[1000] group focus-visible:ring-3 focus-visible:ring-white focus-visible:ring-offset-2 rounded-full"
+   id="wa-float"
+   class="fixed z-[1000] group focus-visible:ring-3 focus-visible:ring-white focus-visible:ring-offset-2 rounded-full"
    target="_blank"
    rel="noopener noreferrer"
-   aria-label="Abrir chat de WhatsApp para consultar sobre asesoría previsional"
-   title="Contáctenos por WhatsApp">
-    <span class="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-[var(--color-whatsapp)] hover:bg-[var(--color-whatsapp-hover)] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+   aria-label="Escríbanos por WhatsApp (se abre en una pestaña nueva)"
+   title="Escríbanos por WhatsApp">
+    <span class="flex items-center justify-center w-14 h-14 md:w-20 md:h-20 bg-[var(--color-whatsapp)] hover:bg-[var(--color-whatsapp-hover)] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
         <i class="fab fa-whatsapp text-3xl md:text-4xl" aria-hidden="true"></i>
     </span>
     <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-slate-800 text-white text-sm font-medium py-2 px-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap hidden md:block shadow-lg" aria-hidden="true">
@@ -593,6 +672,70 @@
         }, { rootMargin: '-80px 0px 0px 0px' });
 
         observer.observe(hero);
+    })();
+
+    // === Floating WhatsApp: hide where it would cover content ===
+    // Hidden while the contact section or the footer is on screen (both carry
+    // their own WhatsApp link), while a form field has focus, and on phones
+    // while the reader scrolls down. Scrolling up brings it back.
+    (function() {
+        var btn = document.getElementById('wa-float');
+        if (!btn || !('IntersectionObserver' in window)) return;
+
+        var mobile = window.matchMedia('(max-width: 767px)');
+        var overlapping = new Set();
+        var fieldFocused = false;
+        var scrollingDown = false;
+        var lastY = window.scrollY;
+
+        function update() {
+            var hide = overlapping.size > 0 || fieldFocused || (mobile.matches && scrollingDown);
+            btn.classList.toggle('wa-float-hidden', hide);
+            if (hide) {
+                btn.setAttribute('tabindex', '-1');
+            } else {
+                btn.removeAttribute('tabindex');
+            }
+        }
+
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    overlapping.add(entry.target);
+                } else {
+                    overlapping.delete(entry.target);
+                }
+            });
+            update();
+        });
+        ['#contacto', 'footer[role="contentinfo"]'].forEach(function(sel) {
+            var el = document.querySelector(sel);
+            if (el) observer.observe(el);
+        });
+
+        document.addEventListener('focusin', function(e) {
+            fieldFocused = e.target.matches('input, textarea, select');
+            update();
+        });
+        document.addEventListener('focusout', function() {
+            fieldFocused = false;
+            update();
+        });
+
+        var ticking = false;
+        window.addEventListener('scroll', function() {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(function() {
+                var y = window.scrollY;
+                if (Math.abs(y - lastY) > 8) {
+                    scrollingDown = y > lastY && y > 120;
+                    lastY = y;
+                    update();
+                }
+                ticking = false;
+            });
+        }, { passive: true });
     })();
 
     // === IntersectionObserver for scroll animations ===

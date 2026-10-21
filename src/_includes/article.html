@@ -91,16 +91,13 @@ layout: 'blog.html'
         font-size: 1.5rem;
         margin: 2rem auto 0.75rem auto;
         color: var(--color-dark-blue);
-        border-left: 5px solid var(--color-primary-green);
-        border-bottom: none;
-        padding: 0.4rem 0 0.4rem 0.75rem;
+        padding: 0;
         font-weight: 800;
         letter-spacing: -0.02em;
     }
 
     .dark article .prose h2 {
         color: var(--color-light-green);
-        border-left-color: var(--color-light-green);
     }
 
     article h2:first-of-type {
@@ -179,7 +176,7 @@ layout: 'blog.html'
         background-color: var(--color-warm-gray);
         color: var(--color-dark-blue);
         padding: 1.5rem 2rem;
-        border-left: 6px solid var(--color-primary-green);
+        border: 1px solid var(--color-light-blue);
         margin: 2rem 0;
         border-radius: 0.5rem;
         font-style: italic;
@@ -188,7 +185,7 @@ layout: 'blog.html'
     .dark article blockquote:not(.tiktok-embed) {
         background-color: #1e293b;
         color: #e2e8f0;
-        border-left-color: var(--color-light-green);
+        border-color: #334155;
     }
 
     article blockquote p {
@@ -319,7 +316,7 @@ layout: 'blog.html'
        avoid starting regular paragraphs with bold text in article markdown. */
     article .prose p:has(> strong:first-child) {
         background-color: var(--color-callout-bg);
-        border-left: 5px solid var(--color-callout-border);
+        border: 1px solid var(--color-callout-border);
         padding: 0.85rem 1rem;
         border-radius: 0.5rem;
         margin: 1.5rem auto;
@@ -335,7 +332,7 @@ layout: 'blog.html'
 
     .dark article .prose p:has(> strong:first-child) {
         background-color: var(--color-callout-bg);
-        border-left-color: var(--color-callout-border);
+        border-color: var(--color-callout-border);
         color: var(--color-callout-text);
     }
 
@@ -366,12 +363,13 @@ layout: 'blog.html'
         position: fixed;
         top: 0;
         left: 0;
+        width: 100%;
         height: 3px;
         background: var(--color-primary-green);
         z-index: 51;
-        width: 0%;
-        transition: width 0.1s linear;
-        border-radius: 0 2px 2px 0;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform 0.1s linear;
     }
 
     /* "Volver al Blog" arrow nudge on hover */
@@ -409,16 +407,14 @@ layout: 'blog.html'
 
     /* Table of Contents */
     #article-toc {
-        background-color: var(--color-warm-gray);
-        border-radius: 1rem;
-        padding: 1.25rem 1.5rem;
-        margin-bottom: 2rem;
-        border-top: 3px solid var(--color-primary-green);
+        padding: 1.25rem 0;
+        margin-bottom: 2.5rem;
+        border-top: 1px solid var(--color-light-blue);
+        border-bottom: 1px solid var(--color-light-blue);
     }
 
     .dark #article-toc {
-        background-color: #1e293b;
-        border-top-color: var(--color-light-green);
+        border-color: #334155;
     }
 
     .toc-title {
@@ -507,7 +503,7 @@ layout: 'blog.html'
         font-weight: 700;
         color: var(--color-dark-blue);
         /* fallback for browsers without color-mix() */
-        background-color: rgba(26, 138, 76, 0.12);
+        background-color: rgba(21, 127, 69, 0.12);
         background-color: color-mix(in srgb, var(--color-primary-green) 12%, transparent);
         padding: 0.1rem 0.4rem;
         border-radius: 0.25rem;
@@ -604,12 +600,12 @@ layout: 'blog.html'
         <div class="article-entrance article-entrance-delay-1 flex flex-wrap items-center gap-4 text-base text-slate-500 dark:text-slate-400">
             {% if page.date %}
             <p class="flex items-center gap-2">
-                <i class="fas fa-calendar-alt text-primary-green" aria-hidden="true"></i>
+                <i class="fas fa-calendar-alt text-primary-green dark:text-light-green" aria-hidden="true"></i>
                 <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | readableDate }}</time>
             </p>
             {% endif %}
             <p class="flex items-center gap-2">
-                <i class="fas fa-clock text-primary-green" aria-hidden="true"></i>
+                <i class="fas fa-clock text-primary-green dark:text-light-green" aria-hidden="true"></i>
                 <span>{{ reading_time }} min de lectura</span>
             </p>
         </div>
@@ -635,7 +631,7 @@ layout: 'blog.html'
 
     <!-- Lead/Summary -->
     {% if lead != nil and lead.size > 0 %}
-    <section class="text-lg md:text-xl bg-dark-blue/[0.04] dark:bg-slate-700/80 p-6 md:p-8 rounded-2xl text-slate-700 dark:text-slate-200 mb-12 leading-relaxed shadow-sm" aria-label="Resumen del artículo">
+    <section class="text-lg md:text-xl text-slate-700 dark:text-slate-200 mb-10 leading-relaxed font-medium" aria-label="Resumen del artículo">
         {{lead}}
     </section>
     {% endif %}
@@ -655,7 +651,7 @@ layout: 'blog.html'
     <!-- Article Footer -->
     <footer class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700">
         <!-- Call to Action -->
-        <div class="bg-warm-gray dark:bg-slate-800 rounded-2xl p-6 md:p-8 text-center mb-8">
+        <div class="text-center py-2 md:py-4">
             <h2 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-3">
                 ¿Tiene dudas sobre su pensión?
             </h2>
@@ -667,12 +663,6 @@ layout: 'blog.html'
                 <i class="fas fa-envelope" aria-hidden="true"></i>
                 Contáctenos
             </a>
-        </div>
-
-        <!-- Social Sharing -->
-        <div class="text-center">
-            <p class="text-slate-600 dark:text-slate-400 mb-4 text-lg">Síganos en redes sociales:</p>
-            {% include "social-buttons.html" %}
         </div>
     </footer>
 </article>
@@ -693,7 +683,7 @@ layout: 'blog.html'
                 var total = article.offsetHeight - window.innerHeight;
                 var scrolled = -rect.top;
                 var pct = Math.min(Math.max(scrolled / total * 100, 0), 100);
-                bar.style.width = pct + '%';
+                bar.style.transform = 'scaleX(' + (pct / 100) + ')';
                 ticking = false;
             });
         }
